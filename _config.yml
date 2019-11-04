@@ -13,8 +13,8 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://lanlan2017.github.io/exam/
-root: /exam/
+url: https://lanlan2017.github.io/test/
+root: /test/
 # git@github.com:lanlan2017/exam
 # permalink: :year/:month/:day/:title/
 permalink: /:abbrlink/ #blog可以修改为其他信息,blog
@@ -82,7 +82,7 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:lanlan2017/exam.git #git@github.com:lanlan2017/lanlan2017.github.io.git
+  repo: https://gh_token@github.com/lanlan2017/test.git #git@github.com:lanlan2017/lanlan2017.github.io.git
   # branch: master #published
   branch: gh-pages #published
   # message: [message]

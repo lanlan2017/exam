@@ -14,22 +14,20 @@ install:                      # 在安装项目环境阶段需要运行的命令
 
 script:                       # 在构建阶段需要运行的命令，一条一行，类似的还有 before_script、after_script
   - hexo generate             # Hexo 常规命令，执行清理和生成
-
-after_success:                # script 阶段成功时执行，构建失败不会执行，其他同上
+ 
+# 设置git提交名，邮箱；替换真实token到_config.yml文件，最后depoy部署
+after_script:
   - git config user.name "lanlan2017"
   - git config user.email "18251956727@163.com"
-  - git clone -b gh-pages https://github.com/lanlan2017/test.git ./page/
-  - ls
-  - cp -rf ./public/ ./page/
-  - cd ./page/
-  - ls
-  - git add .
-  - git commit -m "Travis CI Auto Builder at `date +"%Y-%m-%d %H:%M"`"  # 提交记录包含时间 跟上面更改时区配合
-  - git push --force --quiet https://github.com/lanlan2017/test.git gh-pages  # 强制覆盖gh-pages分支,HexoBlogToken是在Travis中配置环境变
+  # 替换同目录下的_config.yml文件中gh_token字符串为travis后台刚才配置的变量，注意此处sed命令用了双引号。单引号无效！
+  - sed -i "s/gh_token/${GH_TOKEN}/g" ./_config.yml
+  - hexo deploy
 
-# https://github.com/lanlan2017/test.git
-# https://github.com/lanlan2017/test.git
-
+  
 branches:
 only:
   - master # 触发持续集成的分支
+
+# env:
+#  global:
+#    - GH_REF: github.com:lanlan2017/test.git # 就是你github上存放静态博客最终文件的仓库地址末尾加上.git
