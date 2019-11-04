@@ -20,6 +20,7 @@ after_success:                # script 阶段成功时执行，构建失败不�
   - git init
   - git config user.name "lanlan2017"
   - git config user.email "18251956727@163.com"
+  - git remote set-url origin https://${HexoBlogToken}@${GH_REF}
   - git remote -v
   - ls -a
   - git add .
