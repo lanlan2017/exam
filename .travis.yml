@@ -18,14 +18,14 @@ script:                       # 在构建阶段需要运行的命令，一条一
 after_success:                # script 阶段成功时执行，构建失败不会执行，其他同上
   - git config user.name "lanlan2017"
   - git config user.email "18251956727@163.com"
-  - git clone -b gh-pages https://github.com/lanlan2017/test.git page
+  - git clone -b gh-pages https://github.com/lanlan2017/test.git ./page/
   - ls
-  - cp -rf public/ page/
-  - cd page
+  - cp -rf ./public/ ./page/
+  - cd ./page/
   - ls
   - git add .
   - git commit -m "Travis CI Auto Builder at `date +"%Y-%m-%d %H:%M"`"  # 提交记录包含时间 跟上面更改时区配合
-  - git push --force --quiet "https://${HexoBlogToken}@${GH_REF}" master:gh-pages  # 强制覆盖gh-pages分支,HexoBlogToken是在Travis中配置环境变
+  - git push --force --quiet https://github.com/lanlan2017/test.git gh-pages  # 强制覆盖gh-pages分支,HexoBlogToken是在Travis中配置环境变
 
 # https://github.com/lanlan2017/test.git
 # https://github.com/lanlan2017/test.git
@@ -33,8 +33,3 @@ after_success:                # script 阶段成功时执行，构建失败不�
 branches:
 only:
   - master # 触发持续集成的分支
-
-env:
- global:
-   - GH_REF: github.com:lanlan2017/test.git # 就是你github上存放静态博客最终文件的仓库地址末尾加上.git
-   - secure:
