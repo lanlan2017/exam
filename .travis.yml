@@ -20,6 +20,7 @@ after_success:                # script 阶段成功时执行，构建失败不�
   - git init
   - git config user.name "lanlan2017"
   - git config user.email "18251956727@163.com"
+  - git remote -v
   - ls -a
   - git add .
   - git commit -m "Travis CI Auto Builder at `date +"%Y-%m-%d %H:%M"`"  # 提交记录包含时间 跟上面更改时区配合
