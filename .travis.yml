@@ -35,3 +35,4 @@ only:
 env:
  global:
    - GH_REF: github.com:lanlan2017/test.git # 就是你github上存放静态博客最终文件的仓库地址末尾加上.git
+   - secure:
