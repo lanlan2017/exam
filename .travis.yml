@@ -16,13 +16,12 @@ script:                       # 在构建阶段需要运行的命令，一条一
   - hexo generate             # Hexo 常规命令，执行清理和生成
 
 after_success:                # script 阶段成功时执行，构建失败不会执行，其他同上
-  - cd ./public
-  - git init
   - git config user.name "lanlan2017"
   - git config user.email "18251956727@163.com"
-  - git remote set-url origin https://${HexoBlogToken}@${GH_REF}
-  - git remote -v
-  - ls -a
+  - git clone -b gh-pages git@github.com:lanlan2017/test.git ./page
+  - ls
+  - cp ./public ./page
+  - cd ./page
   - git add .
   - git commit -m "Travis CI Auto Builder at `date +"%Y-%m-%d %H:%M"`"  # 提交记录包含时间 跟上面更改时区配合
   - git push --force --quiet "https://${HexoBlogToken}@${GH_REF}" master:gh-pages  # 强制覆盖gh-pages分支,HexoBlogToken是在Travis中配置环境变
