@@ -26,6 +26,8 @@ after_success:                # script 阶段成功时执行，构建失败不�
   - git commit -m "Travis CI Auto Builder at `date +"%Y-%m-%d %H:%M"`"  # 提交记录包含时间 跟上面更改时区配合
   - git push --force --quiet "https://${HexoBlogToken}@${GH_REF}" master:gh-pages  # 强制覆盖gh-pages分支,HexoBlogToken是在Travis中配置环境变
 
+# https://github.com/lanlan2017/test.git
+
 branches:
 only:
   - master # 触发持续集成的分支
