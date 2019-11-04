@@ -4,12 +4,12 @@ categories:
   - LeetCode
   - 简单
 date: 2019-10-15 17:30:47
-updated: 2019-11-03 23:53:43
+updated: 2019-11-04 00:35:14
 abbrlink: 2877c0a6
 ---
-- [LeetCode刷题 [9] 回文数](/exam/2877c0a6/#LeetCode刷题-[9]-回文数)
-    - [解法2: 使用StringBuilder的reverse方法逆序](/exam/2877c0a6/#解法2-使用StringBuilder的reverse方法逆序)
-    - [解法3: 通过数学运算逆序](/exam/2877c0a6/#解法3-通过数学运算逆序)
+- [LeetCode刷题 [9] 回文数](null2877c0a6/#LeetCode刷题-[9]-回文数)
+    - [解法2: 使用StringBuilder的reverse方法逆序](null2877c0a6/#解法2-使用StringBuilder的reverse方法逆序)
+    - [解法3: 通过数学运算逆序](null2877c0a6/#解法3-通过数学运算逆序)
 
 <!--more-->
 <script src="https://cdn.bootcss.com/jquery/3.4.0/jquery.slim.min.js"></script>
