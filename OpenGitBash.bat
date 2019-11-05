@@ -4,5 +4,6 @@ echo 切换盘符 %~d0
 echo 进入当前目录 %~dp0
 cd %~dp0
 echo 打开 git-bash
+java -jar "E:\dev2\idea_workspace\HexoTools\runable\FM.jar" toc %~dp0source\_posts\
 start git-bash --cd=%~dp0
-REM pause
+pause
