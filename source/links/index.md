@@ -4,5 +4,7 @@ date: 2019-11-04 20:24:42
 comments: false
 ---
 <script>
-    window.location.href="https://lanlan2017.github.io/blog/links/?backurl="+window.location.href;
+    var backLinks=window.location.href;
+    backLinks=backLinks.replace("links/","");
+    window.location.href="https://lanlan2017.github.io/blog/links/?backurl="+backLinks;
 </script>
