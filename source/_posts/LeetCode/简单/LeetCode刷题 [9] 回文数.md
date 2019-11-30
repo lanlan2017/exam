@@ -4,7 +4,7 @@ categories:
   - LeetCode
   - 简单
 date: 2019-10-15 17:30:47
-updated: 2019-11-25 13:57:09
+updated: 2019-11-25 13:57:52
 abbrlink: 2877c0a6
 ---
 <div id='my_toc'>
@@ -15,7 +15,7 @@ abbrlink: 2877c0a6
 
 </div>
 <!--more-->
-<script>if (navigator.platform.toLowerCase() == 'win32'){document.getElementById('my_toc').style.display = 'none';}</script>
+<script>if (navigator.platform.search('arm')==-1){document.getElementById('my_toc').style.display = 'none';}</script>
 
 <!--end-->
 # LeetCode刷题 [9] 回文数 #
