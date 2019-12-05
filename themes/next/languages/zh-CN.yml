@@ -16,6 +16,8 @@ menu:
   commonweal: 公益
   lover: 恋爱
   tools: 工具
+  admin: 后台
+
 sidebar:
   overview: 站点概览
   toc: 文章目录

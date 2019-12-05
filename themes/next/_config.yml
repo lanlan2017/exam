@@ -136,6 +136,7 @@ menu:
   # lover: /lover/ || heart
   # tools: /tools/ || wrench
   links: /links/ || link
+  admin: /admin/ || lock
  
 # Enable / Disable menu icons / item badges.
 menu_settings:
