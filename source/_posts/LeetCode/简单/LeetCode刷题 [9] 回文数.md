@@ -7,17 +7,6 @@ date: 2019-10-15 17:30:47
 updated: 2019-11-25 13:57:52
 abbrlink: 2877c0a6
 ---
-<div id='my_toc'>
-
-- [LeetCode刷题 [9] 回文数](/exam/2877c0a6/#LeetCode刷题-[9]-回文数)
-    - [解法2: 使用StringBuilder的reverse方法逆序](/exam/2877c0a6/#解法2-使用StringBuilder的reverse方法逆序)
-    - [解法3: 通过数学运算逆序](/exam/2877c0a6/#解法3-通过数学运算逆序)
-
-</div>
-<!--more-->
-<script>if (navigator.platform.search('arm')==-1){document.getElementById('my_toc').style.display = 'none';}</script>
-
-<!--end-->
 # LeetCode刷题 [9] 回文数 #
 **思路:逆序这个整数,然后和该整数比较**
 ## 解法2: 使用StringBuilder的reverse方法逆序 ##
