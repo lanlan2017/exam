@@ -4,9 +4,34 @@ categories:
   - LeetCode
   - 简单
 date: 2019-10-15 17:30:47
-updated: 2019-11-25 13:57:52
+updated: 2019-12-15 14:30:18
 abbrlink: 2877c0a6
 ---
+<div id='my_toc' style="margin-left: 1em;"></div>
+<!--more-->
+<script src="/js/src/jquery.slim.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var myToc = document.getElementById('my_toc');
+        $("h1,h2,h3,h4,h5,h6").each(function (i, item) {
+            if (item.id != '')
+            {
+                var alink = document.createElement('a');
+                alink.href = '#' + item.id;
+                alink.text = item.id;
+                var num=(item.tagName.substring(1)-1)*2;
+                alink.style='margin-left: '+num+'em';
+                myToc.appendChild(alink);
+                myToc.appendChild(document.createElement('br'));
+            }
+        });
+    });
+</script>
+<script>if (navigator.platform.search('arm')==-1){document.getElementById('my_toc').style.display = 'none';}
+var e,p = document.getElementsByTagName('p');while (p.length>0) {e = p[0];e.parentElement.removeChild(e);}
+</script>
+
+<!--end-->
 # LeetCode刷题 [9] 回文数 #
 **思路:逆序这个整数,然后和该整数比较**
 ## 解法2: 使用StringBuilder的reverse方法逆序 ##
