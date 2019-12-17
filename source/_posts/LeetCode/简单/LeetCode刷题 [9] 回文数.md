@@ -4,7 +4,7 @@ categories:
   - LeetCode
   - 简单
 date: 2019-10-15 17:30:47
-updated: 2019-12-17 01:32:53
+updated: 2019-12-17 01:36:29
 abbrlink: 2877c0a6
 ---
 <div id='my_toc'><a href="/exam/2877c0a6/#LeetCode刷题-9-回文数" class="header_1">LeetCode刷题 [9] 回文数</a><br><a href="/exam/2877c0a6/#解法2-使用StringBuilder的reverse方法逆序" class="header_2">解法2: 使用StringBuilder的reverse方法逆序</a><br><a href="/exam/2877c0a6/#解法3-通过数学运算逆序" class="header_2">解法3: 通过数学运算逆序</a><br></div>
