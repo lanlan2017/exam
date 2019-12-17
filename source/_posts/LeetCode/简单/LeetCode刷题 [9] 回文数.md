@@ -4,29 +4,31 @@ categories:
   - LeetCode
   - 简单
 date: 2019-10-15 17:30:47
-updated: 2019-12-15 14:30:18
+updated: 2019-12-17 01:21:09
 abbrlink: 2877c0a6
 ---
-<div id='my_toc' style="margin-left: 1em;"></div>
+<div id='my_toc'><a href="/exam/2877c0a6/#LeetCode刷题-[9]-回文数" class="header_1">LeetCode刷题 [9] 回文数</a><br><a href="/exam/2877c0a6/#解法2--使用StringBuilder的reverse方法逆序" class="header_2">解法2: 使用StringBuilder的reverse方法逆序</a><br><a href="/exam/2877c0a6/#解法3--通过数学运算逆序" class="header_2">解法3: 通过数学运算逆序</a><br></div>
+<style>
+    .header_1{
+        margin-left: 1em;
+    }
+    .header_2{
+        margin-left: 2em;
+    }
+    .header_3{
+        margin-left: 3em;
+    }
+    .header_4{
+        margin-left: 4em;
+    }
+    .header_5{
+        margin-left: 5em;
+    }
+    .header_6{
+        margin-left: 6em;
+    }
+</style>
 <!--more-->
-<script src="/js/src/jquery.slim.min.js"></script>
-<script>
-    $(document).ready(function () {
-        var myToc = document.getElementById('my_toc');
-        $("h1,h2,h3,h4,h5,h6").each(function (i, item) {
-            if (item.id != '')
-            {
-                var alink = document.createElement('a');
-                alink.href = '#' + item.id;
-                alink.text = item.id;
-                var num=(item.tagName.substring(1)-1)*2;
-                alink.style='margin-left: '+num+'em';
-                myToc.appendChild(alink);
-                myToc.appendChild(document.createElement('br'));
-            }
-        });
-    });
-</script>
 <script>if (navigator.platform.search('arm')==-1){document.getElementById('my_toc').style.display = 'none';}
 var e,p = document.getElementsByTagName('p');while (p.length>0) {e = p[0];e.parentElement.removeChild(e);}
 </script>
