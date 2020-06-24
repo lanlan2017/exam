@@ -12,8 +12,8 @@
     "version": "4.1.1"
   },
   "dependencies": {
-    "core-js": "^3.5.0",
-    "hexo": "^4.1.1",
+    "core-js": "^3.6.5",
+    "hexo": "^4.2.1",
     "hexo-abbrlink": "^2.0.5",
     "hexo-auto-category": "^0.2.0",
     "hexo-deployer-git": "^2.1.0",
