@@ -12,3 +12,4 @@ public/
 package-lock.json
 *.html
 Test/
+*.txt
