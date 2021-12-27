@@ -5,11 +5,4 @@ db.json
 node_modules/
 public/
 .deploy*/
-备份.md
-*/测试.md
-*/测试/*
-*/*/测试.md
 package-lock.json
-*.html
-Test/
-*.txt
