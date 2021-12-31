@@ -6,12 +6,6 @@ date: 2020-01-15 04:52:39
 updated: 2021-03-21 04:39:04
 abbrlink: 46ec7757
 ---
-<div id='my_toc'><a href="/exam/46ec7757/#在校生的困境" class="header_1">在校生的困境</a>&nbsp;<br><a href="/exam/46ec7757/#建议" class="header_1">建议</a>&nbsp;<br><a href="/exam/46ec7757/#1-明确目标，先说下公司面试应届生的标准" class="header_2">1. 明确目标，先说下公司面试应届生的标准</a>&nbsp;<br><a href="/exam/46ec7757/#2-面试中大多数应届生的实际表现" class="header_2">2. 面试中大多数应届生的实际表现</a>&nbsp;<br><a href="/exam/46ec7757/#达不到标准的具体表现" class="header_3">达不到标准的具体表现</a>&nbsp;<br><a href="/exam/46ec7757/#3-哪些大学里学到的知识点面试大概率不问（根本不用太费精力看的技术有哪些）" class="header_2">3. 哪些大学里学到的知识点面试大概率不问（根本不用太费精力看的技术有哪些）</a>&nbsp;<br><a href="/exam/46ec7757/#面试时需要掌握的最低技能标准" class="header_3">面试时需要掌握的最低技能标准</a>&nbsp;<br><a href="/exam/46ec7757/#-Java-核心常问" class="header_4">`Java`核心常问:</a>&nbsp;<br><a href="/exam/46ec7757/#java核心不常问" class="header_4">java核心不常问</a>&nbsp;<br><a href="/exam/46ec7757/#数据库方面" class="header_4">数据库方面</a>&nbsp;<br><a href="/exam/46ec7757/#框架方面" class="header_4">框架方面</a>&nbsp;<br><a href="/exam/46ec7757/#综合技能方面" class="header_4">综合技能方面</a>&nbsp;<br><a href="/exam/46ec7757/#看招聘要求查缺补漏" class="header_2">看招聘要求查缺补漏</a>&nbsp;<br><a href="/exam/46ec7757/#大学许多知识后面才用到" class="header_2">大学许多知识后面才用到</a>&nbsp;<br><a href="/exam/46ec7757/#4-用一个月的时间了解Java核心部分的内容" class="header_2">4. 用一个月的时间了解Java核心部分的内容</a>&nbsp;<br><a href="/exam/46ec7757/#5-用半个月的时间，以MySQL为例，了解数据库的大致操作" class="header_2">5. 用半个月的时间，以MySQL为例，了解数据库的大致操作</a>&nbsp;<br><a href="/exam/46ec7757/#6、用一个月的时间，了解基于Spring的web框架" class="header_2">6、用一个月的时间，了解基于Spring的web框架</a>&nbsp;<br><a href="/exam/46ec7757/#8、有学习项目经验后，争取找些商业项目的实践机会" class="header_2">8、有学习项目经验后，争取找些商业项目的实践机会</a>&nbsp;<br><a href="/exam/46ec7757/#9、毕业生准备简历的要点" class="header_2">9、毕业生准备简历的要点</a>&nbsp;<br><a href="/exam/46ec7757/#原文链接" class="header_1">原文链接</a>&nbsp;<br></div>
-<style>.header_1{margin-left: 1em;}.header_2{margin-left: 2em;}.header_3{margin-left: 3em;}.header_4{margin-left: 4em;}.header_5{margin-left: 5em;}.header_6{margin-left: 6em;}</style>
-<!--more-->
-<script>if (navigator.platform.search('arm')==-1){document.getElementById('my_toc').style.display = 'none';}var e,p = document.getElementsByTagName('p');while (p.length>0) {e = p[0];e.parentElement.removeChild(e);}</script>
-
-<!--end-->
 # 在校生的困境
 对于那些已经工作的同学，哪怕才工作不久，毕竟也能**从项目实践里总结和探索`java`的学习途径和相关方法**。但在校生同学由于没机会接触实际项目，在学习内容、进阶途径和学成标准这些方面都是两眼一抹黑，而大学里的内容可能偏重于理论，讲述的技术往往也和软件公司里常用的技术不匹配。
 这就导致了很多上心的在校生，虽然很努力，但到毕业时，才发现自己起早贪黑学成的技能并不能帮他们找到工作。在本文里，就将结合我面试实习生和毕业生的标准，专门给在校生这个群体一些学习`Java`方面的建议。
