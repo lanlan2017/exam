@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
+<meta name="generator" content="Hexo 5.4.0">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/exam/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/exam/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/exam/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/exam/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="_Sly-yzHYmALHXzjFpPWsodMrjBSphw7bfRbMUH80Qc">
+  <meta name="msvalidate.01" content="B1CFD346B8DEBBFE0C983C2AF8955531">
+  <meta name="baidu-site-verification" content="vkMTwK56xr">
+
+<link rel="stylesheet" href="/exam/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"lanlan2017.github.io","root":"/exam/","images":"/exam/images","scheme":"Gemini","darkmode":true,"version":"8.8.2","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/exam/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/exam/js/config.js"></script>
+<meta name="description" content="考点1:对象间存在一对多关系，当一个对象被修改时，则会自动通知它的依赖对象，采用以下哪种设计模式最好？  A 建造者模式 B 观察者模式 C 策略模式 D 代理模式  显示答案&#x2F;隐藏答案正确答案: B   考点2:如果需要一个语言解释执行，并且可以将语言中的句子表示为一个抽象语法树的时候，对效率要求不高的情况下，应该选择何种设计模式？  A 解释器模式 B 动态代理模式 C 装饰模式 D 访问者模">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2021年10月04日 设计模式">
+<meta property="og:url" content="https://lanlan2017.github.io/exam/d98c5bee/index.html">
+<meta property="og:site_name" content="蓝蓝的站点">
+<meta property="og:description" content="考点1:对象间存在一对多关系，当一个对象被修改时，则会自动通知它的依赖对象，采用以下哪种设计模式最好？  A 建造者模式 B 观察者模式 C 策略模式 D 代理模式  显示答案&#x2F;隐藏答案正确答案: B   考点2:如果需要一个语言解释执行，并且可以将语言中的句子表示为一个抽象语法树的时候，对效率要求不高的情况下，应该选择何种设计模式？  A 解释器模式 B 动态代理模式 C 装饰模式 D 访问者模">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gitee.com/XiaoLan223/images/raw/master/Blog/Sum/20211004223947.png">
+<meta property="article:published_time" content="2021-10-04T14:36:27.000Z">
+<meta property="article:modified_time" content="2021-10-04T14:36:27.000Z">
+<meta property="article:author" content="蓝蓝">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/XiaoLan223/images/raw/master/Blog/Sum/20211004223947.png">
+
+
+<link rel="canonical" href="https://lanlan2017.github.io/exam/d98c5bee/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://lanlan2017.github.io/exam/d98c5bee/","path":"/d98c5bee/","title":"2021年10月04日 设计模式"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>2021年10月04日 设计模式 | 蓝蓝的站点</title>
+  
+
+  <script src="/exam/js/third-party/analytics/baidu-analytics.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?dadeb188eb14ccde0b25a19230c429b5"></script>
+
+
+<link rel="dns-prefetch" href="https://waline-test-mzjszagu6-lanlan2017.vercel.app">
+  <noscript>
+    <link rel="stylesheet" href="/exam/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/exam/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">蓝蓝的站点</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">笔试题汇总</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/exam/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-dir"><a href="/exam/dir/" rel="section"><i class="fa fa-sitemap fa-fw"></i>目录</a></li>
+        <li class="menu-item menu-item-categories"><a href="/exam/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/exam/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-tags"><a href="/exam/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B91"><span class="nav-number">1.</span> <span class="nav-text">考点1:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B92"><span class="nav-number">2.</span> <span class="nav-text">考点2:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B93"><span class="nav-number">3.</span> <span class="nav-text">考点3:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B94"><span class="nav-number">4.</span> <span class="nav-text">考点4:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B95"><span class="nav-number">5.</span> <span class="nav-text">考点5:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B96"><span class="nav-number">6.</span> <span class="nav-text">考点6:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B97"><span class="nav-number">7.</span> <span class="nav-text">考点7:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B98"><span class="nav-number">8.</span> <span class="nav-text">考点8:</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="蓝蓝"
+      src="/exam/images/avatar.png">
+  <p class="site-author-name" itemprop="name">蓝蓝</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/exam/archives/">
+          <span class="site-state-item-count">148</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/exam/categories/">
+        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://lanlan2017.github.io/todo/" title="todo → https:&#x2F;&#x2F;lanlan2017.github.io&#x2F;todo&#x2F;"><i class="fa fa-check-square fa-fw"></i>todo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://lanlan2017.github.io/links/" title="links → https:&#x2F;&#x2F;lanlan2017.github.io&#x2F;links&#x2F;"><i class="fa fa-link fa-fw"></i>links</a>
+      </span>
+  </div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lanlan2017.github.io/exam/d98c5bee/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/exam/images/avatar.png">
+      <meta itemprop="name" content="蓝蓝">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="蓝蓝的站点">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          2021年10月04日 设计模式
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-10-04 22:36:27" itemprop="dateCreated datePublished" datetime="2021-10-04T22:36:27+08:00">2021-10-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/exam/categories/%E7%89%9B%E5%AE%A2%E7%BD%91/" itemprop="url" rel="index"><span itemprop="name">牛客网</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/exam/categories/%E7%89%9B%E5%AE%A2%E7%BD%91/%E4%B8%93%E9%A1%B9%E7%BB%83%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">专项练习</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/exam/categories/%E7%89%9B%E5%AE%A2%E7%BD%91/%E4%B8%93%E9%A1%B9%E7%BB%83%E4%B9%A0/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" itemprop="url" rel="index"><span itemprop="name">设计模式</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/exam/d98c5bee/#waline-comments" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" id="/exam/d98c5bee/" data-xid="/exam/d98c5bee/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>688</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="考点1"><a href="#考点1" class="headerlink" title="考点1:"></a>考点1:</h1><p>对象间存在一对多关系，当一个对象被修改时，则会自动通知它的依赖对象，采用以下哪种设计模式最好？</p>
+<ul>
+<li>A 建造者模式</li>
+<li>B 观察者模式</li>
+<li>C 策略模式</li>
+<li>D 代理模式</li>
+</ul>
+<details><summary>显示答案/隐藏答案</summary>正确答案: B</details>
+
+
+<h1 id="考点2"><a href="#考点2" class="headerlink" title="考点2:"></a>考点2:</h1><p>如果需要一个语言解释执行，并且可以将语言中的句子表示为一个抽象语法树的时候，对效率要求不高的情况下，应该选择何种设计模式？</p>
+<ul>
+<li>A 解释器模式</li>
+<li>B 动态代理模式</li>
+<li>C 装饰模式</li>
+<li>D 访问者模式</li>
+</ul>
+<details><summary>显示答案/隐藏答案</summary>正确答案: A</details>
+
+
+<h1 id="考点3"><a href="#考点3" class="headerlink" title="考点3:"></a>考点3:</h1><p>如果强调一系列相关产品的接口，以便联合使用它们的时候，应该选择何种设计模式：</p>
+<ul>
+<li>A 模板方法模式</li>
+<li>B 备忘录模式</li>
+<li>C 抽象工厂模式</li>
+<li>D 组合模式</li>
+</ul>
+<details><summary>显示答案/隐藏答案</summary>正确答案: C</details>
+
+
+<h1 id="考点4"><a href="#考点4" class="headerlink" title="考点4:"></a>考点4:</h1><p>如果让你来实现前端的MVVM框架，View层需要支持不同终端的不同交互，下面哪些设计模式不太适合用来实现这个需求（）</p>
+<ul>
+<li>A 单例模式</li>
+<li>B 观察者模式</li>
+<li>C 适配器模式</li>
+<li>D 代理模式</li>
+</ul>
+<details><summary>显示答案/隐藏答案</summary>正确答案: A</details>
+
+
+<h1 id="考点5"><a href="#考点5" class="headerlink" title="考点5:"></a>考点5:</h1><p>下图的UML类结构图表示的是哪种设计模式？</p>
+<p><img data-src="https://gitee.com/XiaoLan223/images/raw/master/Blog/Sum/20211004223947.png" alt="img"></p>
+<ul>
+<li>A 解释器模式</li>
+<li>B 装饰模式</li>
+<li>C 桥接模式</li>
+<li>D 责任链模式</li>
+</ul>
+<details><summary>显示答案/隐藏答案</summary>正确答案: D</details>
+
+<h1 id="考点6"><a href="#考点6" class="headerlink" title="考点6:"></a>考点6:</h1><p>下面的选项中哪些属于工厂模式()</p>
+<ul>
+<li>A 静态工厂模式</li>
+<li>B 工厂方法模式</li>
+<li>C 抽象工厂模式</li>
+<li>D 简单工厂模式</li>
+</ul>
+<details><summary>显示答案/隐藏答案</summary>正确答案: BCD</details>
+
+
+<h1 id="考点7"><a href="#考点7" class="headerlink" title="考点7:"></a>考点7:</h1><p>下列描述中，哪些是外观模式的特点（      ）</p>
+<ul>
+<li>A 对客户端屏蔽了子系统组件</li>
+<li>B 实现了子系统与客户端之间的紧耦合关系</li>
+<li>C 单个子系统的修改不影响其他子系统</li>
+<li>D 子系统类变化时，只需要修改外观类即可</li>
+</ul>
+<details><summary>显示答案/隐藏答案</summary>正确答案: ACD</details>
+
+<h1 id="考点8"><a href="#考点8" class="headerlink" title="考点8:"></a>考点8:</h1><p>以下设计模式的应用场景中，属于代理模式的选项有（）</p>
+<ul>
+<li>A 树形结构的遍历</li>
+<li>B 产品簇创建场景</li>
+<li>C 防火墙</li>
+<li>D CopyOnWriteList</li>
+</ul>
+<details><summary>显示答案/隐藏答案</summary>正确答案: CD</details>
+
+
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>蓝蓝
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://lanlan2017.github.io/exam/d98c5bee/" title="2021年10月04日 设计模式">https://lanlan2017.github.io/exam/d98c5bee/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/exam/6decad7e/" rel="prev" title="2021年09月23日 java1">
+                  <i class="fa fa-chevron-left"></i> 2021年09月23日 java1
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/exam/2b2bcc2e/" rel="next" title="华为OD">
+                  华为OD <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="waline-comments"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2018 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">蓝蓝</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">507k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">7:41</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/exam/js/comments.js"></script><script src="/exam/js/utils.js"></script><script src="/exam/js/motion.js"></script><script src="/exam/js/next-boot.js"></script><script src="/exam/js/bookmark.js"></script><script src="/exam/js/pjax.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/exam/js/third-party/search/local-search.js"></script>
+
+
+
+  <script src="/exam/js/third-party/fancybox.js"></script>
+
+  <script src="/exam/js/third-party/pace.js"></script>
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="/exam/js/third-party/math/mathjax.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://lanlan2017.github.io/exam/d98c5bee/"}</script>
+  <script src="/exam/js/third-party/quicklink.js"></script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":null,"enable":true,"serverURL":"https://waline-test-mzjszagu6-lanlan2017.vercel.app","placeholder":"Just go go","avatar":"mm","pageSize":10,"visitor":false,"comment_count":true,"requiredFields":[],"meta":["nick","mail","link"],"libUrl":"https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js","el":"#waline-comments","path":"/exam/d98c5bee/"}</script>
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.waline.el).then(() => 
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => {
+    new Waline(CONFIG.waline);
+  });
+});
+</script>
+</body>
+</html>

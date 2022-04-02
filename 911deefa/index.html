@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
+<meta name="generator" content="Hexo 5.4.0">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/exam/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/exam/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/exam/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/exam/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="_Sly-yzHYmALHXzjFpPWsodMrjBSphw7bfRbMUH80Qc">
+  <meta name="msvalidate.01" content="B1CFD346B8DEBBFE0C983C2AF8955531">
+  <meta name="baidu-site-verification" content="vkMTwK56xr">
+
+<link rel="stylesheet" href="/exam/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"lanlan2017.github.io","root":"/exam/","images":"/exam/images","scheme":"Gemini","darkmode":true,"version":"8.8.2","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/exam/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/exam/js/config.js"></script>
+<meta name="description" content="考点1下面哪段程序能够正确的实现了GBK编码字节流到UTF-8编码字节流的转换:byte[] src,dst;  A dst&#x3D;String.fromBytes(src,&quot;GBK&quot;).getBytes(&quot;UTF-8&quot;) B dst&#x3D;new String(src,&quot;GBK&quot;).getBytes(&quot;UTF-8&quot;) C dst">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2019年11月24日 java1">
+<meta property="og:url" content="https://lanlan2017.github.io/exam/911deefa/index.html">
+<meta property="og:site_name" content="蓝蓝的站点">
+<meta property="og:description" content="考点1下面哪段程序能够正确的实现了GBK编码字节流到UTF-8编码字节流的转换:byte[] src,dst;  A dst&#x3D;String.fromBytes(src,&quot;GBK&quot;).getBytes(&quot;UTF-8&quot;) B dst&#x3D;new String(src,&quot;GBK&quot;).getBytes(&quot;UTF-8&quot;) C dst">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-11-24T12:22:58.000Z">
+<meta property="article:modified_time" content="2021-03-21T08:40:51.000Z">
+<meta property="article:author" content="蓝蓝">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://lanlan2017.github.io/exam/911deefa/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://lanlan2017.github.io/exam/911deefa/","path":"/911deefa/","title":"2019年11月24日 java1"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>2019年11月24日 java1 | 蓝蓝的站点</title>
+  
+
+  <script src="/exam/js/third-party/analytics/baidu-analytics.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?dadeb188eb14ccde0b25a19230c429b5"></script>
+
+
+<link rel="dns-prefetch" href="https://waline-test-mzjszagu6-lanlan2017.vercel.app">
+  <noscript>
+    <link rel="stylesheet" href="/exam/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/exam/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">蓝蓝的站点</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">笔试题汇总</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/exam/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-dir"><a href="/exam/dir/" rel="section"><i class="fa fa-sitemap fa-fw"></i>目录</a></li>
+        <li class="menu-item menu-item-categories"><a href="/exam/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/exam/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-tags"><a href="/exam/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B91"><span class="nav-number">1.</span> <span class="nav-text">考点1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90"><span class="nav-number">1.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B92"><span class="nav-number">2.</span> <span class="nav-text">考点2</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-1"><span class="nav-number">2.1.</span> <span class="nav-text">解析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ConcurrentHashMap%E4%BD%BF%E7%94%A8ReentrantLock%E6%9D%A5%E4%BF%9D%E8%AF%81%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8"><span class="nav-number">2.1.1.</span> <span class="nav-text">ConcurrentHashMap使用ReentrantLock来保证线程安全</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Arrays-asList-%E8%BF%94%E5%9B%9EArrays%E7%B1%BB%E7%9A%84%E9%9D%99%E6%80%81%E5%86%85%E9%83%A8%E7%B1%BB"><span class="nav-number">2.1.2.</span> <span class="nav-text">Arrays.asList()返回Arrays类的静态内部类</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B93"><span class="nav-number">3.</span> <span class="nav-text">考点3</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-2"><span class="nav-number">3.1.</span> <span class="nav-text">解析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux%E8%A7%A3%E5%8E%8B%E7%BC%A9%E5%92%8C%E5%8E%8B%E7%BC%A9%E5%91%BD%E4%BB%A4"><span class="nav-number">3.1.1.</span> <span class="nav-text">Linux解压缩和压缩命令</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#tar-cf-all-tar-jpg"><span class="nav-number">4.</span> <span class="nav-text">tar -cf all.tar *.jpg</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#tar-rf-all-tar-gif"><span class="nav-number">5.</span> <span class="nav-text">tar -rf all.tar *.gif</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#tar-uf-all-tar-logo-gif"><span class="nav-number">6.</span> <span class="nav-text">tar -uf all.tar logo.gif</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#tar-tf-all-tar"><span class="nav-number">7.</span> <span class="nav-text">tar -tf all.tar</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#tar-xf-all-tar"><span class="nav-number">8.</span> <span class="nav-text">tar -xf all.tar</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B94"><span class="nav-number">9.</span> <span class="nav-text">考点4</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-3"><span class="nav-number">9.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B95"><span class="nav-number">10.</span> <span class="nav-text">考点5</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-4"><span class="nav-number">10.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B96"><span class="nav-number">11.</span> <span class="nav-text">考点6</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-5"><span class="nav-number">11.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B97"><span class="nav-number">12.</span> <span class="nav-text">考点7</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-6"><span class="nav-number">12.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B98"><span class="nav-number">13.</span> <span class="nav-text">考点8</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-7"><span class="nav-number">13.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B99"><span class="nav-number">14.</span> <span class="nav-text">考点9</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-8"><span class="nav-number">14.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B910"><span class="nav-number">15.</span> <span class="nav-text">考点10</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-9"><span class="nav-number">15.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B911"><span class="nav-number">16.</span> <span class="nav-text">考点11</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-10"><span class="nav-number">16.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B912"><span class="nav-number">17.</span> <span class="nav-text">考点12</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-11"><span class="nav-number">17.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B913"><span class="nav-number">18.</span> <span class="nav-text">考点13</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-12"><span class="nav-number">18.1.</span> <span class="nav-text">解析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#case%E9%81%87%E5%88%B0break%E6%89%8D%E8%B7%B3%E5%87%BA"><span class="nav-number">18.1.1.</span> <span class="nav-text">case遇到break才跳出</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B914"><span class="nav-number">19.</span> <span class="nav-text">考点14</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-13"><span class="nav-number">19.1.</span> <span class="nav-text">解析</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="蓝蓝"
+      src="/exam/images/avatar.png">
+  <p class="site-author-name" itemprop="name">蓝蓝</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/exam/archives/">
+          <span class="site-state-item-count">148</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/exam/categories/">
+        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://lanlan2017.github.io/todo/" title="todo → https:&#x2F;&#x2F;lanlan2017.github.io&#x2F;todo&#x2F;"><i class="fa fa-check-square fa-fw"></i>todo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://lanlan2017.github.io/links/" title="links → https:&#x2F;&#x2F;lanlan2017.github.io&#x2F;links&#x2F;"><i class="fa fa-link fa-fw"></i>links</a>
+      </span>
+  </div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lanlan2017.github.io/exam/911deefa/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/exam/images/avatar.png">
+      <meta itemprop="name" content="蓝蓝">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="蓝蓝的站点">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          2019年11月24日 java1
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-11-24 20:22:58" itemprop="dateCreated datePublished" datetime="2019-11-24T20:22:58+08:00">2019-11-24</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-21 16:40:51" itemprop="dateModified" datetime="2021-03-21T16:40:51+08:00">2021-03-21</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/exam/categories/%E7%89%9B%E5%AE%A2%E7%BD%91/" itemprop="url" rel="index"><span itemprop="name">牛客网</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/exam/categories/%E7%89%9B%E5%AE%A2%E7%BD%91/%E4%B8%93%E9%A1%B9%E7%BB%83%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">专项练习</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/exam/categories/%E7%89%9B%E5%AE%A2%E7%BD%91/%E4%B8%93%E9%A1%B9%E7%BB%83%E4%B9%A0/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/exam/categories/%E7%89%9B%E5%AE%A2%E7%BD%91/%E4%B8%93%E9%A1%B9%E7%BB%83%E4%B9%A0/Java/2019%E5%B9%B411%E6%9C%88/" itemprop="url" rel="index"><span itemprop="name">2019年11月</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/exam/911deefa/#waline-comments" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" id="/exam/911deefa/" data-xid="/exam/911deefa/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>5.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>5 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="考点1"><a href="#考点1" class="headerlink" title="考点1"></a>考点1</h1><p>下面哪段程序能够正确的实现了GBK编码字节流到UTF-8编码字节流的转换:<br>byte[] src,dst;</p>
+<ul>
+<li>A <code>dst=String.fromBytes(src,&quot;GBK&quot;).getBytes(&quot;UTF-8&quot;)</code></li>
+<li>B <code>dst=new String(src,&quot;GBK&quot;).getBytes(&quot;UTF-8&quot;)</code></li>
+<li>C <code>dst=new String(&quot;GBK&quot;,src).getBytes()</code></li>
+<li>D <code>dst=String.encode(String.decode(src,&quot;GBK&quot;)),&quot;UTF-8&quot; )</code></li>
+</ul>
+<h2 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: B</details>
+
+<p>先解码再编码</p>
+<ul>
+<li>用<code>new String(src,&quot;GBK&quot;)</code>解码得到字符串</li>
+<li>用<code>getBytes(&quot;UTF-8&quot;)</code>得到字符串对应的<code>UTF8</code>编码字节数组</li>
+</ul>
+<p>String类没有fromBytes()和encode以及decode方法</p>
+<h1 id="考点2"><a href="#考点2" class="headerlink" title="考点2"></a>考点2</h1><p>在java7中,下列哪个说法是正确的:</p>
+<ul>
+<li>A <code>ConcurrentHashMap</code>使用<code>synchronized</code>关键字保证线程安全</li>
+<li>B <code>HashMap</code>实现了<code>Collection</code>接口</li>
+<li>C <code>Arrays.asList</code>方法返回<code>java.util.ArrayList</code>对象</li>
+<li>D <code>SimpleDateFormat</code>对象是线程不安全的</li>
+</ul>
+<h2 id="解析-1"><a href="#解析-1" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: D</details>
+
+<h3 id="ConcurrentHashMap使用ReentrantLock来保证线程安全"><a href="#ConcurrentHashMap使用ReentrantLock来保证线程安全" class="headerlink" title="ConcurrentHashMap使用ReentrantLock来保证线程安全"></a><code>ConcurrentHashMap</code>使用<code>ReentrantLock</code>来保证线程安全</h3><p><code>ConcurrentHashMap</code>使用<code>segment</code>来分段和管理锁,<code>segment</code>继承自<code>ReentrantLock</code>,因此<code>ConcurrentHashMap</code>使用<code>ReentrantLock</code>来保证线程安全。</p>
+<h3 id="Arrays-asList-返回Arrays类的静态内部类"><a href="#Arrays-asList-返回Arrays类的静态内部类" class="headerlink" title="Arrays.asList()返回Arrays类的静态内部类"></a><code>Arrays.asList()</code>返回<code>Arrays</code>类的静态内部类</h3><p><code>Arrays.asList()</code>将一个数组转化为一个<code>List</code>对象,这个方方法返回一个<code>ArrayList</code>类型的对象, 这个<code>ArrayList</code>类是<code>Arrays</code>类的静态内部类<br>而不是<code>java.util.ArrayList</code>类,</p>
+<p>不能对这个列表进行添加删除更新操作,否则会报<code>UnsupportedOperationException</code>异常。</p>
+<h1 id="考点3"><a href="#考点3" class="headerlink" title="考点3"></a>考点3</h1><p>以下哪个命令用于查看tar(backup.tar)文件的内容而不提取它?()</p>
+<ul>
+<li>A <code>tar -xvf backup.tar</code></li>
+<li>B <code>tar -tvf backup.tar</code></li>
+<li>C <code>tar -svf backup.tar</code></li>
+<li>D <code>none of these</code></li>
+</ul>
+<h2 id="解析-2"><a href="#解析-2" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: B</details>
+
+<h3 id="Linux解压缩和压缩命令"><a href="#Linux解压缩和压缩命令" class="headerlink" title="Linux解压缩和压缩命令"></a>Linux解压缩和压缩命令</h3><p>有空了解一下<br>把常用的tar解压命令总结下，当作备忘：<br>tar<br>-c: 建立压缩档案<br>-x：解压<br>-t：查看内容<br>-r：向压缩归档文件末尾追加文件<br>-u：更新原压缩包中的文件<br>这五个是独立的命令，压缩解压都要用到其中一个，可以和别的命令连用但只能用其中一个。下面的参数是根据需要在压缩或解压档案时可选的。<br>-z：有gzip属性的<br>-j：有bz2属性的<br>-Z：有compress属性的<br>-v：显示所有过程<br>-O：将文件解开到标准输出<br>下面的参数-f是必须的<br>-f: 使用档案名字，切记，这个参数是最后一个参数，后面只能接档案名。</p>
+<h1 id="tar-cf-all-tar-jpg"><a href="#tar-cf-all-tar-jpg" class="headerlink" title="tar -cf all.tar *.jpg"></a>tar -cf all.tar *.jpg</h1><p>这条命令是将所有.jpg的文件打成一个名为all.tar的包。-c是表示产生新的包，-f指定包的文件名。</p>
+<h1 id="tar-rf-all-tar-gif"><a href="#tar-rf-all-tar-gif" class="headerlink" title="tar -rf all.tar *.gif"></a>tar -rf all.tar *.gif</h1><p>这条命令是将所有.gif的文件增加到all.tar的包里面去。-r是表示增加文件的意思。</p>
+<h1 id="tar-uf-all-tar-logo-gif"><a href="#tar-uf-all-tar-logo-gif" class="headerlink" title="tar -uf all.tar logo.gif"></a>tar -uf all.tar logo.gif</h1><p>这条命令是更新原来tar包all.tar中logo.gif文件，-u是表示更新文件的意思。</p>
+<h1 id="tar-tf-all-tar"><a href="#tar-tf-all-tar" class="headerlink" title="tar -tf all.tar"></a>tar -tf all.tar</h1><p>这条命令是列出all.tar包中所有文件，-t是列出文件的意思</p>
+<h1 id="tar-xf-all-tar"><a href="#tar-xf-all-tar" class="headerlink" title="tar -xf all.tar"></a>tar -xf all.tar</h1><p>这条命令是解出all.tar包中所有文件，-x是解开的意思<br>压缩<br>tar –cvf jpg.tar *.jpg  将目录里所有jpg文件打包成tar.jpg<br>tar –czf jpg.tar.gz *.jpg   将目录里所有jpg文件打包成jpg.tar后，并且将其用gzip压缩，生成一个gzip压缩过的包，命名为jpg.tar.gz<br>tar –cjf jpg.tar.bz2 *.jpg 将目录里所有jpg文件打包成jpg.tar后，并且将其用bzip2压缩，生成一个bzip2压缩过的包，命名为jpg.tar.bz2<br>tar –cZf jpg.tar.Z *.jpg   将目录里所有jpg文件打包成jpg.tar后，并且将其用compress压缩，生成一个umcompress压缩过的包，命名为jpg.tar.Z<br>rar a jpg.rar *.jpg rar格式的压缩，需要先下载rar for linux<br>zip jpg.zip *.jpg   zip格式的压缩，需要先下载zip for linux<br>解压<br>tar –xvf file.tar  解压 tar包<br>tar -xzvf file.tar.gz 解压tar.gz<br>tar -xjvf file.tar.bz2   解压 tar.bz2<br>tar –xZvf file.tar.Z   解压tar.Z<br>unrar e file.rar 解压rar<br>unzip file.zip 解压zip<br>总结<br>*.tar 用 tar –xvf 解压<br>*.gz 用 gzip -d或者gunzip 解压<br><em>.tar.gz和</em>.tgz 用 tar –xzf 解压<br>*.bz2 用 bzip2 -d或者用bunzip2 解压<br>*.tar.bz2用tar –xjf 解压<br>*.Z 用 uncompress 解压<br>*.tar.Z 用tar –xZf 解压<br>*.rar 用 unrar e解压<br>*.zip 用 unzip 解压<br>linux下最常用的打包程序就是tar了，使用tar程序打出来的包我们常称为tar包，tar包文件的命令通常都是以.tar结尾的。生成tar包后，就可以用其它的程序来进行压缩。<br>1．命令格式：<br>tar[必要参数][选择参数][文件]<br>2．命令功能：<br>用来压缩和解压文件。tar本身不具有压缩功能。他是调用压缩功能实现的<br>3．命令参数：<br>必要参数有如下：<br>-A 新增压缩文件到已存在的压缩<br>-B 设置区块大小<br>-c 建立新的压缩文件<br>-d 记录文件的差别<br>-r 添加文件到已经压缩的文件<br>-u 添加改变了和现有的文件到已经存在的压缩文件<br>-x 从压缩的文件中提取文件<br>-t 显示压缩文件的内容<br>-z 支持gzip解压文件<br>-j 支持bzip2解压文件<br>-Z 支持compress解压文件<br>-v 显示操作过程<br>-l 文件系统边界设置<br>-k 保留原有文件不覆盖<br>-m 保留文件不被覆盖<br>-W 确认压缩文件的正确性<br>可选参数如下：<br>-b 设置区块数目<br>-C 切换到指定目录<br>-f 指定压缩文件<br>–help 显示帮助信息<br>–version 显示版本信息<br>4．常见解压/压缩命令<br>tar<br>解包：tar xvf FileName.tar<br>打包：tar cvf FileName.tar DirName<br>（注：tar是打包，不是压缩！）<br>.gz<br>解压1：gunzip FileName.gz<br>解压2：gzip -d FileName.gz<br>压缩：gzip FileName<br>.tar.gz 和 .tgz<br>解压：tar zxvf FileName.tar.gz<br>压缩：tar zcvf FileName.tar.gz DirName<br>.bz2<br>解压1：bzip2 -d FileName.bz2<br>解压2：bunzip2 FileName.bz2<br>压缩： bzip2 -z FileName<br>.tar.bz2<br>解压：tar jxvf FileName.tar.bz2<br>压缩：tar jcvf FileName.tar.bz2 DirName<br>.bz<br>解压1：bzip2 -d FileName.bz<br>解压2：bunzip2 FileName.bz<br>压缩：未知<br>.tar.bz<br>解压：tar jxvf FileName.tar.bz<br>压缩：未知<br>.Z<br>解压：uncompress FileName.Z<br>压缩：compress FileName<br>.tar.Z<br>解压：tar Zxvf FileName.tar.Z<br>压缩：tar Zcvf FileName.tar.Z DirName<br>.zip<br>解压：unzip FileName.zip<br>压缩：zip FileName.zip DirName<br>.rar<br>解压：rar x FileName.rar<br>压缩：rar a FileName.rar DirName<br>5．使用实例<br>实例1：将文件全部打包成tar包<br>命令：<br>tar -cvf log.tar log2012.log<br>tar -zcvf log.tar.gz log2012.log<br>tar -jcvf log.tar.bz2 log2012.log</p>
+<h1 id="考点4"><a href="#考点4" class="headerlink" title="考点4"></a>考点4</h1><p>jdk1.8版本之前的前提下,接口和抽象类描述正确的有( )</p>
+<ul>
+<li>A 抽象类没有构造函数</li>
+<li>B 接口没有构造函数</li>
+<li>C 抽象类不允许多继承</li>
+<li>D 接口中的方法可以有方法体</li>
+</ul>
+<h2 id="解析-3"><a href="#解析-3" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: BC</details>
+
+<p>抽象类可以有构造函数。只是不能被实例化！<br>JDK8以后的默认方法和静态方法可以有方法体，题目的方法应该是指普通方法</p>
+<h1 id="考点5"><a href="#考点5" class="headerlink" title="考点5"></a>考点5</h1><p>以下选项中,合法的赋值语句是()</p>
+<ul>
+<li>A <code>a&gt;1;</code></li>
+<li>B <code>i++;</code></li>
+<li>C <code>a= a+1=5;</code></li>
+<li>D <code>y = int ( i );</code></li>
+</ul>
+<h2 id="解析-4"><a href="#解析-4" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: B</details>
+`i++`算是自我赋值
+D选择不一定对y为short、byte、char时，
+y = （int）i; //发生向下转型，不可赋值
+
+<h1 id="考点6"><a href="#考点6" class="headerlink" title="考点6"></a>考点6</h1><p>执行完以下代码 int [ ]  x = new int[10] ;后,以下哪项说明是正确的( )</p>
+<ul>
+<li>A <code>x[9]</code>为0</li>
+<li>B <code>x[9]</code>未定义</li>
+<li>C <code>x[10]</code>为0</li>
+<li>D <code>x[0]</code>为空</li>
+</ul>
+<h2 id="解析-5"><a href="#解析-5" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: A</details>
+
+<ul>
+<li>基本类型数组: <code>byte[],short[],int[]</code> ,默认值为0；</li>
+<li><code>boolean[]</code>默认值为<code>false</code>；</li>
+<li><code>float[],double[]</code>,默认值为0.0；</li>
+<li>对象类型数组: 默认值为<code>null</code></li>
+</ul>
+<h1 id="考点7"><a href="#考点7" class="headerlink" title="考点7"></a>考点7</h1><p>Java的体系结构包含(    )。</p>
+<ul>
+<li>A <code>Java</code>编程语言</li>
+<li>B <code>Java</code>类文件格式</li>
+<li>C <code>Java API</code></li>
+<li>D <code>JVM</code></li>
+</ul>
+<h2 id="解析-6"><a href="#解析-6" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: ABCD</details>
+
+
+<h1 id="考点8"><a href="#考点8" class="headerlink" title="考点8"></a>考点8</h1><p>以下代码的循环次数是</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">7</span>;</span><br><span class="line">        <span class="keyword">do</span> &#123;</span><br><span class="line">            System.out.println(--i);</span><br><span class="line">            --i;</span><br><span class="line">        &#125;</span><br><span class="line">         <span class="keyword">while</span> (i != <span class="number">0</span>);</span><br><span class="line">        System.out.println(i);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>A 0</li>
+<li>B 1</li>
+<li>C 7</li>
+<li>D 无限次</li>
+</ul>
+<h2 id="解析-7"><a href="#解析-7" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: D</details>
+
+<p>每次循环都减2,7÷2不可能等于0。所以死循环。</p>
+<h1 id="考点9"><a href="#考点9" class="headerlink" title="考点9"></a>考点9</h1><p>一个Java源程序文件中定义几个类和接口,则编译该文件后生成几个以.class为后缀的字节码文件。</p>
+<ul>
+<li>A 正确</li>
+<li>B 错误</li>
+</ul>
+<h2 id="解析-8"><a href="#解析-8" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: A</details>
+
+<p>如果类中有内部类，会产生<code>类名$内部类名.class</code>，<br>如果有匿名类则会产生<code>类名$1.class</code></p>
+<p>有空测试一下</p>
+<h1 id="考点10"><a href="#考点10" class="headerlink" title="考点10"></a>考点10</h1><p>java8中,下面哪个类用到了解决哈希冲突的开放定址法 </p>
+<ul>
+<li>A <code>LinkedHashSet</code></li>
+<li>B <code>HashMap</code></li>
+<li>C <code>ThreadLocal</code></li>
+<li>D <code>TreeMap</code></li>
+</ul>
+<h2 id="解析-9"><a href="#解析-9" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: C</details>
+
+<ul>
+<li>ThreadLocalMap使用开放定址法解决hash冲突，</li>
+<li>HashMap使用链地址法解决hash冲突。</li>
+</ul>
+<h1 id="考点11"><a href="#考点11" class="headerlink" title="考点11"></a>考点11</h1><p>Java程序的种类有( )</p>
+<ul>
+<li>A 类(<code>Class)</code></li>
+<li>B <code>Applet</code></li>
+<li>C <code>Application</code></li>
+<li>D <code>Servlet</code></li>
+</ul>
+<h2 id="解析-10"><a href="#解析-10" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: BCD</details>
+
+<p>java程序的种类有:<br>内嵌于web文件中,由浏览器来观看的Applet<br>可独立运行的Application<br>服务器端的Servlet</p>
+<h1 id="考点12"><a href="#考点12" class="headerlink" title="考点12"></a>考点12</h1><p>有这样一段程序:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span></span>&#123; </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String [] args)</span></span>&#123; </span><br><span class="line">        List list=<span class="keyword">new</span> ArrayList(); </span><br><span class="line">        list.add(<span class="string">&quot;a&quot;</span>);</span><br><span class="line">        list.add(<span class="string">&quot;b&quot;</span>);</span><br><span class="line">        list.add(<span class="string">&quot;a&quot;</span>);</span><br><span class="line">        Set set=<span class="keyword">new</span> HashSet(); </span><br><span class="line">        set.add(<span class="string">&quot;a&quot;</span>); </span><br><span class="line">        set.add(<span class="string">&quot;b&quot;</span>); </span><br><span class="line">        set.add(<span class="string">&quot;a&quot;</span>); </span><br><span class="line">        System.out.println(list.size()+<span class="string">&quot;,&quot;</span>+set.size()); </span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>请问运行主要的程序会打印出的是什么()</p>
+<ul>
+<li>A 2,2</li>
+<li>B 2,3</li>
+<li>C 3,2</li>
+<li>D 3,3</li>
+</ul>
+<h2 id="解析-11"><a href="#解析-11" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: C</details>
+
+<p>list有序可重复，set无序不可重复</p>
+<h1 id="考点13"><a href="#考点13" class="headerlink" title="考点13"></a>考点13</h1><p>以下程序输出()<br>public static void main(String[] args) {<br>   int num = 2;<br>   switch (num) {<br>   case 1:<br>        ++num;<br>   case 2:<br>        ++num;<br>   case 3:<br>        ++num;<br>   default:<br>        ++num;<br>   break;<br>   }<br>   System.out.println(num);<br> }<br>}</p>
+<ul>
+<li>A 2</li>
+<li>B 3</li>
+<li>C 4</li>
+<li>D 5</li>
+</ul>
+<h2 id="解析-12"><a href="#解析-12" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: D</details>
+
+<h3 id="case遇到break才跳出"><a href="#case遇到break才跳出" class="headerlink" title="case遇到break才跳出"></a>case遇到break才跳出</h3><ul>
+<li>匹配到case 2 num等于3 </li>
+<li>但是其后没有break,所以继续执行case 3 num等于4、</li>
+<li>还是没有break，继续匹配到default语句  num等于5</li>
+</ul>
+<p>所以答案为 5</p>
+<h1 id="考点14"><a href="#考点14" class="headerlink" title="考点14"></a>考点14</h1><p>以下代码在编译和运行过程中会出现什么情况</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestDemo</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> count;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        TestDemo test=<span class="keyword">new</span> TestDemo(<span class="number">88</span>);</span><br><span class="line">        System.out.println(test.count);</span><br><span class="line">    &#125;</span><br><span class="line">    TestDemo(<span class="keyword">int</span> a) &#123;</span><br><span class="line">        count=a;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>A 编译运行通过,输出结果是88</li>
+<li>B 编译时错误,<code>count</code>变量定义的是私有变量</li>
+<li>C 编译时错误,<code>System.out.println</code>方法被调用时<code>test</code>没有被初始化</li>
+<li>D 编译和执行时没有输出结果</li>
+</ul>
+<h2 id="解析-13"><a href="#解析-13" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: A</details>
+
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>蓝蓝
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://lanlan2017.github.io/exam/911deefa/" title="2019年11月24日 java1">https://lanlan2017.github.io/exam/911deefa/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/exam/eac8a439/" rel="prev" title="2019年11月23日 java2">
+                  <i class="fa fa-chevron-left"></i> 2019年11月23日 java2
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/exam/8b210e74/" rel="next" title="2019年11月28日 java1">
+                  2019年11月28日 java1 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="waline-comments"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2018 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">蓝蓝</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">507k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">7:41</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/exam/js/comments.js"></script><script src="/exam/js/utils.js"></script><script src="/exam/js/motion.js"></script><script src="/exam/js/next-boot.js"></script><script src="/exam/js/bookmark.js"></script><script src="/exam/js/pjax.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/exam/js/third-party/search/local-search.js"></script>
+
+
+
+  <script src="/exam/js/third-party/fancybox.js"></script>
+
+  <script src="/exam/js/third-party/pace.js"></script>
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="/exam/js/third-party/math/mathjax.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://lanlan2017.github.io/exam/911deefa/"}</script>
+  <script src="/exam/js/third-party/quicklink.js"></script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":null,"enable":true,"serverURL":"https://waline-test-mzjszagu6-lanlan2017.vercel.app","placeholder":"Just go go","avatar":"mm","pageSize":10,"visitor":false,"comment_count":true,"requiredFields":[],"meta":["nick","mail","link"],"libUrl":"https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js","el":"#waline-comments","path":"/exam/911deefa/"}</script>
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.waline.el).then(() => 
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => {
+    new Waline(CONFIG.waline);
+  });
+});
+</script>
+</body>
+</html>

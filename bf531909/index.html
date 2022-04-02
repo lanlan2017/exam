@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
+<meta name="generator" content="Hexo 5.4.0">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/exam/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/exam/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/exam/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/exam/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="_Sly-yzHYmALHXzjFpPWsodMrjBSphw7bfRbMUH80Qc">
+  <meta name="msvalidate.01" content="B1CFD346B8DEBBFE0C983C2AF8955531">
+  <meta name="baidu-site-verification" content="vkMTwK56xr">
+
+<link rel="stylesheet" href="/exam/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"lanlan2017.github.io","root":"/exam/","images":"/exam/images","scheme":"Gemini","darkmode":true,"version":"8.8.2","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/exam/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/exam/js/config.js"></script>
+<meta name="description" content="考点1:Linux修改权限命令_chmod命令Linux下,为某个脚本赋予可执行权限()  A chmod +x filename.sh B chown +x filename.sh C chmod +r filename.sh D chown +r filename.sh  解析显示答案&#x2F;隐藏答案正确答案: A  chmod命令修改权限 +x表示增加执行权限，+r表示增加读取权限，+w表示增加写">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2021年03月31日Linux专项练习1">
+<meta property="og:url" content="https://lanlan2017.github.io/exam/bf531909/index.html">
+<meta property="og:site_name" content="蓝蓝的站点">
+<meta property="og:description" content="考点1:Linux修改权限命令_chmod命令Linux下,为某个脚本赋予可执行权限()  A chmod +x filename.sh B chown +x filename.sh C chmod +r filename.sh D chown +r filename.sh  解析显示答案&#x2F;隐藏答案正确答案: A  chmod命令修改权限 +x表示增加执行权限，+r表示增加读取权限，+w表示增加写">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-04-03T08:09:07.000Z">
+<meta property="article:modified_time" content="2021-04-03T08:10:56.000Z">
+<meta property="article:author" content="蓝蓝">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://lanlan2017.github.io/exam/bf531909/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://lanlan2017.github.io/exam/bf531909/","path":"/bf531909/","title":"2021年03月31日Linux专项练习1"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>2021年03月31日Linux专项练习1 | 蓝蓝的站点</title>
+  
+
+  <script src="/exam/js/third-party/analytics/baidu-analytics.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?dadeb188eb14ccde0b25a19230c429b5"></script>
+
+
+<link rel="dns-prefetch" href="https://waline-test-mzjszagu6-lanlan2017.vercel.app">
+  <noscript>
+    <link rel="stylesheet" href="/exam/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/exam/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">蓝蓝的站点</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">笔试题汇总</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/exam/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-dir"><a href="/exam/dir/" rel="section"><i class="fa fa-sitemap fa-fw"></i>目录</a></li>
+        <li class="menu-item menu-item-categories"><a href="/exam/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/exam/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-tags"><a href="/exam/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B91-Linux%E4%BF%AE%E6%94%B9%E6%9D%83%E9%99%90%E5%91%BD%E4%BB%A4-chmod%E5%91%BD%E4%BB%A4"><span class="nav-number">1.</span> <span class="nav-text">考点1:Linux修改权限命令_chmod命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90"><span class="nav-number">1.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B92-UNIX%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84"><span class="nav-number">2.</span> <span class="nav-text">考点2:UNIX目录结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-1"><span class="nav-number">2.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B93"><span class="nav-number">3.</span> <span class="nav-text">考点3:</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-2"><span class="nav-number">3.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B94-%E8%AE%B0%E5%BD%95%E5%B7%B2%E7%BB%8F%E5%8A%A0%E8%BD%BD%E7%9A%84%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%96%87%E4%BB%B6"><span class="nav-number">4.</span> <span class="nav-text">考点4:记录已经加载的文件系统的文件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-3"><span class="nav-number">4.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B95-Linux%E5%88%97%E4%B8%BE%E5%BD%93%E5%89%8D%E7%9B%AE%E5%BD%95"><span class="nav-number">5.</span> <span class="nav-text">考点5:Linux列举当前目录</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-4"><span class="nav-number">5.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B96-Linux%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E5%91%BD%E4%BB%A4"><span class="nav-number">6.</span> <span class="nav-text">考点6:Linux查看文件命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-5"><span class="nav-number">6.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B97-Linux%E6%9F%A5%E7%9C%8BCPU-Swap%E5%88%86%E5%8C%BA-%E7%A1%AC%E7%9B%98%E4%BF%A1%E6%81%AF%E5%91%BD%E4%BB%A4"><span class="nav-number">7.</span> <span class="nav-text">考点7:Linux查看CPU Swap分区 硬盘信息命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-6"><span class="nav-number">7.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B98-%E6%97%A5%E5%BF%97%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E6%9C%89%E5%93%AA%E4%BA%9B"><span class="nav-number">8.</span> <span class="nav-text">考点8:日志文件系统有哪些</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-7"><span class="nav-number">8.1.</span> <span class="nav-text">解析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E6%97%A5%E5%BF%97%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F"><span class="nav-number">8.1.1.</span> <span class="nav-text">常见的日志文件系统</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B99-%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8"><span class="nav-number">9.</span> <span class="nav-text">考点9:系统调用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-8"><span class="nav-number">9.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B910"><span class="nav-number">10.</span> <span class="nav-text">考点10:</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-9"><span class="nav-number">10.1.</span> <span class="nav-text">解析</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="蓝蓝"
+      src="/exam/images/avatar.png">
+  <p class="site-author-name" itemprop="name">蓝蓝</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/exam/archives/">
+          <span class="site-state-item-count">148</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/exam/categories/">
+        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://lanlan2017.github.io/todo/" title="todo → https:&#x2F;&#x2F;lanlan2017.github.io&#x2F;todo&#x2F;"><i class="fa fa-check-square fa-fw"></i>todo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://lanlan2017.github.io/links/" title="links → https:&#x2F;&#x2F;lanlan2017.github.io&#x2F;links&#x2F;"><i class="fa fa-link fa-fw"></i>links</a>
+      </span>
+  </div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lanlan2017.github.io/exam/bf531909/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/exam/images/avatar.png">
+      <meta itemprop="name" content="蓝蓝">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="蓝蓝的站点">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          2021年03月31日Linux专项练习1
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-04-03 16:09:07 / 修改时间：16:10:56" itemprop="dateCreated datePublished" datetime="2021-04-03T16:09:07+08:00">2021-04-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/exam/categories/%E7%89%9B%E5%AE%A2%E7%BD%91/" itemprop="url" rel="index"><span itemprop="name">牛客网</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/exam/categories/%E7%89%9B%E5%AE%A2%E7%BD%91/%E4%B8%93%E9%A1%B9%E7%BB%83%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">专项练习</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/exam/categories/%E7%89%9B%E5%AE%A2%E7%BD%91/%E4%B8%93%E9%A1%B9%E7%BB%83%E4%B9%A0/Test/" itemprop="url" rel="index"><span itemprop="name">Test</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/exam/bf531909/#waline-comments" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" id="/exam/bf531909/" data-xid="/exam/bf531909/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="考点1-Linux修改权限命令-chmod命令"><a href="#考点1-Linux修改权限命令-chmod命令" class="headerlink" title="考点1:Linux修改权限命令_chmod命令"></a>考点1:Linux修改权限命令_chmod命令</h1><p>Linux下,为某个脚本赋予可执行权限()</p>
+<ul>
+<li>A <code>chmod +x filename.sh</code></li>
+<li>B <code>chown +x filename.sh</code></li>
+<li>C <code>chmod +r filename.sh</code></li>
+<li>D <code>chown +r filename.sh</code></li>
+</ul>
+<h2 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: A</details>
+
+<p>chmod命令修改权限 +x表示增加执行权限，+r表示增加读取权限，+w表示增加写权限  chown将指定文件的拥有者改为指定的用户或组</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ ls -l</span><br><span class="line">total 3766</span><br><span class="line">-rwxr-xr-x 1 lan 197609     183  3月 19 21:32 hexos.sh*</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">rwx</span><br><span class="line">111</span><br><span class="line">421</span><br></pre></td></tr></table></figure>
+
+<h1 id="考点2-UNIX目录结构"><a href="#考点2-UNIX目录结构" class="headerlink" title="考点2:UNIX目录结构"></a>考点2:UNIX目录结构</h1><p>在UNIX系统中,目录结构采用( )</p>
+<ul>
+<li>A 单级目录结构</li>
+<li>B 二级目录结构</li>
+<li>C 单纯树形目录结构</li>
+<li>D 带链接树形目录结构</li>
+</ul>
+<h2 id="解析-1"><a href="#解析-1" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: D</details>
+
+<p>带链接树形目录结构又称非循环图目录结构,它是指访问一文件(或目录)可以有多条路径。一般常说UNIX的文件系统是树形结构，其实是指带链接的树形结构，而不是纯树形目录结构。 </p>
+<h1 id="考点3"><a href="#考点3" class="headerlink" title="考点3:"></a>考点3:</h1><p>一个文件名字为rr.Z,可以用来解压缩的命令是？</p>
+<ul>
+<li>A <code>tar</code></li>
+<li>B <code>gzip</code></li>
+<li>C <code>compress</code></li>
+<li>D <code>uncompress</code></li>
+</ul>
+<h2 id="解析-2"><a href="#解析-2" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: D</details>
+
+<ul>
+<li><code>tar</code>: 操作.<code>tar</code>的命令</li>
+<li><code>gzip</code>: 压缩.<code>gz</code>压缩包的命令</li>
+<li><code>compress</code>：压缩.Z文件</li>
+<li><code>uncompress</code>：解压缩.Z文件</li>
+</ul>
+<h1 id="考点4-记录已经加载的文件系统的文件"><a href="#考点4-记录已经加载的文件系统的文件" class="headerlink" title="考点4:记录已经加载的文件系统的文件"></a>考点4:记录已经加载的文件系统的文件</h1><p>系统当前已经加载的所有文件系统在_________文件中得到反映。</p>
+<ul>
+<li>A <code>/usr/sbin/cfdisk</code></li>
+<li>B <code>/sbin/fdisk</code></li>
+<li>C <code>/etc/mtab</code></li>
+<li>D <code>/etc/fstab</code></li>
+</ul>
+<h2 id="解析-3"><a href="#解析-3" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: C</details>
+
+
+<p> <strong>/etc/mtab文件的作用</strong>：记载的是现在系统已经装载的文件系统，包括操作系统建立的虚拟文件等；而/etc/fstab是系统准备装载的<br> <strong>etc/fstab文件的作用</strong>：记录了计算机上硬盘分区的相关信息，启动 Linux 的时候，检查分区的<br> fsck 命令，和挂载分区的 mount 命令，都需要 fstab 中的信息，来正确的检查和挂载硬盘。</p>
+<h1 id="考点5-Linux列举当前目录"><a href="#考点5-Linux列举当前目录" class="headerlink" title="考点5:Linux列举当前目录"></a>考点5:Linux列举当前目录</h1><p>在linux中,列举当前目录下文件的是哪个命令______。</p>
+<ul>
+<li>A <code>ps</code></li>
+<li>B <code>cd</code></li>
+<li>C <code>mv</code></li>
+<li>D <code>ls</code></li>
+</ul>
+<h2 id="解析-4"><a href="#解析-4" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: D</details>
+
+<ul>
+<li>ps 查看运行中的进程</li>
+<li>cd 进入某个目录</li>
+<li>mv 移动文件或者文件夹</li>
+<li>ls list的缩写，列出某个目录下的文件或者文件夹</li>
+</ul>
+<h1 id="考点6-Linux查看文件命令"><a href="#考点6-Linux查看文件命令" class="headerlink" title="考点6:Linux查看文件命令"></a>考点6:Linux查看文件命令</h1><p>在Linux下查看文件有多种方法,若希望在查看文件内容过程中,可以按空格实现翻页,应使用(      )命令</p>
+<ul>
+<li>A <code>cat</code></li>
+<li>B <code>more</code></li>
+<li>C <code>less</code></li>
+<li>D <code>head</code></li>
+</ul>
+<h2 id="解析-5"><a href="#解析-5" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: BC</details>
+
+<ul>
+<li> cat：由第一行开始显示文件所有内容； </li>
+<li>tac：从最后一行开始显示文件的所有内容，<ul>
+<li> 注意 tac 与cat 写法正好相反； </li>
+</ul>
+</li>
+<li> more：一页一页的显示文件内容，只能向后翻页； </li>
+<li> less：也是一页一页显示文件内容，但是可以通过键盘上的【pagedown】，【pageup】控制向后，向前翻页； </li>
+<li> head：显示一个文件的前几行； </li>
+<li> tail：显示一个文件的后几行； </li>
+</ul>
+<h1 id="考点7-Linux查看CPU-Swap分区-硬盘信息命令"><a href="#考点7-Linux查看CPU-Swap分区-硬盘信息命令" class="headerlink" title="考点7:Linux查看CPU Swap分区 硬盘信息命令"></a>考点7:Linux查看CPU Swap分区 硬盘信息命令</h1><p>如何在命令行查看一台linux机器的CPU、SWAP分区信息、硬盘信息?</p>
+<ul>
+<li>A <code>cat /proc/cpuinfo</code></li>
+<li>B <code>du</code></li>
+<li>C <code>cat /proc/swaps</code></li>
+<li>D <code>df -lh</code></li>
+</ul>
+<h2 id="解析-6"><a href="#解析-6" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: ACD</details>
+
+<p>-<code>cat /proc/cpuinfo</code>：查看一台<code>linux</code>机器的<code>CPU</code>信息<br>-<code>du</code>：查看该目录占用文件系统数据块的情况<br>-<code>cat /proc/swaps</code>：查看<code>SWAP</code>分区信息<br>-<code>df -lh</code>：查看硬盘信息</p>
+<h1 id="考点8-日志文件系统有哪些"><a href="#考点8-日志文件系统有哪些" class="headerlink" title="考点8:日志文件系统有哪些"></a>考点8:日志文件系统有哪些</h1><p>以下哪个是日志文件系统()</p>
+<ul>
+<li>A <code>ext2</code></li>
+<li>B <code>fat32</code></li>
+<li>C <code>ntfs</code></li>
+<li>D <code>ext3</code></li>
+<li>E <code>ext4</code></li>
+</ul>
+<h2 id="解析-7"><a href="#解析-7" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: CDE</details>
+
+<p>日志文件系统（英语：Journaling file system）是一种文件系统。在发生变化时，它先把相关的信息写入一个被称为日志的区域，然后再把变化写入主文件系统。在文件系统发生故障（如内核崩溃或突然停电）时，日志文件系统更容易保持一致性，并且可以较快恢复。</p>
+<h3 id="常见的日志文件系统"><a href="#常见的日志文件系统" class="headerlink" title="常见的日志文件系统"></a>常见的日志文件系统</h3><p>JFS：IBM的 Journaled File System, 最早的日志文件系统。<br>Ext4/Ext3文件系统：由Ext2文件系统演化而成的日志文件系统，广泛用于Linux系统。<br>XFS文件系统：广泛用于Linux系统，取代了Ext4。<br>ReiserFS：用B+树作为数据结构的日志文件系统，在处理小文件时有较好的性能。<br>Btrfs：用B树作为数据结构，被认为是下一代Linux文件系统。<br>NTFS：微软的NTFS也是日志文件系统，也是Windows下最常用的文件系统。<br>HFS+：苹果公司发展的OS X操作系统下主要使用的文件系统。</p>
+<h1 id="考点9-系统调用"><a href="#考点9-系统调用" class="headerlink" title="考点9:系统调用"></a>考点9:系统调用</h1><p>Linux执行ls,会引起哪些系统调用()</p>
+<ul>
+<li>A <code>nmap</code></li>
+<li>B <code>read</code></li>
+<li>C <code>execve</code></li>
+<li>D <code>fork</code></li>
+</ul>
+<h2 id="解析-8"><a href="#解析-8" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: BCD</details>
+
+<ul>
+<li>任何shell都会执行 exec 和 fork</li>
+<li>而ls会执行read</li>
+<li>三个加起来就是read,execve,fork</li>
+</ul>
+<h1 id="考点10"><a href="#考点10" class="headerlink" title="考点10:"></a>考点10:</h1><p>linux 2.6.* 内核默认支持的文件系统有哪些？</p>
+<ul>
+<li>A <code>ext3</code></li>
+<li>B <code>ext2</code></li>
+<li>C <code>ext4</code></li>
+<li>D <code>xfs</code></li>
+<li>E <code>ufs</code></li>
+</ul>
+<h2 id="解析-9"><a href="#解析-9" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: ABCD</details>
+
+<p>背答案算了</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>蓝蓝
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://lanlan2017.github.io/exam/bf531909/" title="2021年03月31日Linux专项练习1">https://lanlan2017.github.io/exam/bf531909/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/exam/3a8d0894/" rel="prev" title="2021年03月23日Linux专项练习4">
+                  <i class="fa fa-chevron-left"></i> 2021年03月23日Linux专项练习4
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/exam/a22040b2/" rel="next" title="2021年04月09日Linux专项练习1">
+                  2021年04月09日Linux专项练习1 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="waline-comments"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2018 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">蓝蓝</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">507k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">7:41</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/exam/js/comments.js"></script><script src="/exam/js/utils.js"></script><script src="/exam/js/motion.js"></script><script src="/exam/js/next-boot.js"></script><script src="/exam/js/bookmark.js"></script><script src="/exam/js/pjax.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/exam/js/third-party/search/local-search.js"></script>
+
+
+
+  <script src="/exam/js/third-party/fancybox.js"></script>
+
+  <script src="/exam/js/third-party/pace.js"></script>
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="/exam/js/third-party/math/mathjax.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://lanlan2017.github.io/exam/bf531909/"}</script>
+  <script src="/exam/js/third-party/quicklink.js"></script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":null,"enable":true,"serverURL":"https://waline-test-mzjszagu6-lanlan2017.vercel.app","placeholder":"Just go go","avatar":"mm","pageSize":10,"visitor":false,"comment_count":true,"requiredFields":[],"meta":["nick","mail","link"],"libUrl":"https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js","el":"#waline-comments","path":"/exam/bf531909/"}</script>
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.waline.el).then(() => 
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => {
+    new Waline(CONFIG.waline);
+  });
+});
+</script>
+</body>
+</html>

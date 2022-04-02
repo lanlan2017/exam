@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
+<meta name="generator" content="Hexo 5.4.0">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/exam/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/exam/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/exam/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/exam/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="_Sly-yzHYmALHXzjFpPWsodMrjBSphw7bfRbMUH80Qc">
+  <meta name="msvalidate.01" content="B1CFD346B8DEBBFE0C983C2AF8955531">
+  <meta name="baidu-site-verification" content="vkMTwK56xr">
+
+<link rel="stylesheet" href="/exam/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"lanlan2017.github.io","root":"/exam/","images":"/exam/images","scheme":"Gemini","darkmode":true,"version":"8.8.2","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/exam/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/exam/js/config.js"></script>
+<meta name="description" content="考点1:find查找更改时间比一个文件新但比另一个文件旧的文件find . -newer file1 \! \( -newer file2 \)命令的意思是？  A 查找更改时间比文件file1新但比文件file2旧的文件 B 查找更改时间比文件file1旧但比文件file2新的文件 C 查找更改时间比文件file1旧且比文件file2旧的文件 D 查找更改时间比文件file1新且比文件file2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2021年04月12日Linux专项练习3">
+<meta property="og:url" content="https://lanlan2017.github.io/exam/5766400a/index.html">
+<meta property="og:site_name" content="蓝蓝的站点">
+<meta property="og:description" content="考点1:find查找更改时间比一个文件新但比另一个文件旧的文件find . -newer file1 \! \( -newer file2 \)命令的意思是？  A 查找更改时间比文件file1新但比文件file2旧的文件 B 查找更改时间比文件file1旧但比文件file2新的文件 C 查找更改时间比文件file1旧且比文件file2旧的文件 D 查找更改时间比文件file1新且比文件file2">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://uploadfiles.nowcoder.com/images/20190328/3472441_1553739357281_F960C6C562BF518E7DC94B8CA23A374F">
+<meta property="og:image" content="https://uploadfiles.nowcoder.com/images/20171115/8121647_1510750596579_185EADA507DBD588DFD475182F61A7B4">
+<meta property="article:published_time" content="2021-04-13T15:09:54.000Z">
+<meta property="article:modified_time" content="2021-04-13T17:42:54.000Z">
+<meta property="article:author" content="蓝蓝">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://uploadfiles.nowcoder.com/images/20190328/3472441_1553739357281_F960C6C562BF518E7DC94B8CA23A374F">
+
+
+<link rel="canonical" href="https://lanlan2017.github.io/exam/5766400a/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://lanlan2017.github.io/exam/5766400a/","path":"/5766400a/","title":"2021年04月12日Linux专项练习3"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>2021年04月12日Linux专项练习3 | 蓝蓝的站点</title>
+  
+
+  <script src="/exam/js/third-party/analytics/baidu-analytics.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?dadeb188eb14ccde0b25a19230c429b5"></script>
+
+
+<link rel="dns-prefetch" href="https://waline-test-mzjszagu6-lanlan2017.vercel.app">
+  <noscript>
+    <link rel="stylesheet" href="/exam/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/exam/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">蓝蓝的站点</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">笔试题汇总</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/exam/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-dir"><a href="/exam/dir/" rel="section"><i class="fa fa-sitemap fa-fw"></i>目录</a></li>
+        <li class="menu-item menu-item-categories"><a href="/exam/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/exam/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-tags"><a href="/exam/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B91-find%E6%9F%A5%E6%89%BE%E6%9B%B4%E6%94%B9%E6%97%B6%E9%97%B4%E6%AF%94%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E6%96%B0%E4%BD%86%E6%AF%94%E5%8F%A6%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E6%97%A7%E7%9A%84%E6%96%87%E4%BB%B6"><span class="nav-number">1.</span> <span class="nav-text">考点1:find查找更改时间比一个文件新但比另一个文件旧的文件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90"><span class="nav-number">1.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B92-etc-passwd%E4%B8%AD%E7%94%A8%E6%88%B7%E7%BB%84ID%E4%B8%8Eetc-group%E4%B8%AD%E7%9A%84%E7%94%A8%E6%88%B7%E7%BB%84ID%E4%B8%8D%E5%8C%B9%E9%85%8D%E5%AF%BC%E8%87%B4%E7%94%A8%E6%88%B7%E6%97%A0%E6%B3%95%E7%99%BB%E5%BD%95%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">2.</span> <span class="nav-text">考点2:&#x2F;etc&#x2F;passwd中用户组ID与etc&#x2F;group中的用户组ID不匹配导致用户无法登录的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-1"><span class="nav-number">2.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B93-%E7%A1%AC%E9%93%BE%E6%8E%A5%E5%92%8C%E7%AC%A6%E5%8F%B7%E8%BF%9E%E6%8E%A5"><span class="nav-number">3.</span> <span class="nav-text">考点3:硬链接和符号连接</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-2"><span class="nav-number">3.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B94-vi%E7%BC%96%E8%BE%91%E5%99%A8%E5%85%A8%E9%83%A8%E6%9B%BF%E6%8D%A2"><span class="nav-number">4.</span> <span class="nav-text">考点4:vi编辑器全部替换</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-3"><span class="nav-number">4.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B95-recv%E6%96%B9%E6%B3%95"><span class="nav-number">5.</span> <span class="nav-text">考点5:recv方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-4"><span class="nav-number">5.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B96-Linux%E5%8D%B8%E8%BD%BD%E8%AE%BE%E5%A4%87umount"><span class="nav-number">6.</span> <span class="nav-text">考点6:Linux卸载设备umount</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-5"><span class="nav-number">6.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B97-Linux%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B-pthread%E5%BA%93-%E5%87%BD%E6%95%B0%E5%90%8D%E5%92%8C%E6%84%8F%E4%B9%89"><span class="nav-number">7.</span> <span class="nav-text">考点7:Linux多线程编程 pthread库 函数名和意义</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-6"><span class="nav-number">7.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B98-chmod%E6%8E%88%E6%9D%83"><span class="nav-number">8.</span> <span class="nav-text">考点8:chmod授权</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-7"><span class="nav-number">8.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B99-%E4%B8%8E%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86%E7%9B%B8%E5%85%B3%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">9.</span> <span class="nav-text">考点9:与用户管理相关的配置文件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-8"><span class="nav-number">9.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B910-Linux%E5%A4%9A%E7%A7%8D%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%96%B9%E6%B3%95"><span class="nav-number">10.</span> <span class="nav-text">考点10:Linux多种复制文件方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-9"><span class="nav-number">10.1.</span> <span class="nav-text">解析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux%E5%A4%8D%E5%88%B6cp%E5%91%BD%E4%BB%A4"><span class="nav-number">10.1.1.</span> <span class="nav-text">Linux复制cp命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cat%E5%91%BD%E4%BB%A4"><span class="nav-number">10.1.2.</span> <span class="nav-text">cat命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dd%E5%91%BD%E4%BB%A4"><span class="nav-number">10.1.3.</span> <span class="nav-text">dd命令</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="蓝蓝"
+      src="/exam/images/avatar.png">
+  <p class="site-author-name" itemprop="name">蓝蓝</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/exam/archives/">
+          <span class="site-state-item-count">148</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/exam/categories/">
+        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://lanlan2017.github.io/todo/" title="todo → https:&#x2F;&#x2F;lanlan2017.github.io&#x2F;todo&#x2F;"><i class="fa fa-check-square fa-fw"></i>todo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://lanlan2017.github.io/links/" title="links → https:&#x2F;&#x2F;lanlan2017.github.io&#x2F;links&#x2F;"><i class="fa fa-link fa-fw"></i>links</a>
+      </span>
+  </div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lanlan2017.github.io/exam/5766400a/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/exam/images/avatar.png">
+      <meta itemprop="name" content="蓝蓝">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="蓝蓝的站点">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          2021年04月12日Linux专项练习3
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-04-13 23:09:54" itemprop="dateCreated datePublished" datetime="2021-04-13T23:09:54+08:00">2021-04-13</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-04-14 01:42:54" itemprop="dateModified" datetime="2021-04-14T01:42:54+08:00">2021-04-14</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/exam/categories/%E7%89%9B%E5%AE%A2%E7%BD%91/" itemprop="url" rel="index"><span itemprop="name">牛客网</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/exam/categories/%E7%89%9B%E5%AE%A2%E7%BD%91/%E4%B8%93%E9%A1%B9%E7%BB%83%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">专项练习</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/exam/categories/%E7%89%9B%E5%AE%A2%E7%BD%91/%E4%B8%93%E9%A1%B9%E7%BB%83%E4%B9%A0/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/exam/categories/%E7%89%9B%E5%AE%A2%E7%BD%91/%E4%B8%93%E9%A1%B9%E7%BB%83%E4%B9%A0/Linux/2021%E5%B9%B404%E6%9C%88/" itemprop="url" rel="index"><span itemprop="name">2021年04月</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/exam/5766400a/#waline-comments" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" id="/exam/5766400a/" data-xid="/exam/5766400a/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="考点1-find查找更改时间比一个文件新但比另一个文件旧的文件"><a href="#考点1-find查找更改时间比一个文件新但比另一个文件旧的文件" class="headerlink" title="考点1:find查找更改时间比一个文件新但比另一个文件旧的文件"></a>考点1:find查找更改时间比一个文件新但比另一个文件旧的文件</h1><p><code>find . -newer file1 \! \( -newer file2 \)</code>命令的意思是？</p>
+<ul>
+<li>A 查找更改时间比文件<code>file1</code>新但比文件<code>file2</code>旧的文件</li>
+<li>B 查找更改时间比文件<code>file1</code>旧但比文件<code>file2</code>新的文件</li>
+<li>C 查找更改时间比文件<code>file1</code>旧且比文件<code>file2</code>旧的文件</li>
+<li>D 查找更改时间比文件<code>file1</code>新且比文件<code>file2</code>新的文件</li>
+</ul>
+<h2 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: A</details>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost exam]# ls -ltr --full-time</span><br><span class="line">总用量 3640</span><br><span class="line">-rw-r--r--.   1 root root     422 2021-03-19 21:12:12.566962591 +0800 StartWriting.bat</span><br><span class="line">drwxr-xr-x.   2 root root    4096 2021-03-19 21:12:12.566962591 +0800 scaffolds</span><br><span class="line">-rw-r--r--.   1 root root     817 2021-03-19 21:12:12.566962591 +0800 package.json</span><br><span class="line">-rw-r--r--.   1 root root     376 2021-03-19 21:12:12.566962591 +0800 HexoSTest.bat</span><br><span class="line">-rw-r--r--.   1 root root     576 2021-03-19 21:12:12.566962591 +0800 HexoD.bat</span><br><span class="line">-rw-r--r--.   1 root root     158 2021-03-19 21:12:12.566962591 +0800 FM.properties</span><br><span class="line">-rw-r--r--.   1 root root    3093 2021-03-19 21:12:12.566962591 +0800 _config.yml</span><br><span class="line">drwxr-xr-x.   3 root root    4096 2021-03-19 21:12:12.636962591 +0800 themes</span><br><span class="line">drwxr-xr-x.   9 root root    4096 2021-03-19 21:12:12.636962591 +0800 source</span><br><span class="line">-rwxr--r--.   1 root root     174 2021-03-19 21:16:37.816962490 +0800 hexos.sh</span><br><span class="line">drwxr-xr-x. 308 root root    8192 2021-03-19 21:19:12.036962431 +0800 node_modules</span><br><span class="line">-rw-r--r--.   1 root root  170424 2021-03-19 21:19:12.746962431 +0800 package-lock.json</span><br><span class="line">-rw-r--r--.   1 root root 3498022 2021-03-22 20:29:10.927984900 +0800 db.json</span><br><span class="line">-rw-r--r--.   1 root root     431 2021-03-22 20:52:44.997984360 +0800 HexoS.bat</span><br><span class="line">[root@localhost exam]# find . -maxdepth 1 -newer StartWriting.bat \! \( -newer HexoS.bat \)</span><br><span class="line">./HexoS.bat</span><br><span class="line">./source</span><br><span class="line">./themes</span><br><span class="line">./hexos.sh</span><br><span class="line">./node_modules</span><br><span class="line">./db.json</span><br><span class="line">./package-lock.json</span><br><span class="line">[root@localhost exam]# </span><br></pre></td></tr></table></figure>
+
+<h1 id="考点2-etc-passwd中用户组ID与etc-group中的用户组ID不匹配导致用户无法登录的问题"><a href="#考点2-etc-passwd中用户组ID与etc-group中的用户组ID不匹配导致用户无法登录的问题" class="headerlink" title="考点2:/etc/passwd中用户组ID与etc/group中的用户组ID不匹配导致用户无法登录的问题"></a>考点2:/etc/passwd中用户组ID与etc/group中的用户组ID不匹配导致用户无法登录的问题</h1><p>你通过编辑/etc/group文件来改变了sales group的GID,所有的组员都能成功的进行的转换,除了Jack,他甚至都无法登陆,其原因是什么？</p>
+<ul>
+<li>A <code>Jack</code>忘记了<code>group</code>密码</li>
+<li>B <code>Jack</code>需要再次被加入到<code>group</code></li>
+<li>C 在<code>/etc/passwd</code>里指明了<code>Jack</code>的<code>GID</code></li>
+<li>D <code>Jack</code>的账号需要被删除然后新建</li>
+</ul>
+<h2 id="解析-1"><a href="#解析-1" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: C</details>
+
+<ul>
+<li>/etc/group是用户组信息文件，里面定义了<strong>用户组的ID</strong>, </li>
+<li>/etc/passwd是用户基本信息文件，里面定义了<strong>用户的ID</strong>，<strong>用户组的ID</strong>等相关信息。</li>
+</ul>
+<p>所以因为两个文件中都定义了用户组的信息，所以两个文件应该都要改过来，否则会导致用户找不到所属组 </p>
+<h1 id="考点3-硬链接和符号连接"><a href="#考点3-硬链接和符号连接" class="headerlink" title="考点3:硬链接和符号连接"></a>考点3:硬链接和符号连接</h1><p>下列关于链接描述,错误的是 。</p>
+<ul>
+<li>A 硬链接就是让链接文件的i节点号指向被链接文件的i节点</li>
+<li>B 硬链接和符号连接都是产生一个新的i节点</li>
+<li>C 链接分为硬链接和符号链接</li>
+<li>D 硬连接不能链接目录文件</li>
+</ul>
+<h2 id="解析-2"><a href="#解析-2" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: B</details>
+
+<p>（1）软连接可以跨文件系统，硬连接不可以<br>（2）硬连接不管有多少个，都指向的是同一个I节点，会把结点连接数增加，只要结点的连接数不是0，文件就一直存在不管你删除的是源文件还是连接的文件。只要有一个存在文件就存在。当你修改源文件或者连接文件任何一个的时候，其他的文件都会做同步的修改。软链接不直接使用i节点号作为文件指针,<br>而是使用文件路径名作为指针。所以删除连接文件对源文件无影响，但是删除源文件，连接文件就会找不到要指向的文件。软链接有自己的inode, 并在磁盘上有一小片空间存放路径名。<br>（3）软连接可以对一个不存在的文件名进行连接 。<br>（4）软连接可以对目录进行连接。</p>
+<p>硬连接不管有多少个，都指向的是同一个I节点，<br>只有符号链接才产生新的inode节点。<br><img data-src="https://uploadfiles.nowcoder.com/images/20190328/3472441_1553739357281_F960C6C562BF518E7DC94B8CA23A374F"><br>硬连接不能连接文件目录，软连接才可以。<br>硬连接不会产生新节点，硬连接指向同一节点inode。</p>
+<p>Inode是UNIX中一种数据结构，包含了与文件系统中各个文件相关的一些重要信息，在文件系统创建时，同时会创建大量的inode。它用作数据索引的标识符，系统找到文件对应的inode，通过inode 号获取inode信息，再找到文件数据锁在的block读取。<br>硬链接，文件名和inode号对应，也可能多个文件名<b>指向同一个inode号</b>。硬链接实现不同的文件名访问同一个文件，对文件内容的修改会影响到所有的文件名，但删除一个文件名不影响其他文件名的访问。<br>软链接，也可以通过不同文件名访问同一块数据，但是<b>文件名的inode是不一样的</b>。A是B的软链接，A的内容存放的是B的路径名。<br><b>最后在回顾下硬软链接的不同：</b><br>本质不同：硬链接是指向同一个文件，软链接指向的不是同一个文件。<br>删除时：硬链接不受影响，软链接失效<br>创建链接时：创建硬链接链接数加1，创建软链接连接数不变<br><b>是否可以跨分区：硬链接不可以跨分区，软链接可以跨分区</b><br><b>目录是否可以创建链接：硬链接不可以对目录创建，软链接可以对目录创建</b><br>硬链接的inode号相同，软链接inode号不同 </p>
+<h1 id="考点4-vi编辑器全部替换"><a href="#考点4-vi编辑器全部替换" class="headerlink" title="考点4:vi编辑器全部替换"></a>考点4:vi编辑器全部替换</h1><p>Vi编辑器中,怎样将字符AAA全部替换成yyy? </p>
+<ul>
+<li>A <code>p/AAA/yyy/</code></li>
+<li>B <code>s/AAA/yyy/g</code></li>
+<li>C <code>i/AAA/yyy/</code></li>
+<li>D <code>p/AAA/yyy/h</code></li>
+</ul>
+<h2 id="解析-3"><a href="#解析-3" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: B</details>
+
+<p>全局替换命令为：<code>:s/源字符串/目的字符串/g</code></p>
+<table>
+<thead>
+<tr>
+<th align="left">vi末行模式命令</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">/pattern</td>
+<td align="left">从光标开始处向文件尾搜索pattern</td>
+</tr>
+<tr>
+<td align="left">?pattern</td>
+<td align="left">从光标开始处向文件首搜索pattern</td>
+</tr>
+<tr>
+<td align="left">n</td>
+<td align="left">同一方向重复上一次搜索命令</td>
+</tr>
+<tr>
+<td align="left">N</td>
+<td align="left">在反方向上重复上一次搜索命令</td>
+</tr>
+<tr>
+<td align="left">:s/p1/p2/g</td>
+<td align="left">将当前行中所有p1均用p2替代</td>
+</tr>
+<tr>
+<td align="left">:n1,n2s/p1/p2/g</td>
+<td align="left">将第n1至n2行中所有p1均用p2替代</td>
+</tr>
+<tr>
+<td align="left">:g/p1/s//p2/g</td>
+<td align="left">将文件中所有p1均用p2替换</td>
+</tr>
+</tbody></table>
+<img data-src="https://uploadfiles.nowcoder.com/images/20171115/8121647_1510750596579_185EADA507DBD588DFD475182F61A7B4">
+
+
+<h1 id="考点5-recv方法"><a href="#考点5-recv方法" class="headerlink" title="考点5:recv方法"></a>考点5:recv方法</h1><p>调用recv(int sockfd, void *buf, size_t len, int flags)的过程中,一共进行了几次内存复制操作？</p>
+<ul>
+<li>A 1</li>
+<li>B 2</li>
+<li>C 3</li>
+<li>D 4</li>
+</ul>
+<h2 id="解析-4"><a href="#解析-4" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: B</details>
+
+<p>内核从对端接受数据，放在socket的缓存中，然后复制到应用层的buffer，所以一共两个buffer。<br>recv 接受对端socket数据，经过两次系统调用，首先在内核中将数据拷贝到自己的协议栈；然后recv返回将数据从内核缓冲区拷贝到用户buffer中。 内核从对端接受数据，放在socket的缓存中，然后复制到应用层的buffer，所以一共两个buffer。</p>
+<h1 id="考点6-Linux卸载设备umount"><a href="#考点6-Linux卸载设备umount" class="headerlink" title="考点6:Linux卸载设备umount"></a>考点6:Linux卸载设备umount</h1><p>将光盘/dev/hdc卸载的命令是?</p>
+<ul>
+<li>A <code>umount /mnt/cdrom /dev/hdc</code></li>
+<li>B <code>mount /dev/hdc</code></li>
+<li>C <code>umount /dev/hdc</code></li>
+<li>D <code>mount /mnt/cdrom /dev/hdc</code></li>
+</ul>
+<h2 id="解析-5"><a href="#解析-5" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: C</details>
+
+<p>题干没有说明，事先是把/dev/hdc挂载到/mnt/cdrom下。</p>
+<p>挂载设备使用mount，<br>卸载设备使用umount，有三种方式，通过设备名，挂载点或者设备名和挂载点 ：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">umount /dev/hdc</span><br><span class="line">umount /mnt/cdrom</span><br><span class="line">umount /mnt/cdrom /dev/hdc</span><br></pre></td></tr></table></figure>
+
+<h1 id="考点7-Linux多线程编程-pthread库-函数名和意义"><a href="#考点7-Linux多线程编程-pthread库-函数名和意义" class="headerlink" title="考点7:Linux多线程编程 pthread库 函数名和意义"></a>考点7:Linux多线程编程 pthread库 函数名和意义</h1><p>下述是Linux下多线程编程常用的pthread库提供的函数名和意义,说法正确的有？</p>
+<ul>
+<li>A <code>pthread_create</code> 创建一个线程</li>
+<li>B <code>pthread_join</code> 用来等待一个线程的结束</li>
+<li>C <code>pthread_mutex_init</code> 初始化一个线程互斥锁</li>
+<li>D <code>pthread_exit</code> 结束一个线程</li>
+</ul>
+<h2 id="解析-6"><a href="#解析-6" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: ABCD</details>
+
+<h1 id="考点8-chmod授权"><a href="#考点8-chmod授权" class="headerlink" title="考点8:chmod授权"></a>考点8:chmod授权</h1><p>文件aaa的访问权限为rw-r–r–,现要增加所有用户的执行权限和同组用户的写权限,下列哪些命令是正确的？</p>
+<ul>
+<li>A <code>chmod a+x , g+w aaa</code></li>
+<li>B <code>chmod 764 aaa</code></li>
+<li>C <code>chmod 775 aaa</code></li>
+<li>D <code>chmod o+x , g+w aaa</code></li>
+</ul>
+<h2 id="解析-7"><a href="#解析-7" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: AC</details>
+
+
+<h1 id="考点9-与用户管理相关的配置文件"><a href="#考点9-与用户管理相关的配置文件" class="headerlink" title="考点9:与用户管理相关的配置文件"></a>考点9:与用户管理相关的配置文件</h1><p>Linux系统上,下面哪些文件是与用户管理相关的配置文件()</p>
+<ul>
+<li>A <code>/etc/passwd</code></li>
+<li>B <code>/etc/shadow</code></li>
+<li>C <code>/etc/group</code></li>
+<li>D <code>/etc/password</code></li>
+</ul>
+<h2 id="解析-8"><a href="#解析-8" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: ABC</details>
+
+<p>/etc/passwd     存放用户的UID name 密码过期时间 修改时间等等<br>/etc/shadow     存放用户的密码密文<br>/etc/group      存放用户的所属组情况<br>/etc/password    是错误的，linux没有D 这个文件</p>
+<h1 id="考点10-Linux多种复制文件方法"><a href="#考点10-Linux多种复制文件方法" class="headerlink" title="考点10:Linux多种复制文件方法"></a>考点10:Linux多种复制文件方法</h1><p>将文件file1复制为file2可以用下面哪些命令()</p>
+<ul>
+<li>A <code>cp file1 file2</code></li>
+<li>B <code>cat file1 &gt;file2</code></li>
+<li>C <code>cat &lt; file1 &gt;file2</code></li>
+<li>D <code>dd if=file1 of=file2</code></li>
+<li>E <code>cat file1 | cat &gt;file2</code></li>
+</ul>
+<h2 id="解析-9"><a href="#解析-9" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: ABCDE</details>
+
+<h3 id="Linux复制cp命令"><a href="#Linux复制cp命令" class="headerlink" title="Linux复制cp命令"></a>Linux复制cp命令</h3><ul>
+<li><code>cp命令</code>：cp指令用于复制文件或目录。 <ul>
+<li>将文件file1复制成文件file2命令如下：cp file1 file2 </li>
+</ul>
+</li>
+</ul>
+<h3 id="cat命令"><a href="#cat命令" class="headerlink" title="cat命令"></a>cat命令</h3><ul>
+<li><code>cat命令</code>：cat命令是linux下的一个文本输出命令，通常是用于观看某个文件的内容的。 <ul>
+<li>一次显示整个文件命令如下： cat filename</li>
+</ul>
+</li>
+</ul>
+<p>输入输出重定向</p>
+<ul>
+<li><code>&gt;</code>: linux中的数据流重导向：输出导向，覆盖导向的文件内容。 </li>
+<li><code>&lt;</code>: linux中的数据流重导向：输入导向，理解为原本由键盘输入改为文本输入 </li>
+<li><code>|</code>：管道命令操作符，处理经由前面一个指令传出的正确输出信息，然后，传递给下一个命令，作为标准的输入</li>
+</ul>
+<h3 id="dd命令"><a href="#dd命令" class="headerlink" title="dd命令"></a>dd命令</h3><ul>
+<li><code>dd命令</code>: 作用是用指定大小的块拷贝一个文件，并在拷贝的同时进行指定的转换。 <ul>
+<li>参数：<ul>
+<li>if  输入文件（或设备名称）</li>
+<li>of  输出文件（或设备名称） </li>
+</ul>
+</li>
+<li>将文件file1拷贝到文件file2中命令如下：<ul>
+<li>dd if=file1 of=file2</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>蓝蓝
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://lanlan2017.github.io/exam/5766400a/" title="2021年04月12日Linux专项练习3">https://lanlan2017.github.io/exam/5766400a/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/exam/f050cb01/" rel="prev" title="2021年04月12日Linux专项练习2">
+                  <i class="fa fa-chevron-left"></i> 2021年04月12日Linux专项练习2
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/exam/f927b122/" rel="next" title="2021年04月18日Linux专项练习5">
+                  2021年04月18日Linux专项练习5 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="waline-comments"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2018 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">蓝蓝</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">507k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">7:41</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/exam/js/comments.js"></script><script src="/exam/js/utils.js"></script><script src="/exam/js/motion.js"></script><script src="/exam/js/next-boot.js"></script><script src="/exam/js/bookmark.js"></script><script src="/exam/js/pjax.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/exam/js/third-party/search/local-search.js"></script>
+
+
+
+  <script src="/exam/js/third-party/fancybox.js"></script>
+
+  <script src="/exam/js/third-party/pace.js"></script>
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="/exam/js/third-party/math/mathjax.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://lanlan2017.github.io/exam/5766400a/"}</script>
+  <script src="/exam/js/third-party/quicklink.js"></script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":null,"enable":true,"serverURL":"https://waline-test-mzjszagu6-lanlan2017.vercel.app","placeholder":"Just go go","avatar":"mm","pageSize":10,"visitor":false,"comment_count":true,"requiredFields":[],"meta":["nick","mail","link"],"libUrl":"https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js","el":"#waline-comments","path":"/exam/5766400a/"}</script>
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.waline.el).then(() => 
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => {
+    new Waline(CONFIG.waline);
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
+<meta name="generator" content="Hexo 5.4.0">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/exam/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/exam/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/exam/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/exam/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="_Sly-yzHYmALHXzjFpPWsodMrjBSphw7bfRbMUH80Qc">
+  <meta name="msvalidate.01" content="B1CFD346B8DEBBFE0C983C2AF8955531">
+  <meta name="baidu-site-verification" content="vkMTwK56xr">
+
+<link rel="stylesheet" href="/exam/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"lanlan2017.github.io","root":"/exam/","images":"/exam/images","scheme":"Gemini","darkmode":true,"version":"8.8.2","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/exam/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/exam/js/config.js"></script>
+<meta name="description" content="考点1:联系 一对一，一对多，多对多学校中有多个院系和多名教师,每个教师只能属于一个院系,一个系可以有多名教师,院系和教师之间的关系是( )。  A 一对多 B 一对一 C 一对二 D 多对多  解析显示答案&#x2F;隐藏答案正确答案: A   考点2:数据库范式在通常情况下,下面的关系中不可以作为关系数据库的关系是()  A R1(学生号,学生名,性别) B R2(学生号,学生名,班级号) C R3(学">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2021年09月05日 数据库1">
+<meta property="og:url" content="https://lanlan2017.github.io/exam/8af88738/index.html">
+<meta property="og:site_name" content="蓝蓝的站点">
+<meta property="og:description" content="考点1:联系 一对一，一对多，多对多学校中有多个院系和多名教师,每个教师只能属于一个院系,一个系可以有多名教师,院系和教师之间的关系是( )。  A 一对多 B 一对一 C 一对二 D 多对多  解析显示答案&#x2F;隐藏答案正确答案: A   考点2:数据库范式在通常情况下,下面的关系中不可以作为关系数据库的关系是()  A R1(学生号,学生名,性别) B R2(学生号,学生名,班级号) C R3(学">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://uploadfiles.nowcoder.com/images/20180827/283950953_1535337015759_51B3875ECF358403950EB543513B2F00">
+<meta property="article:published_time" content="2021-09-06T02:41:29.000Z">
+<meta property="article:modified_time" content="2021-09-06T02:41:29.000Z">
+<meta property="article:author" content="蓝蓝">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://uploadfiles.nowcoder.com/images/20180827/283950953_1535337015759_51B3875ECF358403950EB543513B2F00">
+
+
+<link rel="canonical" href="https://lanlan2017.github.io/exam/8af88738/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://lanlan2017.github.io/exam/8af88738/","path":"/8af88738/","title":"2021年09月05日 数据库1"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>2021年09月05日 数据库1 | 蓝蓝的站点</title>
+  
+
+  <script src="/exam/js/third-party/analytics/baidu-analytics.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?dadeb188eb14ccde0b25a19230c429b5"></script>
+
+
+<link rel="dns-prefetch" href="https://waline-test-mzjszagu6-lanlan2017.vercel.app">
+  <noscript>
+    <link rel="stylesheet" href="/exam/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/exam/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">蓝蓝的站点</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">笔试题汇总</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/exam/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-dir"><a href="/exam/dir/" rel="section"><i class="fa fa-sitemap fa-fw"></i>目录</a></li>
+        <li class="menu-item menu-item-categories"><a href="/exam/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/exam/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-tags"><a href="/exam/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B91-%E8%81%94%E7%B3%BB-%E4%B8%80%E5%AF%B9%E4%B8%80%EF%BC%8C%E4%B8%80%E5%AF%B9%E5%A4%9A%EF%BC%8C%E5%A4%9A%E5%AF%B9%E5%A4%9A"><span class="nav-number">1.</span> <span class="nav-text">考点1:联系 一对一，一对多，多对多</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90"><span class="nav-number">1.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B92-%E6%95%B0%E6%8D%AE%E5%BA%93%E8%8C%83%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text">考点2:数据库范式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-1"><span class="nav-number">2.1.</span> <span class="nav-text">解析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E8%8C%83%E5%BC%8F1nf-2nf-3nf"><span class="nav-number">2.1.1.</span> <span class="nav-text">数据库范式1nf,2nf,3nf</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B93-DML%E8%AF%AD%E5%8F%A5"><span class="nav-number">3.</span> <span class="nav-text">考点3:DML语句</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-2"><span class="nav-number">3.1.</span> <span class="nav-text">解析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#DQL-DML-DDL-DCL"><span class="nav-number">3.1.1.</span> <span class="nav-text">DQL DML DDL DCL</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B94-%E7%B4%A2%E5%BC%95"><span class="nav-number">4.</span> <span class="nav-text">考点4:索引</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-3"><span class="nav-number">4.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B95-%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B%E5%8F%8A%E5%85%B6%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="nav-number">5.</span> <span class="nav-text">考点5:数据模型及其数据结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-4"><span class="nav-number">5.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B96-SQL%E5%88%9B%E5%BB%BA%E4%B8%BB%E9%94%AE-SQL%E5%88%A0%E9%99%A4%E4%B8%BB%E9%94%AE"><span class="nav-number">6.</span> <span class="nav-text">考点6:SQL创建主键 SQL删除主键</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-5"><span class="nav-number">6.1.</span> <span class="nav-text">解析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E4%B8%BB%E9%94%AE"><span class="nav-number">6.1.1.</span> <span class="nav-text">删除主键</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E4%B8%BB%E9%94%AE"><span class="nav-number">6.1.2.</span> <span class="nav-text">添加主键</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B97-%E5%88%86%E5%B8%83%E5%BC%8F%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9FDDBS"><span class="nav-number">7.</span> <span class="nav-text">考点7:分布式数据库系统DDBS</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-6"><span class="nav-number">7.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B98-%E6%95%B0%E6%8D%AE%E5%BA%93%E6%8A%80%E6%9C%AF%E7%9A%84%E6%A0%B9%E6%9C%AC%E7%9B%AE%E6%A0%87"><span class="nav-number">8.</span> <span class="nav-text">考点8:数据库技术的根本目标</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-7"><span class="nav-number">8.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B99-%E8%A7%86%E5%9B%BE%E5%8F%AF%E4%BB%A5%E4%BB%8E%E5%93%AA%E9%87%8C%E5%AF%BC%E5%87%BA"><span class="nav-number">9.</span> <span class="nav-text">考点9:视图可以从哪里导出</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-8"><span class="nav-number">9.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B910-MySQL-SQL%E6%B3%A8%E5%85%A5"><span class="nav-number">10.</span> <span class="nav-text">考点10:MySQL SQL注入</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-9"><span class="nav-number">10.1.</span> <span class="nav-text">解析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E6%B3%A8%E5%85%A5"><span class="nav-number">10.1.1.</span> <span class="nav-text">函数注入</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="蓝蓝"
+      src="/exam/images/avatar.png">
+  <p class="site-author-name" itemprop="name">蓝蓝</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/exam/archives/">
+          <span class="site-state-item-count">148</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/exam/categories/">
+        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://lanlan2017.github.io/todo/" title="todo → https:&#x2F;&#x2F;lanlan2017.github.io&#x2F;todo&#x2F;"><i class="fa fa-check-square fa-fw"></i>todo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://lanlan2017.github.io/links/" title="links → https:&#x2F;&#x2F;lanlan2017.github.io&#x2F;links&#x2F;"><i class="fa fa-link fa-fw"></i>links</a>
+      </span>
+  </div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lanlan2017.github.io/exam/8af88738/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/exam/images/avatar.png">
+      <meta itemprop="name" content="蓝蓝">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="蓝蓝的站点">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          2021年09月05日 数据库1
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-09-06 10:41:29" itemprop="dateCreated datePublished" datetime="2021-09-06T10:41:29+08:00">2021-09-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/exam/categories/%E7%89%9B%E5%AE%A2%E7%BD%91/" itemprop="url" rel="index"><span itemprop="name">牛客网</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/exam/categories/%E7%89%9B%E5%AE%A2%E7%BD%91/%E4%B8%93%E9%A1%B9%E7%BB%83%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">专项练习</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/exam/categories/%E7%89%9B%E5%AE%A2%E7%BD%91/%E4%B8%93%E9%A1%B9%E7%BB%83%E4%B9%A0/%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/exam/8af88738/#waline-comments" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" id="/exam/8af88738/" data-xid="/exam/8af88738/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="考点1-联系-一对一，一对多，多对多"><a href="#考点1-联系-一对一，一对多，多对多" class="headerlink" title="考点1:联系 一对一，一对多，多对多"></a>考点1:联系 一对一，一对多，多对多</h1><p>学校中有多个院系和多名教师,每个教师只能属于一个院系,一个系可以有多名教师,院系和教师之间的关系是( )。</p>
+<ul>
+<li>A 一对多</li>
+<li>B 一对一</li>
+<li>C 一对二</li>
+<li>D 多对多</li>
+</ul>
+<h2 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: A</details>
+
+
+<h1 id="考点2-数据库范式"><a href="#考点2-数据库范式" class="headerlink" title="考点2:数据库范式"></a>考点2:数据库范式</h1><p>在通常情况下,下面的关系中不可以作为关系数据库的关系是()</p>
+<ul>
+<li>A <code>R1</code>(学生号,学生名,性别)</li>
+<li>B <code>R2</code>(学生号,学生名,班级号)</li>
+<li>C <code>R3</code>(学生号,学生名,宿舍号)</li>
+<li>D <code>R4</code>(学生号,学生名,简历)</li>
+</ul>
+<h2 id="解析-1"><a href="#解析-1" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: D</details>
+
+<p>1NF是第一范式：数据库中的每一项都是不可分割的基本数据项.</p>
+<p>而简历中包含学号与姓名,不满足第一范式。</p>
+<h3 id="数据库范式1nf-2nf-3nf"><a href="#数据库范式1nf-2nf-3nf" class="headerlink" title="数据库范式1nf,2nf,3nf"></a>数据库范式1nf,2nf,3nf</h3><p>1nf: 每一列原子性，不可再分<br>2nf: 非主键列完全依赖于（联合）主键<br>3nf: 非主键直接依赖于主键</p>
+<h1 id="考点3-DML语句"><a href="#考点3-DML语句" class="headerlink" title="考点3:DML语句"></a>考点3:DML语句</h1><p>以下不属于DML的是?</p>
+<ul>
+<li>A <code>INSERT</code></li>
+<li>B <code>DELETE</code></li>
+<li>C <code>CREATE</code></li>
+<li>D <code>UPDATE</code></li>
+</ul>
+<h2 id="解析-2"><a href="#解析-2" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: C</details>
+
+<h3 id="DQL-DML-DDL-DCL"><a href="#DQL-DML-DDL-DCL" class="headerlink" title="DQL DML DDL DCL"></a>DQL DML DDL DCL</h3><p>数据查询语言DQL: 由select字句，from字句，Where字句组成的查询块<br>数据操纵语言DML：insert，update，delete<br>数据定义语言DDL：Create字句，如创建索引。 表 视图等<br>数据控制语言DCL：Grant字句，Commit字句，用来授予或回收访问数据库的某种特权，并控制数据库操纵事务发生的时间及效果，对数据库实行监视等。</p>
+<h1 id="考点4-索引"><a href="#考点4-索引" class="headerlink" title="考点4:索引"></a>考点4:索引</h1><p>关于数据库的描述错误的是:</p>
+<ul>
+<li>A 创建索引一定能提升查询时间</li>
+<li>B 主键的数据列要创建索引</li>
+<li>C 外键的数据列要建立索引</li>
+<li>D 常见数据库索引有 <code>Hash</code> 索引,<code>B-tree</code> 索引</li>
+</ul>
+<h2 id="解析-3"><a href="#解析-3" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: A</details>
+
+<p>首先明白为什么索引会增加速度，DB在执行一条Sql语句的时候，默认的方式是根据搜索条件进行全表扫描，遇到匹配条件的就加入搜索结果集合。<br>如果我们对某一字段增加索引，查询时就会先去索引列表中一次定位到特定值的行数，大大减少遍历匹配的行数，所以能明显增加查询的速度。</p>
+<p>那么在任何时候都应该加索引么？这里有几个反例：<br>1、如果每次都需要取到所有表记录，无论如何都必须进行全表扫描了，那么是否加索引也没有意义了。<br>2、对非唯一的字段，例如“性别”这种大量重复值的字段，增加索引也没有什么意义。<br>3、对于记录比较少的表，增加索引不会带来速度的优化反而浪费了存储空间，因为索引是需要存储空间的，而且有个致命缺点是对于update/insert/delete的每次执行，字段的索引都必须重新计算更新，这就拖慢了速度</p>
+<p>常见的数据库索引是B-tree索引，虽然Hash 索引效率很高，但是他有很多弊端，比如</p>
+<p>Hash 索引仅仅能满足”=”,”IN”和”&lt;=&gt;”查询，不能使用范围查询等，这些弊端导致其不是常见的数据库索引。</p>
+<h1 id="考点5-数据模型及其数据结构"><a href="#考点5-数据模型及其数据结构" class="headerlink" title="考点5:数据模型及其数据结构"></a>考点5:数据模型及其数据结构</h1><p>关系数据模型的基本数据结构是(    )</p>
+<ul>
+<li>A 树</li>
+<li>B 图</li>
+<li>C 索引</li>
+<li>D 关系</li>
+</ul>
+<h2 id="解析-4"><a href="#解析-4" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: D</details>
+
+
+<p><strong>关系数据模型</strong>的逻辑结构是<strong>关系</strong><br><strong>层次数据模型</strong>的逻辑结构是<strong>树</strong><br><strong>网状数据结构</strong>的逻辑结构是<strong>图</strong></p>
+<p>关系模型的数据结构是关系，数据的逻辑结构是二维表。</p>
+<h1 id="考点6-SQL创建主键-SQL删除主键"><a href="#考点6-SQL创建主键-SQL删除主键" class="headerlink" title="考点6:SQL创建主键 SQL删除主键"></a>考点6:SQL创建主键 SQL删除主键</h1><p>下面Transact-SQL语句中可以用于创建主键的是()</p>
+<ul>
+<li>A <code>alter table table1 with notcheck add constraint [PK_table1] primary key nonclustered (column1) on primary;</code></li>
+<li>B <code>alter table table1 column1 primary key;</code></li>
+<li>C <code>alter table table1 column1;</code></li>
+<li>D <code>create table table1 (column1 char(13) not null primary,column2 int not) on primary;</code></li>
+</ul>
+<h2 id="解析-5"><a href="#解析-5" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: A</details>
+
+<h3 id="删除主键"><a href="#删除主键" class="headerlink" title="删除主键"></a>删除主键</h3><p>表中删除主键为：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert <span class="keyword">table</span> table_test <span class="keyword">drop</span> <span class="keyword">primary</span> key;</span><br></pre></td></tr></table></figure>
+<h3 id="添加主键"><a href="#添加主键" class="headerlink" title="添加主键"></a>添加主键</h3><p>表中增加主键为：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert <span class="keyword">table</span> table_test <span class="keyword">add</span> <span class="keyword">primary</span> key(id);</span><br></pre></td></tr></table></figure>
+<p>注意<strong>add</strong>,B,C,D都没有add关键字，可以排除。</p>
+<h1 id="考点7-分布式数据库系统DDBS"><a href="#考点7-分布式数据库系统DDBS" class="headerlink" title="考点7:分布式数据库系统DDBS"></a>考点7:分布式数据库系统DDBS</h1><p>在DDBS中,数据传输量是衡量查询时间的一个主要指标,导致数据传输量大的主要原因是( )。</p>
+<ul>
+<li>A 场地间距离过大</li>
+<li>B 数据库的数据量大</li>
+<li>C 不同场地间的联接操作</li>
+<li>D 在<code>CPU</code>上处理通信的代价高</li>
+</ul>
+<h2 id="解析-6"><a href="#解析-6" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: C</details>
+
+<p>DDBS：<strong>Distributed DataBase System</strong> 分布式数据库系统</p>
+<h1 id="考点8-数据库技术的根本目标"><a href="#考点8-数据库技术的根本目标" class="headerlink" title="考点8:数据库技术的根本目标"></a>考点8:数据库技术的根本目标</h1><p>数据库技术的根本目标是要解决数据的 ( ) 。</p>
+<ul>
+<li>A 存储问题</li>
+<li>B 共享问题</li>
+<li>C 安全问题</li>
+<li>D 保护问题</li>
+</ul>
+<h2 id="解析-7"><a href="#解析-7" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: B</details>
+
+<p>数据库的直接目标是解决数据存储问题，根本目标是为了不同用户或应用程序之间的数据共享。</p>
+<h1 id="考点9-视图可以从哪里导出"><a href="#考点9-视图可以从哪里导出" class="headerlink" title="考点9:视图可以从哪里导出"></a>考点9:视图可以从哪里导出</h1><p>视图是由下面哪两者导出的表()。</p>
+<ul>
+<li>A 模式、关系</li>
+<li>B 基本表、视图</li>
+<li>C 基本关系、关系</li>
+<li>D 内模式、外模式</li>
+</ul>
+<h2 id="解析-8"><a href="#解析-8" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: B</details>
+
+<p>SQL中，<strong>内模式</strong>、<code>模式</code>、外模式分别对应<strong>存储文件</strong>、<code>基本表</code>、视图</p>
+<h1 id="考点10-MySQL-SQL注入"><a href="#考点10-MySQL-SQL注入" class="headerlink" title="考点10:MySQL SQL注入"></a>考点10:MySQL SQL注入</h1><p>Mysql sql注入中使用延时注入时常用的语句是()</p>
+<ul>
+<li>A <code>wait for delay &#39;0:0:10</code></li>
+<li>B <code>sleep(5)</code></li>
+<li>C <code>benchmark(100000000,md5(1))</code></li>
+<li>D <code>union select</code></li>
+</ul>
+<h2 id="解析-9"><a href="#解析-9" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: BC</details>
+
+<h3 id="函数注入"><a href="#函数注入" class="headerlink" title="函数注入"></a>函数注入</h3><table>
+<thead>
+<tr>
+<th align="left">MySQL</th>
+<th align="left">benchmark(100000,md5(1))或者sleep(5)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">PostgreSQL</td>
+<td align="left">PG_SLEEP(5)或者 GENERATE_SERIES(1,100000)</td>
+</tr>
+<tr>
+<td align="left">MS SQL server</td>
+<td align="left">WAITFOR DELAY ‘0:05’</td>
+</tr>
+</tbody></table>
+<p><img data-src="https://uploadfiles.nowcoder.com/images/20180827/283950953_1535337015759_51B3875ECF358403950EB543513B2F00" alt="这里有一张图片"></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>蓝蓝
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://lanlan2017.github.io/exam/8af88738/" title="2021年09月05日 数据库1">https://lanlan2017.github.io/exam/8af88738/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/exam/4f99546e/" rel="prev" title="2021年09月05日 java3">
+                  <i class="fa fa-chevron-left"></i> 2021年09月05日 java3
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/exam/def2879b/" rel="next" title="2021年09月06日 计算机_编程基础1">
+                  2021年09月06日 计算机_编程基础1 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="waline-comments"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2018 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">蓝蓝</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">507k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">7:41</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/exam/js/comments.js"></script><script src="/exam/js/utils.js"></script><script src="/exam/js/motion.js"></script><script src="/exam/js/next-boot.js"></script><script src="/exam/js/bookmark.js"></script><script src="/exam/js/pjax.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/exam/js/third-party/search/local-search.js"></script>
+
+
+
+  <script src="/exam/js/third-party/fancybox.js"></script>
+
+  <script src="/exam/js/third-party/pace.js"></script>
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="/exam/js/third-party/math/mathjax.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://lanlan2017.github.io/exam/8af88738/"}</script>
+  <script src="/exam/js/third-party/quicklink.js"></script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":null,"enable":true,"serverURL":"https://waline-test-mzjszagu6-lanlan2017.vercel.app","placeholder":"Just go go","avatar":"mm","pageSize":10,"visitor":false,"comment_count":true,"requiredFields":[],"meta":["nick","mail","link"],"libUrl":"https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js","el":"#waline-comments","path":"/exam/8af88738/"}</script>
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.waline.el).then(() => 
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => {
+    new Waline(CONFIG.waline);
+  });
+});
+</script>
+</body>
+</html>

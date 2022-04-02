@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
+<meta name="generator" content="Hexo 5.4.0">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/exam/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/exam/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/exam/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/exam/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="_Sly-yzHYmALHXzjFpPWsodMrjBSphw7bfRbMUH80Qc">
+  <meta name="msvalidate.01" content="B1CFD346B8DEBBFE0C983C2AF8955531">
+  <meta name="baidu-site-verification" content="vkMTwK56xr">
+
+<link rel="stylesheet" href="/exam/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"lanlan2017.github.io","root":"/exam/","images":"/exam/images","scheme":"Gemini","darkmode":true,"version":"8.8.2","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/exam/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/exam/js/config.js"></script>
+<meta name="description" content="考点1:java基础知识 boolean表达式设有定义 int a&#x3D;3 ,b&#x3D;4,c&#x3D;5; 则以下的表达式中 , 值为 false 的是 ()  A a &lt; b &amp;&amp; b &lt; c B a &lt;&#x3D; b C a &lt; ( b + c ) D ! ( a &lt; b )  解析显示答案&#x2F;隐藏答案正确答案: D   拓展：单与和双与的区别 &amp;和&amp;&amp;am">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2021年09月07日 java1">
+<meta property="og:url" content="https://lanlan2017.github.io/exam/a562e57f/index.html">
+<meta property="og:site_name" content="蓝蓝的站点">
+<meta property="og:description" content="考点1:java基础知识 boolean表达式设有定义 int a&#x3D;3 ,b&#x3D;4,c&#x3D;5; 则以下的表达式中 , 值为 false 的是 ()  A a &lt; b &amp;&amp; b &lt; c B a &lt;&#x3D; b C a &lt; ( b + c ) D ! ( a &lt; b )  解析显示答案&#x2F;隐藏答案正确答案: D   拓展：单与和双与的区别 &amp;和&amp;&amp;am">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-09-07T06:39:50.000Z">
+<meta property="article:modified_time" content="2021-12-31T07:27:45.000Z">
+<meta property="article:author" content="蓝蓝">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://lanlan2017.github.io/exam/a562e57f/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://lanlan2017.github.io/exam/a562e57f/","path":"/a562e57f/","title":"2021年09月07日 java1"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>2021年09月07日 java1 | 蓝蓝的站点</title>
+  
+
+  <script src="/exam/js/third-party/analytics/baidu-analytics.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?dadeb188eb14ccde0b25a19230c429b5"></script>
+
+
+<link rel="dns-prefetch" href="https://waline-test-mzjszagu6-lanlan2017.vercel.app">
+  <noscript>
+    <link rel="stylesheet" href="/exam/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/exam/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">蓝蓝的站点</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">笔试题汇总</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/exam/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-dir"><a href="/exam/dir/" rel="section"><i class="fa fa-sitemap fa-fw"></i>目录</a></li>
+        <li class="menu-item menu-item-categories"><a href="/exam/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/exam/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-tags"><a href="/exam/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B91-java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-boolean%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">1.</span> <span class="nav-text">考点1:java基础知识 boolean表达式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90"><span class="nav-number">1.1.</span> <span class="nav-text">解析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8B%93%E5%B1%95%EF%BC%9A%E5%8D%95%E4%B8%8E%E5%92%8C%E5%8F%8C%E4%B8%8E%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">1.1.1.</span> <span class="nav-text">拓展：单与和双与的区别</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B92-java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-Object%E7%B1%BB"><span class="nav-number">2.</span> <span class="nav-text">考点2:java基础知识 Object类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-1"><span class="nav-number">2.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B93-%E5%AE%9E%E7%8E%B0%E5%A4%9A%E4%B8%AA%E6%8E%A5%E5%8F%A3%E7%9A%84%E6%AD%A3%E7%A1%AE%E5%86%99%E6%B3%95"><span class="nav-number">3.</span> <span class="nav-text">考点3:实现多个接口的正确写法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-2"><span class="nav-number">3.1.</span> <span class="nav-text">解析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E5%A4%9A%E4%B8%AA%E6%8E%A5%E5%8F%A3%E6%97%B6%E5%8F%AA%E9%9C%80%E8%A6%81%E5%86%99%E4%B8%80%E4%B8%AAimplements"><span class="nav-number">3.1.1.</span> <span class="nav-text">实现多个接口时只需要写一个implements</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B94-Servlet%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="nav-number">4.</span> <span class="nav-text">考点4:Servlet生命周期</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-3"><span class="nav-number">4.1.</span> <span class="nav-text">解析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HttpServlet%E5%AE%B9%E5%99%A8%E5%93%8D%E5%BA%94Web%E8%AF%B7%E6%B1%82%E6%B5%81%E7%A8%8B"><span class="nav-number">4.1.1.</span> <span class="nav-text">HttpServlet容器响应Web请求流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Servlet%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E4%B8%89%E4%B8%AA%E9%98%B6%E6%AE%B5"><span class="nav-number">4.1.2.</span> <span class="nav-text">Servlet生命周期三个阶段</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B95-%E7%B1%BB%E7%9A%84%E5%8A%A0%E8%BD%BD%E9%A1%BA%E5%BA%8F-%E7%88%B6%E7%B1%BB%E9%9D%99%E6%80%81%E5%9D%97-%E5%AD%90%E7%B1%BB%E9%9D%99%E6%80%81%E5%9D%97-main%E6%96%B9%E6%B3%95-%E7%88%B6%E7%B1%BB%E6%9E%84%E9%80%A0%E5%9D%97-%E7%88%B6%E7%B1%BB%E6%9E%84%E9%80%A0%E5%99%A8-%E5%AD%90%E7%B1%BB%E6%9E%84%E9%80%A0%E5%9D%97-%E5%AD%90%E7%B1%BB%E6%9E%84%E9%80%A0%E5%99%A8"><span class="nav-number">5.</span> <span class="nav-text">考点5:类的加载顺序 父类静态块 子类静态块 main方法 父类构造块 父类构造器 子类构造块 子类构造器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-4"><span class="nav-number">5.1.</span> <span class="nav-text">解析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B1%BB%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E9%A1%BA%E5%BA%8F"><span class="nav-number">5.1.1.</span> <span class="nav-text">类的初始化顺序</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B96-%E8%BF%98%E6%B2%A1%E4%BA%86%E8%A7%A3hibernate"><span class="nav-number">6.</span> <span class="nav-text">考点6:还没了解hibernate</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-5"><span class="nav-number">6.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B97-%E5%A0%86%E5%A4%96%E5%86%85%E5%AD%98-off-heap-%E8%BF%98%E6%B2%A1%E5%AD%A6%E5%88%B0"><span class="nav-number">7.</span> <span class="nav-text">考点7:堆外内存 off-heap 还没学到</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-6"><span class="nav-number">7.1.</span> <span class="nav-text">解析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A0%86%E5%A4%96%E5%86%85%E5%AD%98"><span class="nav-number">7.1.1.</span> <span class="nav-text">堆外内存</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B98-Servlet%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="nav-number">8.</span> <span class="nav-text">考点8:Servlet生命周期</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-7"><span class="nav-number">8.1.</span> <span class="nav-text">解析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Servlet%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F3%E4%B8%AA%E9%98%B6%E6%AE%B5"><span class="nav-number">8.1.1.</span> <span class="nav-text">Servlet生命周期3个阶段</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E9%98%B6%E6%AE%B5"><span class="nav-number">8.1.1.1.</span> <span class="nav-text">初始化阶段</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#servlet%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="nav-number">8.1.1.1.1.</span> <span class="nav-text">servlet工作原理</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%93%8D%E5%BA%94%E5%AE%A2%E6%88%B7%E8%AF%B7%E6%B1%82"><span class="nav-number">8.1.1.2.</span> <span class="nav-text">响应客户请求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%88%E6%AD%A2"><span class="nav-number">8.1.1.3.</span> <span class="nav-text">终止</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B99-%E7%B1%BB%E7%9A%84%E5%8A%A0%E8%BD%BD%E9%A1%BA%E5%BA%8F-%E9%9D%99%E6%80%81%E5%9D%97-main-%E6%9E%84%E9%80%A0%E5%9D%97-%E6%9E%84%E9%80%A0%E5%99%A8"><span class="nav-number">9.</span> <span class="nav-text">考点9:类的加载顺序 静态块 main 构造块 构造器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-8"><span class="nav-number">9.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B910-JVM%E7%9B%B8%E5%85%B3-%E8%BF%98%E6%B2%A1%E5%AD%A6%E5%88%B0"><span class="nav-number">10.</span> <span class="nav-text">考点10:JVM相关 还没学到</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-9"><span class="nav-number">10.1.</span> <span class="nav-text">解析</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="蓝蓝"
+      src="/exam/images/avatar.png">
+  <p class="site-author-name" itemprop="name">蓝蓝</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/exam/archives/">
+          <span class="site-state-item-count">148</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/exam/categories/">
+        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://lanlan2017.github.io/todo/" title="todo → https:&#x2F;&#x2F;lanlan2017.github.io&#x2F;todo&#x2F;"><i class="fa fa-check-square fa-fw"></i>todo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://lanlan2017.github.io/links/" title="links → https:&#x2F;&#x2F;lanlan2017.github.io&#x2F;links&#x2F;"><i class="fa fa-link fa-fw"></i>links</a>
+      </span>
+  </div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lanlan2017.github.io/exam/a562e57f/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/exam/images/avatar.png">
+      <meta itemprop="name" content="蓝蓝">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="蓝蓝的站点">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          2021年09月07日 java1
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-09-07 14:39:50" itemprop="dateCreated datePublished" datetime="2021-09-07T14:39:50+08:00">2021-09-07</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-12-31 15:27:45" itemprop="dateModified" datetime="2021-12-31T15:27:45+08:00">2021-12-31</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/exam/categories/%E7%89%9B%E5%AE%A2%E7%BD%91/" itemprop="url" rel="index"><span itemprop="name">牛客网</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/exam/categories/%E7%89%9B%E5%AE%A2%E7%BD%91/%E4%B8%93%E9%A1%B9%E7%BB%83%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">专项练习</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/exam/categories/%E7%89%9B%E5%AE%A2%E7%BD%91/%E4%B8%93%E9%A1%B9%E7%BB%83%E4%B9%A0/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/exam/categories/%E7%89%9B%E5%AE%A2%E7%BD%91/%E4%B8%93%E9%A1%B9%E7%BB%83%E4%B9%A0/Java/2021%E5%B9%B409%E6%9C%88/" itemprop="url" rel="index"><span itemprop="name">2021年09月</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/exam/a562e57f/#waline-comments" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" id="/exam/a562e57f/" data-xid="/exam/a562e57f/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>5.4k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>5 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="考点1-java基础知识-boolean表达式"><a href="#考点1-java基础知识-boolean表达式" class="headerlink" title="考点1:java基础知识 boolean表达式"></a>考点1:java基础知识 boolean表达式</h1><p>设有定义 int a=3 ,b=4,c=5; 则以下的表达式中 , 值为 false 的是 ()</p>
+<ul>
+<li>A <code>a &lt; b &amp;&amp; b &lt; c</code></li>
+<li>B <code>a &lt;= b</code></li>
+<li>C <code>a &lt; ( b + c )</code></li>
+<li>D <code>! ( a &lt; b )</code></li>
+</ul>
+<h2 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: D</details>
+
+
+<h3 id="拓展：单与和双与的区别"><a href="#拓展：单与和双与的区别" class="headerlink" title="拓展：单与和双与的区别"></a>拓展：单与和双与的区别</h3><ul>
+<li><code>&amp;</code>和<code>&amp;&amp;</code>都是<strong>逻辑运算符</strong>，都是判断<strong>两边同时真则为真，否则为假;</strong><ul>
+<li>但是<code>&amp;&amp;</code>当第一个条件不成之后，后面的条件都不执行了，而<code>&amp;</code>则还是继续执行，直到整个条件语句执行完为止。</li>
+</ul>
+</li>
+<li><code>||</code>和<code>|</code>都是逻辑<code>或</code>，<strong>只要两个数任意一个为真，条件就为真。</strong><ul>
+<li>同上，<code>||</code>也具有短路效果。</li>
+</ul>
+</li>
+</ul>
+<p><strong>双与有短路功能，单与可以进行位运算</strong></p>
+<h1 id="考点2-java基础知识-Object类"><a href="#考点2-java基础知识-Object类" class="headerlink" title="考点2:java基础知识 Object类"></a>考点2:java基础知识 Object类</h1><p>Java中所有类的父类是( )。</p>
+<ul>
+<li>A <code>Father</code></li>
+<li>B <code>Dang</code></li>
+<li>C <code>Exception</code></li>
+<li>D <code>Object</code></li>
+</ul>
+<h2 id="解析-1"><a href="#解析-1" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: D</details>
+
+<ul>
+<li>java中Object是所有类的父亲,</li>
+<li>所有类的对象都是Class的实例。</li>
+</ul>
+<h1 id="考点3-实现多个接口的正确写法"><a href="#考点3-实现多个接口的正确写法" class="headerlink" title="考点3:实现多个接口的正确写法"></a>考点3:实现多个接口的正确写法</h1><p>在java中,已定义两个接口B和C,要定义一个实现这两个接口的类,以下语句正确的是()</p>
+<ul>
+<li>A <code>interface A extends B,C</code></li>
+<li>B <code>interface A eimplements B,C</code></li>
+<li>C <code>class A implements B,C</code></li>
+<li>D <code>class A implements B,implements C</code></li>
+</ul>
+<h2 id="解析-2"><a href="#解析-2" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: C</details>
+
+<h3 id="实现多个接口时只需要写一个implements"><a href="#实现多个接口时只需要写一个implements" class="headerlink" title="实现多个接口时只需要写一个implements"></a>实现多个接口时只需要写一个implements</h3><p>类实现多个接口的时候，只需要一个implements，多个接口通过逗号进行隔开，</p>
+<p>先继承类,再实现接口</p>
+<h1 id="考点4-Servlet生命周期"><a href="#考点4-Servlet生命周期" class="headerlink" title="考点4:Servlet生命周期"></a>考点4:Servlet生命周期</h1><p>J2EE中,当把来自客户机的HTTP请求委托给servlet时,会调用HttpServlet的( )方法</p>
+<ul>
+<li>A <code>service</code></li>
+<li>B <code>doget</code></li>
+<li>C <code>dopost</code></li>
+<li>D <code>init</code></li>
+</ul>
+<h2 id="解析-3"><a href="#解析-3" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: A</details>
+
+<h3 id="HttpServlet容器响应Web请求流程"><a href="#HttpServlet容器响应Web请求流程" class="headerlink" title="HttpServlet容器响应Web请求流程"></a>HttpServlet容器响应Web请求流程</h3><p>HttpServlet容器响应Web客户请求流程如下：<br>1）Web客户向Servlet容器发出Http请求；<br>2）Servlet容器解析Web客户的Http请求；<br>3）Servlet容器创建一个HttpRequest对象，在这个对象中封装Http请求信息；<br>4）Servlet容器创建一个HttpResponse对象；<br>5）Servlet容器调用HttpServlet的service方法，这个方法中会根据request的Method来判断具体是执行doGet还是doPost，把HttpRequest和HttpResponse对象作为service方法的参数传给HttpServlet对象；<br>6）HttpServlet调用HttpRequest的有关方法，获取HTTP请求信息；<br>7）HttpServlet调用HttpResponse的有关方法，生成响应数据；<br>8）Servlet容器把HttpServlet的响应结果传给Web客户。</p>
+<p>doGet()<br>或<br>doPost()<br>是创建HttpServlet时需要覆盖的方法.</p>
+<h3 id="Servlet生命周期三个阶段"><a href="#Servlet生命周期三个阶段" class="headerlink" title="Servlet生命周期三个阶段"></a>Servlet生命周期三个阶段</h3><p>1.初始化阶段，调用init()方法<br>2.响应客户请求阶段，调用service()方法<br>3.终止阶段，调用destroy()方法</p>
+<h1 id="考点5-类的加载顺序-父类静态块-子类静态块-main方法-父类构造块-父类构造器-子类构造块-子类构造器"><a href="#考点5-类的加载顺序-父类静态块-子类静态块-main方法-父类构造块-父类构造器-子类构造块-子类构造器" class="headerlink" title="考点5:类的加载顺序 父类静态块 子类静态块 main方法 父类构造块 父类构造器 子类构造块 子类构造器"></a>考点5:类的加载顺序 父类静态块 子类静态块 main方法 父类构造块 父类构造器 子类构造块 子类构造器</h1><p>关于以下application,说法正确是什么？</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> x=<span class="number">10</span>;</span><br><span class="line">    <span class="keyword">static</span> &#123;x+=<span class="number">5</span>;&#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="comment">//4</span></span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;x=&quot;</span>+x);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">static</span>&#123;x/=<span class="number">3</span>;&#125;;</span><br><span class="line">&#125;<span class="comment">//9</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>A 4行与9行不能通过编译,因为缺少方法名和返回类型</li>
+<li>B 编译通过,执行结果是:<code>x=5</code></li>
+<li>C 编译通过,执行结果是:<code>x=3</code></li>
+<li>D 9行不能通过编译,因为只能有一个静态初始化器</li>
+</ul>
+<h2 id="解析-4"><a href="#解析-4" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: B</details>
+
+<h3 id="类的初始化顺序"><a href="#类的初始化顺序" class="headerlink" title="类的初始化顺序"></a>类的初始化顺序</h3><figure class="highlight java"><figcaption><span>G:\dev2\idea_workspace\MyJavaTools\RunableTools\src\base\test\B.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span></span>&#123;</span><br><span class="line">    <span class="keyword">static</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;父类 静态 代码块&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">A</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;父类 构造 方法&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;父类 初始化 代码块&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">B</span> <span class="keyword">extends</span> <span class="title">A</span></span>&#123;</span><br><span class="line">    <span class="keyword">static</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;子类 静态 代码块&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">B</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;子类 构造 方法&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;子类 初始化 代码块&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;main方法 执行&quot;</span>);</span><br><span class="line">        &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;main方法 代码块1&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">new</span> B();</span><br><span class="line">        &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;main方法 代码块2&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">父类 静态 代码块</span><br><span class="line">子类 静态 代码块</span><br><span class="line">main方法 执行</span><br><span class="line">main方法 代码块1</span><br><span class="line">父类 初始化 代码块</span><br><span class="line">父类 构造 方法</span><br><span class="line">子类 初始化 代码块</span><br><span class="line">子类 构造 方法</span><br><span class="line">main方法 代码块2</span><br></pre></td></tr></table></figure>
+
+<p><strong>静态代码块先于 主方法执行，静态代码块之间遵从代码顺序执行</strong>。<br>所以：先初始化静态变量</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x=10；//x=10</span><br></pre></td></tr></table></figure>
+<p>执行第一个静态代码块，</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x=x+5; //x=15</span><br></pre></td></tr></table></figure>
+<p>执行第二静态代码块 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x=x/3; //x=5</span><br></pre></td></tr></table></figure>
+<p>执行主方法： 输出x=5</p>
+<p>拓展一下，在类中定义的{}之间被称为构造块，构造块相对于构造方法先执行，构造块之间按照代码编译顺序执行</p>
+<p>此外还有普通代码块，存在于方法之中。<br>贴出参考文章：<a href="http://www.cnblogs.com/sophine/p/3531282.html" target="_blank">http://www.cnblogs.com/sophine/p/3531282.html</a></p>
+<h1 id="考点6-还没了解hibernate"><a href="#考点6-还没了解hibernate" class="headerlink" title="考点6:还没了解hibernate"></a>考点6:还没了解hibernate</h1><p>下面关于hibernate核心接口说明错误的是？</p>
+<ul>
+<li>A <code>Configuration</code> 接口:配置<code>Hibernate</code>,根据其启动<code>hibernate</code>,创建<code>SessionFactory</code> 对象</li>
+<li>B <code>SessionFactory</code> 接口:负责保存、更新、删除、加载和查询对象,是线程不安全的,避免多个线程共享同一个<code>session</code>,是轻量级、一级缓存</li>
+<li>C <code>Query</code> 和<code>Criteria</code> 接口:执行数据库的查询</li>
+<li>D <code>Transaction</code> 接口:管理事务</li>
+</ul>
+<h2 id="解析-5"><a href="#解析-5" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: B</details>
+
+<p>B选项中应该是Session接口而不是SessionFactory接口<br>1，Configuration接口：配置Hibernate，根据其启动Hibernate，创建SessionFactory对象；<br>2，SessionFactory接口：初始化Hibernate，充当数据存储源的，创建session对象，SessionFactory是线程安全的，意味着它的同一个实例可以被应用的多个线程共享，是重量级二级缓存；<br>3，<strong>session接口：负责保存、更新、删除、加载和查询对象，是一个非线程安全的，避免多个线程共享一个session，是轻量级，一级缓存。</strong><br>4，Transaction接口：管理事务。可以对事务进行提交和回滚；<br>5，Query和Criteria接口：执行数据库的查询。</p>
+<h1 id="考点7-堆外内存-off-heap-还没学到"><a href="#考点7-堆外内存-off-heap-还没学到" class="headerlink" title="考点7:堆外内存 off-heap 还没学到"></a>考点7:堆外内存 off-heap 还没学到</h1><p>off-heap是指那种内存()</p>
+<ul>
+<li>A <code>JVM GC</code>能管理的内存</li>
+<li>B <code>JVM</code>进程管理的内存</li>
+<li>C 在<code>JVM</code>老年代内存区</li>
+<li>D 在<code>JVM</code>新生代内存</li>
+</ul>
+<h2 id="解析-6"><a href="#解析-6" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: B</details>
+
+<h3 id="堆外内存"><a href="#堆外内存" class="headerlink" title="堆外内存"></a>堆外内存</h3><p>off-heap叫做堆外内存，将你的对象从堆中脱离出来序列化，然后存储在一大块内存中，这就像它存储到磁盘上一样，但它仍然在RAM中。对象在这种状态下不能直接使用，它们必须首先反序列化，也不受垃圾收集。<br>序列化和反序列化将会影响部分性能（所以可以考虑使用FST-serialization）使用堆外内存能够降低GC导致的暂停。<br>堆外内存不受垃圾收集器管理，也不属于老年代，新生代。</p>
+<h1 id="考点8-Servlet生命周期"><a href="#考点8-Servlet生命周期" class="headerlink" title="考点8:Servlet生命周期"></a>考点8:Servlet生命周期</h1><p>servlet周期包含哪些:</p>
+<ul>
+<li>A 初始化</li>
+<li>B 销毁</li>
+<li>C 请求处理</li>
+<li>D 开始</li>
+</ul>
+<h2 id="解析-7"><a href="#解析-7" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: ABC</details>
+
+
+<h3 id="Servlet生命周期3个阶段"><a href="#Servlet生命周期3个阶段" class="headerlink" title="Servlet生命周期3个阶段"></a>Servlet生命周期3个阶段</h3><p>1）初始化阶段：调用init方法<br>2）响应客户请求：调用service<br>3）终止：调用destory方法</p>
+<h4 id="初始化阶段"><a href="#初始化阶段" class="headerlink" title="初始化阶段"></a>初始化阶段</h4><p>在下列时刻servlet容器装载servlet<br>1 servlet容器启动时，自动装载某些servlet<br>2 在servlet容器启动后，客户首次向servlet发送请求<br>3 servlet类文件被更新之后，重新装载servlet</p>
+<p>Servlet被装载之后，servlet容器创建一个servlet对象并调用servlet的init方法，在servlet生命周期内，init方法只能被调用一次。</p>
+<h5 id="servlet工作原理"><a href="#servlet工作原理" class="headerlink" title="servlet工作原理"></a>servlet工作原理</h5><p>客户端发起一个请求，servlet调用service方法时请求进行响应，service对请求的方式进行了匹配，选择调用doPost或者doGet等这些方法，然后进入对应方法中调用逻辑层的方法，实现对客户的响应。</p>
+<h4 id="响应客户请求"><a href="#响应客户请求" class="headerlink" title="响应客户请求"></a>响应客户请求</h4><p>对于用户到达servlet的请求，servlet容器会创建特定于该请求的ServletRequest和ServletResponse对象，然后调用servlet的service方法，service方法从ServletRequest对象中获取客户请求的信息，处理该请求，并且通过ServletResponse对象向客户端返回响应信息。</p>
+<h4 id="终止"><a href="#终止" class="headerlink" title="终止"></a>终止</h4><p>当web应用终止或者servlet容器终止或servlet容器重新装载servlet新实例时，servlet容器会调用servlet对象的destory方法，在destory方法中可以释放servlet占用的资源</p>
+<h1 id="考点9-类的加载顺序-静态块-main-构造块-构造器"><a href="#考点9-类的加载顺序-静态块-main-构造块-构造器" class="headerlink" title="考点9:类的加载顺序 静态块 main 构造块 构造器"></a>考点9:类的加载顺序 静态块 main 构造块 构造器</h1><p>关于以下代码的说明,正确的是( )</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">StaticStuff</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> x=<span class="number">10</span>;</span><br><span class="line">    <span class="keyword">static</span> &#123; x+=<span class="number">5</span>;&#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[ ])</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;x=&quot;</span> + x);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">static</span> &#123; x/=<span class="number">3</span>;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>A 4行与9行不能通过编译,因为缺少方法名和返回类型</li>
+<li>B 9行不能通过编译,因为只能有一个静态初始化器</li>
+<li>C 编译通过,执行结果为:x=5</li>
+<li>D 编译通过,执行结果为:x=3</li>
+</ul>
+<h2 id="解析-8"><a href="#解析-8" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: C</details>
+
+<p><strong>同上第5题</strong></p>
+<h1 id="考点10-JVM相关-还没学到"><a href="#考点10-JVM相关-还没学到" class="headerlink" title="考点10:JVM相关 还没学到"></a>考点10:JVM相关 还没学到</h1><p>关于OutOfMemoryError,下面说法正确的是()？</p>
+<ul>
+<li>A <code>java.lang.OutOfMemoryError: PermGen space</code> 增加<code>-XX:MaxPermSize</code>这个参数的值的话,这个问题通常会得到解决。</li>
+<li>B <code>java.lang.OutOfMemoryError: Requested array size exceeds VM limit</code>当你正准备创建一个超过虚拟机允许的大小的数组时,这条错误将会出现</li>
+<li>C <code>java.lang.OutOfMemoryError: Java heap space</code> 一般情况下解决这个问题最快的方法就是通过<code>-Xmx</code>参数来增加堆的大小</li>
+<li>D <code>java.lang.OutOfMemoryError: nativeGetNewTLA</code>这个异常只有在<code>jRockit</code>虚拟机时才会碰到</li>
+</ul>
+<h2 id="解析-9"><a href="#解析-9" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: ABC</details>
+
+<p>关于此题，《深入理解java虚拟机》有关于OOM（OutOfMemory）问题的解释<br>A：属于运行时常量池导致的溢出，设置-XX：MaxPermSize可以解决这个问题，<br>B：属于堆空间不足导致的错误，问题比较少见，解决方式和C相同，<br>C：属于java堆内存问题，一般的手段是通过内存映像分析工具，对Dump出来的堆转储存快照进行分析，重点是确认内存中的对象是否是有必要的，也就是要判断是出现了内存泄漏，还是出现了内存溢出，如果是内存列楼，通过工具检查泄露对象打GC Roots的引用链信息，可以准确的确定出泄露代码的位置，不存在泄露，就应该检查虚拟机的堆参数，如果可以继续调大，可以设置-Xmx解决问题<br>D：java.lang.OutOfMemoryError: nativeGetNewTLA指当虚拟机不能分配新的线程本地空间(Thread Local Area）的时候错误信息，此错误是线程申请一个新的TLA时产生的，这个异常一般只会发生在jRockit虚拟机，只有过于绝对。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>蓝蓝
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://lanlan2017.github.io/exam/a562e57f/" title="2021年09月07日 java1">https://lanlan2017.github.io/exam/a562e57f/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/exam/def2879b/" rel="prev" title="2021年09月06日 计算机_编程基础1">
+                  <i class="fa fa-chevron-left"></i> 2021年09月06日 计算机_编程基础1
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/exam/5469bef2/" rel="next" title="2021年09月08日 java1">
+                  2021年09月08日 java1 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="waline-comments"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2018 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">蓝蓝</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">507k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">7:41</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/exam/js/comments.js"></script><script src="/exam/js/utils.js"></script><script src="/exam/js/motion.js"></script><script src="/exam/js/next-boot.js"></script><script src="/exam/js/bookmark.js"></script><script src="/exam/js/pjax.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/exam/js/third-party/search/local-search.js"></script>
+
+
+
+  <script src="/exam/js/third-party/fancybox.js"></script>
+
+  <script src="/exam/js/third-party/pace.js"></script>
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="/exam/js/third-party/math/mathjax.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://lanlan2017.github.io/exam/a562e57f/"}</script>
+  <script src="/exam/js/third-party/quicklink.js"></script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":null,"enable":true,"serverURL":"https://waline-test-mzjszagu6-lanlan2017.vercel.app","placeholder":"Just go go","avatar":"mm","pageSize":10,"visitor":false,"comment_count":true,"requiredFields":[],"meta":["nick","mail","link"],"libUrl":"https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js","el":"#waline-comments","path":"/exam/a562e57f/"}</script>
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.waline.el).then(() => 
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => {
+    new Waline(CONFIG.waline);
+  });
+});
+</script>
+</body>
+</html>

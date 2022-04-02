@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
+<meta name="generator" content="Hexo 5.4.0">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/exam/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/exam/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/exam/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/exam/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="_Sly-yzHYmALHXzjFpPWsodMrjBSphw7bfRbMUH80Qc">
+  <meta name="msvalidate.01" content="B1CFD346B8DEBBFE0C983C2AF8955531">
+  <meta name="baidu-site-verification" content="vkMTwK56xr">
+
+<link rel="stylesheet" href="/exam/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"lanlan2017.github.io","root":"/exam/","images":"/exam/images","scheme":"Gemini","darkmode":true,"version":"8.8.2","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/exam/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/exam/js/config.js"></script>
+<meta name="description" content="考点1:构造方法以下不属于构造方法特征的是()  A 构造方法名与类名相同 B 构造方法不返回任何值,也没有返回类型 C 构造方法在创建对象时调用,其他地方不能显式地直接调用 D 每一个类只能有一个构造方法  解析显示答案&#x2F;隐藏答案正确答案: D   考点2:类定义有以下程序片段,下列哪个选项不能插入到第一行 。( )。 12341.2. public  class  A&amp;#123;3. &#x2F;&#x2F;do">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2021年08月10日 java2">
+<meta property="og:url" content="https://lanlan2017.github.io/exam/a6c2ab94/index.html">
+<meta property="og:site_name" content="蓝蓝的站点">
+<meta property="og:description" content="考点1:构造方法以下不属于构造方法特征的是()  A 构造方法名与类名相同 B 构造方法不返回任何值,也没有返回类型 C 构造方法在创建对象时调用,其他地方不能显式地直接调用 D 每一个类只能有一个构造方法  解析显示答案&#x2F;隐藏答案正确答案: D   考点2:类定义有以下程序片段,下列哪个选项不能插入到第一行 。( )。 12341.2. public  class  A&amp;#123;3. &#x2F;&#x2F;do">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://uploadfiles.nowcoder.com/images/20161123/5918115_1479891741965_E3A349EA0FAFB7A49B99084AB8BF7860">
+<meta property="og:image" content="https://uploadfiles.nowcoder.com/images/20210403/295024425_1617425679179/ED4A39D7A4730633FAFF15C2833D36EF">
+<meta property="og:image" content="https://uploadfiles.nowcoder.com/images/20210403/295024425_1617423311067/E233F218A90B7A00B94B7F533A98C0A2">
+<meta property="og:image" content="https://uploadfiles.nowcoder.com/images/20210403/295024425_1617423324866/1A8F685C15FEEF92820538FEA13FF231">
+<meta property="article:published_time" content="2021-08-09T11:50:05.000Z">
+<meta property="article:modified_time" content="2021-08-15T17:00:14.000Z">
+<meta property="article:author" content="蓝蓝">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://uploadfiles.nowcoder.com/images/20161123/5918115_1479891741965_E3A349EA0FAFB7A49B99084AB8BF7860">
+
+
+<link rel="canonical" href="https://lanlan2017.github.io/exam/a6c2ab94/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://lanlan2017.github.io/exam/a6c2ab94/","path":"/a6c2ab94/","title":"2021年08月10日 java2"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>2021年08月10日 java2 | 蓝蓝的站点</title>
+  
+
+  <script src="/exam/js/third-party/analytics/baidu-analytics.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?dadeb188eb14ccde0b25a19230c429b5"></script>
+
+
+<link rel="dns-prefetch" href="https://waline-test-mzjszagu6-lanlan2017.vercel.app">
+  <noscript>
+    <link rel="stylesheet" href="/exam/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/exam/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">蓝蓝的站点</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">笔试题汇总</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/exam/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-dir"><a href="/exam/dir/" rel="section"><i class="fa fa-sitemap fa-fw"></i>目录</a></li>
+        <li class="menu-item menu-item-categories"><a href="/exam/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/exam/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-tags"><a href="/exam/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B91-%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">考点1:构造方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90"><span class="nav-number">1.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B92-%E7%B1%BB%E5%AE%9A%E4%B9%89"><span class="nav-number">2.</span> <span class="nav-text">考点2:类定义</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-1"><span class="nav-number">2.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B93-%E5%8F%AF%E4%BF%A1%E6%95%B0%E6%8D%AE"><span class="nav-number">3.</span> <span class="nav-text">考点3:可信数据</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-2"><span class="nav-number">3.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B94-%E7%BA%BF%E7%A8%8B-%E7%BA%BF%E7%A8%8B%E6%89%A7%E8%A1%8C%E4%BD%93-run-%EF%BC%8Cstart-%EF%BC%8Cjoin-%E6%96%B9%E6%B3%95"><span class="nav-number">4.</span> <span class="nav-text">考点4:线程 线程执行体 run()，start()，join()方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-3"><span class="nav-number">4.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B95-%E6%8A%BD%E8%B1%A1%E7%B1%BB-abstract%EF%BC%8Cfinal%EF%BC%8Cstatic%E5%85%B3%E9%94%AE%E5%AD%97"><span class="nav-number">5.</span> <span class="nav-text">考点5:抽象类 abstract，final，static关键字</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-4"><span class="nav-number">5.1.</span> <span class="nav-text">解析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#static%E4%B8%8D%E8%83%BD%E4%BF%AE%E9%A5%B0%E5%A4%96%E9%83%A8%E7%B1%BB"><span class="nav-number">5.1.1.</span> <span class="nav-text">static不能修饰外部类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%96%E9%83%A8%E7%B1%BB%E5%8F%AA%E8%83%BD%E6%98%AFpublic-abstract-%E6%88%96%E8%80%85final%E4%BF%AE%E9%A5%B0"><span class="nav-number">5.1.1.1.</span> <span class="nav-text">外部类只能是public,abstract,或者final修饰</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#abstract%E5%92%8Cstatic%E4%B8%8D%E8%83%BD%E5%85%B1%E5%90%8C%E4%BF%AE%E9%A5%B0%E6%96%B9%E6%B3%95"><span class="nav-number">5.1.2.</span> <span class="nav-text">abstract和static不能共同修饰方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#abstract%E6%96%B9%E6%B3%95%E5%8F%AA%E8%83%BD%E8%A2%ABpublic%E6%88%96protected%E4%BF%AE%E9%A5%B0"><span class="nav-number">5.1.2.1.</span> <span class="nav-text">abstract方法只能被public或protected修饰</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B96"><span class="nav-number">6.</span> <span class="nav-text">考点6:</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-5"><span class="nav-number">6.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B97-hibernate%E5%BB%B6%E8%BF%9F%E5%8A%A0%E8%BD%BD"><span class="nav-number">7.</span> <span class="nav-text">考点7:hibernate延迟加载</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-6"><span class="nav-number">7.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B98-IO%E6%B5%81%E6%94%AF%E6%8C%81Unicode%E7%9A%84IO%E6%B5%81"><span class="nav-number">8.</span> <span class="nav-text">考点8:IO流支持Unicode的IO流</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-7"><span class="nav-number">8.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B99"><span class="nav-number">9.</span> <span class="nav-text">考点9:</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-8"><span class="nav-number">9.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B910"><span class="nav-number">10.</span> <span class="nav-text">考点10:</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-9"><span class="nav-number">10.1.</span> <span class="nav-text">解析</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="蓝蓝"
+      src="/exam/images/avatar.png">
+  <p class="site-author-name" itemprop="name">蓝蓝</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/exam/archives/">
+          <span class="site-state-item-count">148</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/exam/categories/">
+        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://lanlan2017.github.io/todo/" title="todo → https:&#x2F;&#x2F;lanlan2017.github.io&#x2F;todo&#x2F;"><i class="fa fa-check-square fa-fw"></i>todo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://lanlan2017.github.io/links/" title="links → https:&#x2F;&#x2F;lanlan2017.github.io&#x2F;links&#x2F;"><i class="fa fa-link fa-fw"></i>links</a>
+      </span>
+  </div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lanlan2017.github.io/exam/a6c2ab94/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/exam/images/avatar.png">
+      <meta itemprop="name" content="蓝蓝">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="蓝蓝的站点">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          2021年08月10日 java2
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-08-09 19:50:05" itemprop="dateCreated datePublished" datetime="2021-08-09T19:50:05+08:00">2021-08-09</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-08-16 01:00:14" itemprop="dateModified" datetime="2021-08-16T01:00:14+08:00">2021-08-16</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/exam/categories/%E7%89%9B%E5%AE%A2%E7%BD%91/" itemprop="url" rel="index"><span itemprop="name">牛客网</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/exam/categories/%E7%89%9B%E5%AE%A2%E7%BD%91/%E4%B8%93%E9%A1%B9%E7%BB%83%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">专项练习</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/exam/categories/%E7%89%9B%E5%AE%A2%E7%BD%91/%E4%B8%93%E9%A1%B9%E7%BB%83%E4%B9%A0/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/exam/categories/%E7%89%9B%E5%AE%A2%E7%BD%91/%E4%B8%93%E9%A1%B9%E7%BB%83%E4%B9%A0/Java/2021%E5%B9%B408%E6%9C%88/" itemprop="url" rel="index"><span itemprop="name">2021年08月</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/exam/a6c2ab94/#waline-comments" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" id="/exam/a6c2ab94/" data-xid="/exam/a6c2ab94/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>6.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>6 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="考点1-构造方法"><a href="#考点1-构造方法" class="headerlink" title="考点1:构造方法"></a>考点1:构造方法</h1><p>以下不属于构造方法特征的是()</p>
+<ul>
+<li>A 构造方法名与类名相同</li>
+<li>B 构造方法不返回任何值,也没有返回类型</li>
+<li>C 构造方法在创建对象时调用,其他地方不能显式地直接调用</li>
+<li>D 每一个类只能有一个构造方法</li>
+</ul>
+<h2 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: D</details>
+
+
+<h1 id="考点2-类定义"><a href="#考点2-类定义" class="headerlink" title="考点2:类定义"></a>考点2:类定义</h1><p>有以下程序片段,下列哪个选项不能插入到第一行 。( )。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span></span><br><span class="line"><span class="number">2.</span> <span class="keyword">public</span>  <span class="class"><span class="keyword">class</span>  <span class="title">A</span></span>&#123;</span><br><span class="line"><span class="number">3.</span> <span class="comment">//do sth</span></span><br><span class="line"><span class="number">4.</span> &#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>A <code>public class MainClass&#123; &#125;</code></li>
+<li>B <code>package mine;</code></li>
+<li>C <code>class ANotherClass&#123; &#125;</code></li>
+<li>D <code>import java.util.*;</code></li>
+</ul>
+<h2 id="解析-1"><a href="#解析-1" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: A</details>
+
+<p>Java一个源程序只能有一个public类存在,且类名与文件名相同。<br>Java程序是从main方法开始执行的,public为类加载器提供入口,然后找到public类中的main方法开始执行。<br>如果存在多个public类,程序将不知道该从哪里执行。<br>注意,内部类可以是 public的,因为内部类是作为外部类的成员存在的</p>
+<h1 id="考点3-可信数据"><a href="#考点3-可信数据" class="headerlink" title="考点3:可信数据"></a>考点3:可信数据</h1><p>后端获取数据,向前端输出过程中,以下描述正确的是</p>
+<ul>
+<li>A 对于前端过滤过的参数,属于可信数据,可以直接输出到前端页面</li>
+<li>B 对于从数据库获得的数据,属于可信数据,可以直接输出到前端页面</li>
+<li>C 对于从用户上传的<code>Excel</code>等文件解析出的数据,属于可信数据,可以直接输出到前端页面</li>
+<li>D 其它选项都不属于可信数据,输出前应该采用信息安全部发布的<code>XSSFilter</code>做进行相应编码</li>
+</ul>
+<h2 id="解析-2"><a href="#解析-2" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: D</details>
+
+
+<h1 id="考点4-线程-线程执行体-run-，start-，join-方法"><a href="#考点4-线程-线程执行体-run-，start-，join-方法" class="headerlink" title="考点4:线程 线程执行体 run()，start()，join()方法"></a>考点4:线程 线程执行体 run()，start()，join()方法</h1><p>以下哪个方法用于定义线程的执行体？ ()</p>
+<ul>
+<li>A <code>start()</code></li>
+<li>B <code>join()</code></li>
+<li>C <code>run()</code></li>
+<li>D <code>synchronized()</code></li>
+</ul>
+<h2 id="解析-3"><a href="#解析-3" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: C</details>
+
+
+<p>run()方法是用来定义这个线程在启动的时候需要做什么,但是,直接调用线程的run()方法只会执行一遍函数体,而不会开辟线程,必须使用star()来启动线程。</p>
+<p><code>线程B.join()</code>方法是停止当前正在运行的线程,先转去<strong>运行调用join()方法的线程B</strong>,直到线程B运行结束后。再返回运行当前线程。</p>
+<h1 id="考点5-抽象类-abstract，final，static关键字"><a href="#考点5-抽象类-abstract，final，static关键字" class="headerlink" title="考点5:抽象类 abstract，final，static关键字"></a>考点5:抽象类 abstract，final，static关键字</h1><p>以下关于 abstract 关键字的说法,正确的是()</p>
+<ul>
+<li>A <code>abstract</code> 可以与<code>final</code> 并列修饰同一个类。</li>
+<li>B <code>abstract</code> 类中不可以有<code>private</code>的成员。</li>
+<li>C <code>abstract</code> 类中必须全部是<code>abstract</code>方法。</li>
+<li>D <code>abstract</code> 方法必须在<code>abstract</code>类或接口中。</li>
+</ul>
+<h2 id="解析-4"><a href="#解析-4" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: D</details>
+
+<blockquote>
+<ol>
+<li>abstract类不能与final,static使用。final修饰方法，子类可以调用，但不能覆盖。 </li>
+<li>抽象类可以有private成员，但最好不要有private,因为私有和抽象放在一起，子类如果想重写父类的私有方法根本继承不过来，也就无法重写 </li>
+<li><strong>抽象类中可以有非抽象方法</strong> </li>
+<li>抽象类中可以都是非抽象的，但是<strong>抽象方法一定要在类和接口</strong>中 </li>
+</ol>
+</blockquote>
+<blockquote>
+<ul>
+<li>abstract类是需要被继承使用的，所以它不能被final使用，所以A错，</li>
+<li>也可以有private属性，B错，</li>
+<li>也可以有普通方法 甚至所有都可以是普通方法，当然这样也就失去了abstract类的意义，C错，</li>
+<li>interface属于特殊的abstract类，也是abstract类，所以D对</li>
+</ul>
+</blockquote>
+<ol>
+<li>abstract类不能使用final,static修饰。<ul>
+<li>abstract类就是要被继承实现。</li>
+<li>final修饰的类不能被继承，所以abstract不能和final共同修饰一个类<ul>
+<li>final修饰方法，子类可以调用，但不能覆盖。 </li>
+<li>final修饰的变量不能修改，既是常量。</li>
+</ul>
+</li>
+<li><strong>static修饰的类只能是内部类</strong>，<strong>static不能修饰外部类</strong><ul>
+<li>抽象类是不能实例化的，即不能被分配内存；</li>
+</ul>
+</li>
+<li>static修饰的方法在类实例化之前就已经别分配了内存，这样一来矛盾就出现了。所以abstract不能和static共同修饰同一个类，在abstract类里面，可以不能定义static内部类</li>
+</ul>
+</li>
+<li>最好不要有private因为私有和抽象放在一起，子类如果想重写父类的私有方法根本继承不过来，也就无法重写 。但是抽象类中是可以有私有的成员。 </li>
+<li>抽象类中可以有非抽象方法 </li>
+<li>抽象类中可以都是非抽象的，但是<strong>抽象方法一定要在抽象类和接口</strong>中。普通类可以被实例化，而抽象方法本身不能被调用，如果普通类有抽象方法，那么该方法被调用就会出错。</li>
+</ol>
+<h3 id="static不能修饰外部类"><a href="#static不能修饰外部类" class="headerlink" title="static不能修饰外部类"></a>static不能修饰外部类</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">A</span></span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>报错：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Illegal modifier for the class A; only public, abstract &amp; final are permitted</span><br></pre></td></tr></table></figure>
+<h4 id="外部类只能是public-abstract-或者final修饰"><a href="#外部类只能是public-abstract-或者final修饰" class="headerlink" title="外部类只能是public,abstract,或者final修饰"></a>外部类只能是public,abstract,或者final修饰</h4><h3 id="abstract和static不能共同修饰方法"><a href="#abstract和static不能共同修饰方法" class="headerlink" title="abstract和static不能共同修饰方法"></a>abstract和static不能共同修饰方法</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">B</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">abstract</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>报错：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The abstract method method in type B can only set a visibility modifier, one of public or protected</span><br></pre></td></tr></table></figure>
+<h4 id="abstract方法只能被public或protected修饰"><a href="#abstract方法只能被public或protected修饰" class="headerlink" title="abstract方法只能被public或protected修饰"></a>abstract方法只能被public或protected修饰</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure>
+<p>报错：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The abstract method method in type B can only set a visibility modifier, one of public or protected</span><br></pre></td></tr></table></figure>
+
+<h1 id="考点6"><a href="#考点6" class="headerlink" title="考点6:"></a>考点6:</h1><p>下面关于JAVA的垃圾回收机制,正确的是( )</p>
+<ul>
+<li>A 当调用”<code>System.gc()</code>“来强制回收时,系统会立即回收垃圾</li>
+<li>B 垃圾回收不能确定具体的回收时间</li>
+<li>C 程序可明确地标识某个局部变量的引用不再被使用</li>
+<li>D 程序可以显式地立即释放对象占有的内存</li>
+</ul>
+<h2 id="解析-5"><a href="#解析-5" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: B</details>
+
+
+<p>java提供了一个系统级的线程，即垃圾回收器线程。用来对每一个分配出去的内存空间进行跟踪。当JVM空闲时，自动回收每块可能被回收的内存，GC是完全自动的，不能被强制执行。程序员最多只能用System.gc()来建议执行垃圾回收器回收内存，但是具体的回收时间，是不可知的。当对象的引用变量被赋值为null，可能被当成垃圾。 </p>
+<h1 id="考点7-hibernate延迟加载"><a href="#考点7-hibernate延迟加载" class="headerlink" title="考点7:hibernate延迟加载"></a>考点7:hibernate延迟加载</h1><p>下面有个hibernate延迟加载,说法错误的是？</p>
+<ul>
+<li>A Hibernate2延迟加载实现:a)实体对象 b)集合(Collection)</li>
+<li>B <code>Hibernate3</code> 提供了属性的延迟加载功能</li>
+<li>C <code>get</code>支持延迟加载,<code>load</code>不支持延迟加</li>
+<li>D <code>hibernate</code>使用<code>Java</code>反射机制,而不是字节码增强程序来实现透明性</li>
+</ul>
+<h2 id="解析-6"><a href="#解析-6" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: C</details>
+
+<p> Hibernate 中 get()和load() 的区别： </p>
+<p>get是立即加载，load是延迟加载。<br>get()采用立即加载方式，当get()执行的时候会立即向数据库发出查询语句，如果没有对应的记录，返回null，而load()采用延迟加载，执行此方法的时候返回的是一个***，只有等真正使用该对象属性的时候，才会发出SQL语句进行查询，若没有，则出现异常ObjectNotFoundException</p>
+<h1 id="考点8-IO流支持Unicode的IO流"><a href="#考点8-IO流支持Unicode的IO流" class="headerlink" title="考点8:IO流支持Unicode的IO流"></a>考点8:IO流支持Unicode的IO流</h1><p>哪个类可用于处理Unicode?</p>
+<ul>
+<li>A <code>InputStreamReader</code></li>
+<li>B <code>BufferedReader</code></li>
+<li>C <code>Writer</code></li>
+<li>D <code>PipedInputStream</code></li>
+</ul>
+<h2 id="解析-7"><a href="#解析-7" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: A</details>
+
+
+<p>InputStreamReader可以指定字符编码格式<br>InputStreamReader是转换流，将字节流转换成字符流。</p>
+<p>BufferedReader只是起到了装饰的作用，就是不用每次都new一个数组了，增加了缓冲区，缓冲区有和没有都一样，只是读取的快慢不同，真正实现功能的是InputStreamReader</p>
+<p>看API就知道了。<br> A、 InputStreanReader的构造函数：</p>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>InputStreamReader(InputStream in)</code></td>
+<td align="left">Creates an InputStreamReader that uses the default charset.</td>
+</tr>
+<tr>
+<td align="left"><code>InputStreamReader(InputStream in, String charsetName)</code></td>
+<td align="left">Creates an InputStreamReader that uses the named charset.</td>
+</tr>
+<tr>
+<td align="left"><code>InputStreamReader(InputStream in, Charset cs)</code></td>
+<td align="left">Creates an InputStreamReader that uses the given charset.</td>
+</tr>
+<tr>
+<td align="left"><code>InputStreamReader(InputStream in, CharsetDecoder dec)</code></td>
+<td align="left">Creates an InputStreamReader that uses the given charset decoder.</td>
+</tr>
+</tbody></table>
+<p> B、BufferedReader的构造函数：</p>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>BufferedReader(Reader in)</code></td>
+<td align="left">Creates a buffering character-input stream that uses a default-sized input buffer.</td>
+</tr>
+<tr>
+<td align="left"><code>BufferedReader(Reader in, int sz)</code></td>
+<td align="left">Creates a buffering character-input stream that uses an input buffer of the specified size.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">D、PipedInputStream的构造函数：</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>PipedInputStream()</code></td>
+<td align="left">Creates a PipedInputStream so that it is not yet connected.</td>
+</tr>
+<tr>
+<td align="left"><code>PipedInputStream(int pipeSize)</code></td>
+<td align="left">Creates a PipedInputStream so that it is not yet connected and uses the specified pipe size for the pipe’s buffer.</td>
+</tr>
+<tr>
+<td align="left"><code>PipedInputStream(PipedOutputStream src)</code></td>
+<td align="left">Creates a PipedInputStream so that it is connected to the piped output stream src.</td>
+</tr>
+<tr>
+<td align="left"><code>PipedInputStream(PipedOutputStream src, int pipeSize)</code></td>
+<td align="left">Creates a PipedInputStream so that it is connected to the piped output stream src and uses the specified pipe size for the pipe’s buffer.</td>
+</tr>
+</tbody></table>
+<h1 id="考点9"><a href="#考点9" class="headerlink" title="考点9:"></a>考点9:</h1><p>以下代码定义了一个变量,如何输出这个变量的值？<br><img data-src="https://uploadfiles.nowcoder.com/images/20161123/5918115_1479891741965_E3A349EA0FAFB7A49B99084AB8BF7860" alt="这里有一张图片"></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean:define</span> <span class="attr">id</span>=<span class="string">&quot;stringBean&quot;</span> <span class="attr">value</span>=<span class="string">&quot;helloWorld&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>A <code>&lt;% String myBean = (String)pageContext.getAttribute(&quot;stringBean&quot;,PageContext.PAGE_SCOPE); %&gt; &lt;%=myBean%&gt;</code></li>
+<li>B <code>&lt;bean:write name=&quot;helloworld&quot;/&gt;</code></li>
+<li>C <code>&lt;bean:write name=&quot;stringBean&quot;/&gt;</code></li>
+<li>D <code>&lt;%=stringBean%&gt;</code></li>
+</ul>
+<h2 id="解析-8"><a href="#解析-8" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: ACD</details>
+
+<p><strong>—————看完秒懂—————————</strong> </p>
+<ul>
+<li>A选项： <ul>
+<li>通过 pageContext（PageContext类的实例，提供对JSP页面所有对象以及命名空间的访问） 获取stringBean 的值，赋给 String 类型的变量 myBean，然后通过 Jsp 表达式 处理该值。 </li>
+</ul>
+</li>
+<li>bean:define <ul>
+<li>题目中的 Struts 的bean:define 标签定义了一个字符串变量 stringBean ,它的值为 helloworld。 </li>
+</ul>
+</li>
+<li>bean:write <ul>
+<li>bean:write相当于 <code>&lt;%=request.getAttribute(&quot;something&quot;)%&gt;</code> 其中 something 是属性的名字。所以 B 错，C对。 </li>
+</ul>
+</li>
+<li>D选项： <ul>
+<li>通过Jsp 表达式 获取变量 stringBean 的值 </li>
+</ul>
+</li>
+</ul>
+<h1 id="考点10"><a href="#考点10" class="headerlink" title="考点10:"></a>考点10:</h1><p>下面有关值类型和引用类型描述正确的是()？</p>
+<ul>
+<li>A 值类型的变量赋值只是进行数据复制,创建一个同值的新对象,而引用类型变量赋值,仅仅是把对象的引用的指针赋值给变量,使它们共用一个内存地址。</li>
+<li>B 值类型数据是在栈上分配内存空间,它的变量直接包含变量的实例,使用效率相对较高。而引用类型数据是分配在堆上,引用类型的变量通常包含一个指向实例的指针,变量通过指针来引用实例。</li>
+<li>C 引用类型一般都具有继承性,但是值类型一般都是封装的,因此值类型不能作为其他任何类型的基类。</li>
+<li>D 值类型变量的作用域主要是在栈上分配内存空间内,而引用类型变量作用域主要在分配的堆上。</li>
+</ul>
+<h2 id="解析-9"><a href="#解析-9" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: ABC</details>
+
+<div class="post-content"><p> 我的理解（有错麻烦大家指正，谢谢！） </p> <p> 值类型：基本数据类型（int、double、boolean ...）<br> 引用类型：reference类型，通过它可以直接或间接的查找到对象在java堆中数据存放的起始地址或索引（对象在java堆中的哪个位置） </p> <div> 先来两个例子，变量的赋值在内存中是怎么样的： </div> <div> 先上一张运行时数据区的网图 </div> <div> <img data-src="https://uploadfiles.nowcoder.com/images/20210403/295024425_1617425679179/ED4A39D7A4730633FAFF15C2833D36EF"> </div> <div> 局部变量表、操作数栈在虚拟机栈中<br> </div> <p> <strong>一：基本变量的赋值</strong> </p> <pre class="prettyprint lang-java">public void method() {<br> int a = 1;<br> int b = a;<br>}<br><br>该方法的字节码：<br> 0 iconst_1 // 将 int 型 1 推送至操作数栈栈顶<br> 1 istore_1 // 将操作数栈栈顶 int 型值存入第二个本地变量<br> 2 iload_1 // 将第二个int型本地变量推送至操作数栈顶<br> 3 istore_2 // 将操作数栈栈顶 int 型值存入第三个本地变量<br> 4 return // 方法返回<br></pre> <p> <img alt="图片说明" data-src="https://uploadfiles.nowcoder.com/images/20210403/295024425_1617423311067/E233F218A90B7A00B94B7F533A98C0A2" title="图片标题"> </p> <p> <strong>二：基本变量的赋值</strong> </p> <pre class="prettyprint lang-java">public void method2() {<br> Object a = new Object();<br> Object b = a;<br>}<br><br>该方法的字节码：<br> 0 new #15 &lt;java/lang/Object&gt; // 创建一个对象，并将其引用压入栈顶<br> 3 dup // 复制栈顶引用类型数据并将其值压入栈顶<br> 4 invokespecial #1 &lt;java/lang/Object.&lt;init&gt;&gt; // 执行对象构造方法（使用了栈顶引用类型）<br> 7 astore_1 // 将操作数栈栈顶引用类型数据值存入第二个本地变量 a<br> 8 aload_1 // 将第二个引用类型本地变量推送至栈顶<br> 9 astore_2 // 将栈顶引用类型数值存入第三个本地变量b<br> 10 return // 方法返回</pre> <p> <img alt="图片说明" data-src="https://uploadfiles.nowcoder.com/images/20210403/295024425_1617423324866/1A8F685C15FEEF92820538FEA13FF231" title="图片标题"> </p> <p> 再看选项 </p> <ul> <li> <p> A<span>(✔)</span>：<strong>值类型</strong>的和<strong>引用类型</strong>的变量赋值就像上面一样，先把局部变量表中 a 的数值存入操作数栈，再取出来放入 b，不过区别在于： </p> <ul> <li> 前者在局部变量表中存放的数值<strong>是真正意义上的 a 代表的数据</strong>，所以说赋值操作是“复制（iload_1、istore_2）”一份出来再给 b </li><li> 后者在局部变量表中存放的数值<strong>不是真正意义上 a 代表的数据</strong>，只是<strong>指向堆中对象的指针</strong>（指向 a 真正代表的数据）。赋值操作只是把 a 中数值即<strong>指针复制</strong>给 b ，<strong>堆中a代表正真的数据即对象(0x11)并没有被复制</strong> </li></ul> </li><li> <p> B<span>(✔)</span>： </p> <ul> <li> "值类型数据是在<strong>栈（指虚拟机栈）上分配</strong>内存空间，它的变量直接包含变量的实例，使用效率相对较高。" ：<strong>局部变量表（在虚拟机栈中）</strong>中存放数值的就是真正意义上的数据，不用访问堆，效率较高 </li><li> “而引用类型数据是分配在<strong>堆</strong>上，引用类型的变量通常包含一个<strong>指向实例</strong>（指向堆中对象）的指针，变量通过指针来引用实例。” ：局部变量表中存放的数值是指向<strong>堆</strong>中数据（对象）的指针 </li></ul> </li><li> <p> C(✔)：类可以继承，基本数据类型不能继承 </p> </li><li> <div> D(X)：“值类型变量的作用域主要是在栈上分配内存空间内”：如果是跟上诉一致在方法内定义的基本变量，它的作用域就在栈中；如果是在类中定义的成员变量例如 Class A 中有成员变量 int val，这个类的实例在堆中，那么 val 作用域也在堆中 </div> </li></ul> <div> <br> </div> <div> <br> </div> <div> 题外话：操作数栈深度在编译期就已经决定 </div></div>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>蓝蓝
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://lanlan2017.github.io/exam/a6c2ab94/" title="2021年08月10日 java2">https://lanlan2017.github.io/exam/a6c2ab94/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/exam/32f75ed4/" rel="prev" title="2021年08月09日 java">
+                  <i class="fa fa-chevron-left"></i> 2021年08月09日 java
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/exam/4d1e272c/" rel="next" title="2021年08月23日 java1">
+                  2021年08月23日 java1 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="waline-comments"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2018 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">蓝蓝</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">507k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">7:41</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/exam/js/comments.js"></script><script src="/exam/js/utils.js"></script><script src="/exam/js/motion.js"></script><script src="/exam/js/next-boot.js"></script><script src="/exam/js/bookmark.js"></script><script src="/exam/js/pjax.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/exam/js/third-party/search/local-search.js"></script>
+
+
+
+  <script src="/exam/js/third-party/fancybox.js"></script>
+
+  <script src="/exam/js/third-party/pace.js"></script>
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="/exam/js/third-party/math/mathjax.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://lanlan2017.github.io/exam/a6c2ab94/"}</script>
+  <script src="/exam/js/third-party/quicklink.js"></script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":null,"enable":true,"serverURL":"https://waline-test-mzjszagu6-lanlan2017.vercel.app","placeholder":"Just go go","avatar":"mm","pageSize":10,"visitor":false,"comment_count":true,"requiredFields":[],"meta":["nick","mail","link"],"libUrl":"https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js","el":"#waline-comments","path":"/exam/a6c2ab94/"}</script>
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.waline.el).then(() => 
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => {
+    new Waline(CONFIG.waline);
+  });
+});
+</script>
+</body>
+</html>

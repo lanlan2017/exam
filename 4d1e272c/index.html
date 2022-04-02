@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
+<meta name="generator" content="Hexo 5.4.0">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/exam/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/exam/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/exam/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/exam/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="_Sly-yzHYmALHXzjFpPWsodMrjBSphw7bfRbMUH80Qc">
+  <meta name="msvalidate.01" content="B1CFD346B8DEBBFE0C983C2AF8955531">
+  <meta name="baidu-site-verification" content="vkMTwK56xr">
+
+<link rel="stylesheet" href="/exam/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"lanlan2017.github.io","root":"/exam/","images":"/exam/images","scheme":"Gemini","darkmode":true,"version":"8.8.2","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/exam/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/exam/js/config.js"></script>
+<meta name="description" content="考点1:Java编程单元Java中基本的编程单元为:  A 类 B 函数 C 变量 D 数据  解析显示答案&#x2F;隐藏答案正确答案: A  java的基本编程单元是类，基本存储单元是变量。 考点2:下列说法正确的是  A 在类方法中可用this来调用本类的类方法 B 在类方法中调用本类的类方法可直接调用 C 在类方法中只能调用本类的类方法 D 在类方法中绝对不能调用实例方法  解析显示答案&#x2F;隐藏答案正">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2021年08月23日 java1">
+<meta property="og:url" content="https://lanlan2017.github.io/exam/4d1e272c/index.html">
+<meta property="og:site_name" content="蓝蓝的站点">
+<meta property="og:description" content="考点1:Java编程单元Java中基本的编程单元为:  A 类 B 函数 C 变量 D 数据  解析显示答案&#x2F;隐藏答案正确答案: A  java的基本编程单元是类，基本存储单元是变量。 考点2:下列说法正确的是  A 在类方法中可用this来调用本类的类方法 B 在类方法中调用本类的类方法可直接调用 C 在类方法中只能调用本类的类方法 D 在类方法中绝对不能调用实例方法  解析显示答案&#x2F;隐藏答案正">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://uploadfiles.nowcoder.com/images/20171008/4154422_1507446427676_B79947F5D1E4CD7AAB65620127350E13">
+<meta property="og:image" content="https://uploadfiles.nowcoder.com/images/20170817/6577016_1502936071145_236678ED840D4B66889A095C455D1A00">
+<meta property="og:image" content="https://uploadfiles.nowcoder.com/images/20190426/317867636_1556251137650_3CD35CAB76746F3EC273E712CD317FE8">
+<meta property="og:image" content="https://uploadfiles.nowcoder.com/images/20181220/498582_1545274273176_1ED0ED9EEE430F4BA241A72B30A3F7AA">
+<meta property="article:published_time" content="2021-08-23T15:46:52.000Z">
+<meta property="article:modified_time" content="2021-08-23T15:46:52.000Z">
+<meta property="article:author" content="蓝蓝">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://uploadfiles.nowcoder.com/images/20171008/4154422_1507446427676_B79947F5D1E4CD7AAB65620127350E13">
+
+
+<link rel="canonical" href="https://lanlan2017.github.io/exam/4d1e272c/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://lanlan2017.github.io/exam/4d1e272c/","path":"/4d1e272c/","title":"2021年08月23日 java1"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>2021年08月23日 java1 | 蓝蓝的站点</title>
+  
+
+  <script src="/exam/js/third-party/analytics/baidu-analytics.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?dadeb188eb14ccde0b25a19230c429b5"></script>
+
+
+<link rel="dns-prefetch" href="https://waline-test-mzjszagu6-lanlan2017.vercel.app">
+  <noscript>
+    <link rel="stylesheet" href="/exam/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/exam/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">蓝蓝的站点</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">笔试题汇总</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/exam/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-dir"><a href="/exam/dir/" rel="section"><i class="fa fa-sitemap fa-fw"></i>目录</a></li>
+        <li class="menu-item menu-item-categories"><a href="/exam/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/exam/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-tags"><a href="/exam/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B91-Java%E7%BC%96%E7%A8%8B%E5%8D%95%E5%85%83"><span class="nav-number">1.</span> <span class="nav-text">考点1:Java编程单元</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90"><span class="nav-number">1.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B92"><span class="nav-number">2.</span> <span class="nav-text">考点2:</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-1"><span class="nav-number">2.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B93"><span class="nav-number">3.</span> <span class="nav-text">考点3:</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-2"><span class="nav-number">3.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B95"><span class="nav-number">4.</span> <span class="nav-text">考点5:</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-3"><span class="nav-number">4.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B96"><span class="nav-number">5.</span> <span class="nav-text">考点6:</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-4"><span class="nav-number">5.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B97"><span class="nav-number">6.</span> <span class="nav-text">考点7:</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-5"><span class="nav-number">6.1.</span> <span class="nav-text">解析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BF%85%E9%A1%BB%E5%AE%9E%E7%8E%B0%E6%8E%A5%E5%8F%A3%E7%9A%84%E6%89%80%E6%9C%89%E6%96%B9%E6%B3%95-%E6%96%B9%E6%B3%95%E5%8E%9F%E5%9E%8B%E8%A6%81%E4%B8%80%E8%87%B4"><span class="nav-number">6.1.1.</span> <span class="nav-text">必须实现接口的所有方法 方法原型要一致</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90%E8%A6%81%E6%9B%B4%E4%BD%8E"><span class="nav-number">6.1.2.</span> <span class="nav-text">访问权限要更低</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E7%9A%84%E6%8E%A5%E5%8F%A3%E6%96%B9%E6%B3%95%E9%83%BD%E6%98%AFpublic"><span class="nav-number">6.1.3.</span> <span class="nav-text">实现的接口方法都是public</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%A4%E5%90%8C%E4%B8%A4%E5%B0%8F%E4%B8%80%E5%A4%A7"><span class="nav-number">6.1.4.</span> <span class="nav-text">两同两小一大</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3%E7%9A%84%E6%88%90%E5%91%98%E7%89%B9%E7%82%B9%E6%98%AF"><span class="nav-number">6.1.5.</span> <span class="nav-text">接口的成员特点是:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B98"><span class="nav-number">7.</span> <span class="nav-text">考点8:</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-6"><span class="nav-number">7.1.</span> <span class="nav-text">解析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9B%86%E5%90%88%E7%BB%A7%E6%89%BF%E6%A0%91"><span class="nav-number">7.1.1.</span> <span class="nav-text">集合继承树</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B99"><span class="nav-number">8.</span> <span class="nav-text">考点9:</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-7"><span class="nav-number">8.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B910"><span class="nav-number">9.</span> <span class="nav-text">考点10:</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-8"><span class="nav-number">9.1.</span> <span class="nav-text">解析</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="蓝蓝"
+      src="/exam/images/avatar.png">
+  <p class="site-author-name" itemprop="name">蓝蓝</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/exam/archives/">
+          <span class="site-state-item-count">148</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/exam/categories/">
+        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://lanlan2017.github.io/todo/" title="todo → https:&#x2F;&#x2F;lanlan2017.github.io&#x2F;todo&#x2F;"><i class="fa fa-check-square fa-fw"></i>todo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://lanlan2017.github.io/links/" title="links → https:&#x2F;&#x2F;lanlan2017.github.io&#x2F;links&#x2F;"><i class="fa fa-link fa-fw"></i>links</a>
+      </span>
+  </div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lanlan2017.github.io/exam/4d1e272c/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/exam/images/avatar.png">
+      <meta itemprop="name" content="蓝蓝">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="蓝蓝的站点">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          2021年08月23日 java1
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-08-23 23:46:52" itemprop="dateCreated datePublished" datetime="2021-08-23T23:46:52+08:00">2021-08-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/exam/categories/%E7%89%9B%E5%AE%A2%E7%BD%91/" itemprop="url" rel="index"><span itemprop="name">牛客网</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/exam/categories/%E7%89%9B%E5%AE%A2%E7%BD%91/%E4%B8%93%E9%A1%B9%E7%BB%83%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">专项练习</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/exam/categories/%E7%89%9B%E5%AE%A2%E7%BD%91/%E4%B8%93%E9%A1%B9%E7%BB%83%E4%B9%A0/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/exam/categories/%E7%89%9B%E5%AE%A2%E7%BD%91/%E4%B8%93%E9%A1%B9%E7%BB%83%E4%B9%A0/Java/2021%E5%B9%B408%E6%9C%88/" itemprop="url" rel="index"><span itemprop="name">2021年08月</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/exam/4d1e272c/#waline-comments" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" id="/exam/4d1e272c/" data-xid="/exam/4d1e272c/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="考点1-Java编程单元"><a href="#考点1-Java编程单元" class="headerlink" title="考点1:Java编程单元"></a>考点1:Java编程单元</h1><p>Java中基本的编程单元为:</p>
+<ul>
+<li>A 类</li>
+<li>B 函数</li>
+<li>C 变量</li>
+<li>D 数据</li>
+</ul>
+<h2 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: A</details>
+
+<p>java的基本编程单元是类，基本存储单元是变量。</p>
+<h1 id="考点2"><a href="#考点2" class="headerlink" title="考点2:"></a>考点2:</h1><p>下列说法正确的是</p>
+<ul>
+<li>A 在类方法中可用<code>this</code>来调用本类的类方法</li>
+<li>B 在类方法中调用本类的类方法可直接调用</li>
+<li>C 在类方法中只能调用本类的类方法</li>
+<li>D 在类方法中绝对不能调用实例方法</li>
+</ul>
+<h2 id="解析-1"><a href="#解析-1" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: B</details>
+
+
+<h1 id="考点3"><a href="#考点3" class="headerlink" title="考点3:"></a>考点3:</h1><p>语句:char foo=’中’,是否正确？(假设源文件以GB2312编码存储,并且以javac – encoding GB2312命令编译)</p>
+<ul>
+<li>A 正确</li>
+<li>B 错误</li>
+</ul>
+<h2 id="解析-2"><a href="#解析-2" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: A</details>
+
+
+<h1 id="考点5"><a href="#考点5" class="headerlink" title="考点5:"></a>考点5:</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//point X</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Foo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line"></span><br><span class="line">        PrintWriter out = <span class="keyword">new</span> PrintWriter(</span><br><span class="line">            <span class="keyword">new</span> java.io.OutputStreamWriter(System.out), <span class="keyword">true</span>);</span><br><span class="line">        out.printIn(<span class="string">&quot;Hello&quot;</span>)；</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>下面哪个选项放在poinx X这里可以正确执行？</p>
+<ul>
+<li>A <code>import java.io.PrintWriter;</code></li>
+<li>B <code>include java.io.PrintWriter;</code></li>
+<li>C <code>import java.io.OutputStreamWriter;</code></li>
+<li>D <code>include java.io.OutputStreamWriter;</code></li>
+<li>E <code>no statement is needed.</code></li>
+</ul>
+<h2 id="解析-3"><a href="#解析-3" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: A</details>
+
+<p>java中没有include关键字，导包用import<br>由于代码中使用了printWriter 类，所以要导入此类Import java.io.PrintWriter; </p>
+<h1 id="考点6"><a href="#考点6" class="headerlink" title="考点6:"></a>考点6:</h1><p>下列语句中,正确的是</p>
+<ul>
+<li>A <code>float x=0.0</code></li>
+<li>B <code>boolean b=3&gt;5</code></li>
+<li>C <code>char c=&quot;A&quot;</code></li>
+<li>D <code>double =3.14</code></li>
+</ul>
+<h2 id="解析-4"><a href="#解析-4" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: B</details>
+
+<p>A小数默认double,float x=0.0f<br>C字符串不能赋值给字符<br>D没有变量名</p>
+<h1 id="考点7"><a href="#考点7" class="headerlink" title="考点7:"></a>考点7:</h1><p>1.将下列(A、B、C、D)哪个代码替换下列程序中的【代码】不会导致编译错误？</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Com</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> M=<span class="number">200</span>;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">f</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ImpCom</span> <span class="keyword">implements</span> <span class="title">Com</span></span>&#123;</span><br><span class="line">    【代码】</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>A <code>public int f()&#123;return 100+M;&#125;</code></li>
+<li>B <code>int f()&#123;return 100;&#125;</code></li>
+<li>C <code>public double f()&#123;return 2.6;&#125;</code></li>
+<li>D <code>public abstract int f();</code></li>
+</ul>
+<h2 id="解析-5"><a href="#解析-5" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: A</details>
+
+<p>C: The return type is incompatible with Com.f()<br>D：The abstract method f in type ImpCom can only be defined by an abstract class</p>
+<h3 id="必须实现接口的所有方法-方法原型要一致"><a href="#必须实现接口的所有方法-方法原型要一致" class="headerlink" title="必须实现接口的所有方法 方法原型要一致"></a>必须实现接口的所有方法 方法原型要一致</h3><p><strong>1、必须实现接口中所有的方法。</strong><br>在实现类中实现接口时，<strong>方法的名字、返回值类型、参数的个数及类型</strong>必须与接口中的完全一致，并且<strong>必须实现接口中的所有方法。</strong> </p>
+<h3 id="访问权限要更低"><a href="#访问权限要更低" class="headerlink" title="访问权限要更低"></a>访问权限要更低</h3><p><strong>2、接口实现类相当于子类，子类的访问权限是不能比父类小的。</strong></p>
+<h3 id="实现的接口方法都是public"><a href="#实现的接口方法都是public" class="headerlink" title="实现的接口方法都是public"></a>实现的接口方法都是public</h3><p><strong>接口中所有方法默认都是public</strong>，至于为什么要是public，原因在于如果不是public，那么只能在同个包下被实现，可访问权限就降低很多了，那么在实现类中，实现的类相当于子类，子类的访问权限是不能比父类小的，而在java中一个类如果没有权限的修饰符，默认是friendly(同一个包内的其它类才可访问)，所以在<strong>接口的实现类重写的方法中一定要写public</strong> </p>
+<h3 id="两同两小一大"><a href="#两同两小一大" class="headerlink" title="两同两小一大"></a>两同两小一大</h3><p>接口中的抽象方法默认的修饰符是public abstract,后重写，<strong>两同两小一大</strong>可知，前边修饰符应该是public</p>
+<h3 id="接口的成员特点是"><a href="#接口的成员特点是" class="headerlink" title="接口的成员特点是:"></a>接口的成员特点是:</h3><ol>
+<li>成员变量修饰符 默认 public static final </li>
+<li>成员方法修饰符 默认 public abstract</li>
+</ol>
+<h1 id="考点8"><a href="#考点8" class="headerlink" title="考点8:"></a>考点8:</h1><p>下面哪些接口直接继承自Collection接口()</p>
+<ul>
+<li>A <code>List</code></li>
+<li>B <code>Map</code></li>
+<li>C <code>Set</code></li>
+<li>D <code>Iterator</code></li>
+</ul>
+<h2 id="解析-6"><a href="#解析-6" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: AC</details>
+
+<h3 id="集合继承树"><a href="#集合继承树" class="headerlink" title="集合继承树"></a>集合继承树</h3><p><img data-src="https://uploadfiles.nowcoder.com/images/20171008/4154422_1507446427676_B79947F5D1E4CD7AAB65620127350E13" alt="这里有一张图片"></p>
+<p><img data-src="https://uploadfiles.nowcoder.com/images/20170817/6577016_1502936071145_236678ED840D4B66889A095C455D1A00" alt="这里有一张图片"></p>
+<p><img data-src="https://uploadfiles.nowcoder.com/images/20190426/317867636_1556251137650_3CD35CAB76746F3EC273E712CD317FE8" alt="这里有一张图片"></p>
+<p><img data-src="https://uploadfiles.nowcoder.com/images/20181220/498582_1545274273176_1ED0ED9EEE430F4BA241A72B30A3F7AA" alt="这里有一张图片"></p>
+<p> Iterator接口 不继承任何接口！ </p>
+<h1 id="考点9"><a href="#考点9" class="headerlink" title="考点9:"></a>考点9:</h1><p>抽象类和接口的区别,以下说法错误的是</p>
+<ul>
+<li>A 接口是公开的,里面不能有私有的方法或变量,是用于让别人使用的,而抽象类是可以有私有方法或私有变量的。</li>
+<li>B <code>abstract class</code> 在 <code>Java</code> 语言中表示的是一种继承关系,一个类只能使用一次继承关系。但是,一个类却可以实现多个<code>interface</code>,实现多重继承。接口还有标识(里面没有任何方法,如<code>Remote</code>接口)和数据共享(里面的变量全是常量)的作用。</li>
+<li>C 在<code>abstract class</code> 中可以有自己的数据成员,也可以有非<code>abstarct</code>的成员方法,而在<code>interface</code>中,只能够有静态的不能被修改的数据成员(也就是必须是 <code>static final</code>的,不过在 <code>interface</code>中一般不定义数据成员),所有的成员方法默认都是 <code>public abstract</code> 类型的。</li>
+<li>D <code>abstract class</code>和<code>interface</code>所反映出的设计理念不同。其实<code>abstract class</code>表示的是<code>has-a</code>关系,<code>interface</code>表示的是<code>is-a</code>关系。</li>
+</ul>
+<h2 id="解析-7"><a href="#解析-7" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: ACD</details>
+
+
+<p> 抽象类：在Java中被abstract关键字修饰的类称为抽象类，被abstract关键字修饰的方法称为抽象方法，抽象方法只有方法的声明，没有方法体。抽象类的特点： a、抽象类不能被实例化只能被继承； b、包含抽象方法的一定是抽象类，但是抽象类不一定含有抽象方法； c、抽象类中的抽象方法的修饰符只能为public或者protected，默认为public； d、一个子类继承一个抽象类，则子类必须实现父类抽象方法，否则子类也必须定义为抽象类； e、抽象类可以包含属性、方法、构造方法，但是构造方法不能用于实例化，主要用途是被子类调用。 接口：Java中接口使用interface关键字修饰，特点为: a、接口可以包含变量、方法；变量被隐士指定为public static final，方法被隐士指定为public abstract（JDK1.8之前）； b、接口支持多继承，即一个接口可以extends多个接口，间接的解决了Java中类的单继承问题； c、一个类可以实现多个接口； d、JDK1.8中对接口增加了新的特性：  （1）、默认方法（default method）：JDK 1.8允许给接口添加非抽象的方法实现，但必须使用default关键字修饰；定义了default的方法可以不被实现子类所实现，但只能被实现子类的对象调用；如果子类实现了多个接口，并且这些接口包含一样的默认方法，则子类必须重写默认方法；  （2）、静态方法（static method）：JDK 1.8中允许使用static关键字修饰一个方法，并提供实现，称为接口静态方法。接口静态方法只能通过接口调用（接口名.静态方法名）。     注意：<strong>jdk1.9是允许接口中出现private修饰的默认方法和静态方法</strong>。</p>
+<p> 解析：<br> A：jdk1.9是允许接口中出现private修饰的默认方法和静态方法，A错误；<br> 抽象类可以有私有的变量和方法。 B：正确<br> C：抽象类可以有抽象和非抽象的方法；jdk1.8接口中可以有默认方法和静态方法，C错误。<br> D：强调继承关系，is-a，如果A is-a B，那么B就是A的父类；<br> 代表组合关系，like-a，接口，如果A like a B，那么B就是A的接口。 ；<br> 强调从属关系，has-a，如果A has a B，那么B就是A的组成部分。<br> D项错误。 </p>
+<p>is a是继承（抽象类），has a是组合（接口）</p>
+<p>在JDK9后，接口中可以有私有静态方法和私有普通方法</p>
+<h1 id="考点10"><a href="#考点10" class="headerlink" title="考点10:"></a>考点10:</h1><p>下面的Java赋值语句哪些是有错误的 ()</p>
+<ul>
+<li>A int i =1000;</li>
+<li>B float f = 45.0;</li>
+<li>C char s = ‘\u0639’</li>
+<li>D Object o = ‘f’;</li>
+<li>E String s = “hello,world\0”;</li>
+<li>F Double d = 100;</li>
+</ul>
+<h2 id="解析-8"><a href="#解析-8" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: BCF</details>
+
+<p>选项F是自动装箱， 装箱过程中调用的是Double类的valueOf(double d)方法， 而这里是100为int型， 所以编译会“cannot convert from int to Double”。</p>
+<p>最后一个选项F项，很多人都没解释清楚。 首先，double d =100; 是不会错的，double是8个字节64位，int 是4个字节，32位。所以int转double，32位转64位，肯定是不会错的。</p>
+<p>那F项错在哪里？仔细看是Double 不是double哦，所以这道题考的是java自动装箱，对于Integer和Double的自动装箱，只能装对应的数据类型，不对应就会报错。java中100默认是int型,而不是byte，short和long;100.0默认是double，而不是float。想了解int装箱，请大家仔细阅读这篇文章：<a href="https://blog.csdn.net/zhangjin1120/article/details/116329647" target="_blank">关于int装箱更多问题</a>。而装箱远比这个复杂，看下面。 </p>
+<pre>
+Integer i=100;//没有问题
+Integer i2=100.0;//报红杠，因为默认是double
+Integer i3=(byte)100;//报红杠
+Short s = (byte) 100;//没有问题，是不是很神奇？说明上面的规律对Short不适用
+Double d=100; //报红杠
+Double d=100.0;//没有问题
+Double d=100.0f;//报红杠
+double d=100;//没有问题，100是int类型，自动转换为double.
+Double d=Double.valueOf("100"); //正确
+Double d=Double.valueOf(100);//正确
+Double d=new Double(100);//正确
+</pre> 
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>蓝蓝
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://lanlan2017.github.io/exam/4d1e272c/" title="2021年08月23日 java1">https://lanlan2017.github.io/exam/4d1e272c/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/exam/a6c2ab94/" rel="prev" title="2021年08月10日 java2">
+                  <i class="fa fa-chevron-left"></i> 2021年08月10日 java2
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/exam/36cb6def/" rel="next" title="2021年08月24日 java2">
+                  2021年08月24日 java2 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="waline-comments"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2018 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">蓝蓝</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">507k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">7:41</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/exam/js/comments.js"></script><script src="/exam/js/utils.js"></script><script src="/exam/js/motion.js"></script><script src="/exam/js/next-boot.js"></script><script src="/exam/js/bookmark.js"></script><script src="/exam/js/pjax.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/exam/js/third-party/search/local-search.js"></script>
+
+
+
+  <script src="/exam/js/third-party/fancybox.js"></script>
+
+  <script src="/exam/js/third-party/pace.js"></script>
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="/exam/js/third-party/math/mathjax.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://lanlan2017.github.io/exam/4d1e272c/"}</script>
+  <script src="/exam/js/third-party/quicklink.js"></script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":null,"enable":true,"serverURL":"https://waline-test-mzjszagu6-lanlan2017.vercel.app","placeholder":"Just go go","avatar":"mm","pageSize":10,"visitor":false,"comment_count":true,"requiredFields":[],"meta":["nick","mail","link"],"libUrl":"https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js","el":"#waline-comments","path":"/exam/4d1e272c/"}</script>
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.waline.el).then(() => 
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => {
+    new Waline(CONFIG.waline);
+  });
+});
+</script>
+</body>
+</html>

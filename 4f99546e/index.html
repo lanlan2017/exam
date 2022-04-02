@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
+<meta name="generator" content="Hexo 5.4.0">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/exam/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/exam/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/exam/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/exam/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="_Sly-yzHYmALHXzjFpPWsodMrjBSphw7bfRbMUH80Qc">
+  <meta name="msvalidate.01" content="B1CFD346B8DEBBFE0C983C2AF8955531">
+  <meta name="baidu-site-verification" content="vkMTwK56xr">
+
+<link rel="stylesheet" href="/exam/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"lanlan2017.github.io","root":"/exam/","images":"/exam/images","scheme":"Gemini","darkmode":true,"version":"8.8.2","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/exam/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/exam/js/config.js"></script>
+<meta name="description" content="考点1:Java内存结构图定义:String s1 &#x3D; &quot;uml&quot;; String s2 &#x3D; &quot;uml&quot;; String s3&#x3D; new String(&quot;uml&quot;); String s4&#x3D; new String(&quot;uml&quot;);那么,s1&#x3D;&#x3D;s2;s3 &#x3D;&#x3D; s4;s1.equals(s3);判断正确与否  A T,F,">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2021年09月05日 java3">
+<meta property="og:url" content="https://lanlan2017.github.io/exam/4f99546e/index.html">
+<meta property="og:site_name" content="蓝蓝的站点">
+<meta property="og:description" content="考点1:Java内存结构图定义:String s1 &#x3D; &quot;uml&quot;; String s2 &#x3D; &quot;uml&quot;; String s3&#x3D; new String(&quot;uml&quot;); String s4&#x3D; new String(&quot;uml&quot;);那么,s1&#x3D;&#x3D;s2;s3 &#x3D;&#x3D; s4;s1.equals(s3);判断正确与否  A T,F,">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://uploadfiles.nowcoder.com/images/20190701/300975041_1561974792932_428A93CE2102F1DFD863C72B9733057F">
+<meta property="og:image" content="https://uploadfiles.nowcoder.com/images/20190701/918861942_1561968854891_59B2900AA03CB2182A51CDB520B535B6">
+<meta property="og:image" content="https://uploadfiles.nowcoder.com/images/20180827/9780880_1535335958506_5721C0ED3C89479FA5F09D1F8E722D00">
+<meta property="article:published_time" content="2021-09-05T08:09:22.000Z">
+<meta property="article:modified_time" content="2021-12-31T07:27:42.000Z">
+<meta property="article:author" content="蓝蓝">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://uploadfiles.nowcoder.com/images/20190701/300975041_1561974792932_428A93CE2102F1DFD863C72B9733057F">
+
+
+<link rel="canonical" href="https://lanlan2017.github.io/exam/4f99546e/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://lanlan2017.github.io/exam/4f99546e/","path":"/4f99546e/","title":"2021年09月05日 java3"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>2021年09月05日 java3 | 蓝蓝的站点</title>
+  
+
+  <script src="/exam/js/third-party/analytics/baidu-analytics.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?dadeb188eb14ccde0b25a19230c429b5"></script>
+
+
+<link rel="dns-prefetch" href="https://waline-test-mzjszagu6-lanlan2017.vercel.app">
+  <noscript>
+    <link rel="stylesheet" href="/exam/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/exam/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">蓝蓝的站点</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">笔试题汇总</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/exam/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-dir"><a href="/exam/dir/" rel="section"><i class="fa fa-sitemap fa-fw"></i>目录</a></li>
+        <li class="menu-item menu-item-categories"><a href="/exam/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/exam/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-tags"><a href="/exam/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B91-Java%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84%E5%9B%BE"><span class="nav-number">1.</span> <span class="nav-text">考点1:Java内存结构图</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90"><span class="nav-number">1.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B92-Applet"><span class="nav-number">2.</span> <span class="nav-text">考点2:Applet</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-1"><span class="nav-number">2.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B93-abstract%E5%92%8Cfinal%E7%9F%9B%E7%9B%BE"><span class="nav-number">3.</span> <span class="nav-text">考点3:abstract和final矛盾</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-2"><span class="nav-number">3.1.</span> <span class="nav-text">解析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#abstract%E5%92%8Cfinal%E7%9F%9B%E7%9B%BE"><span class="nav-number">3.1.1.</span> <span class="nav-text">abstract和final矛盾</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B94-%E5%B8%B8%E8%AF%86"><span class="nav-number">4.</span> <span class="nav-text">考点4:常识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-3"><span class="nav-number">4.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B95-%E4%B8%80%E5%88%87%E7%9A%86%E5%AF%B9%E8%B1%A1"><span class="nav-number">5.</span> <span class="nav-text">考点5:一切皆对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-4"><span class="nav-number">5.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B96-Hibernate"><span class="nav-number">6.</span> <span class="nav-text">考点6:Hibernate</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-5"><span class="nav-number">6.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B97-final%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F%E4%B8%8D%E4%BC%9A%E9%BB%98%E8%AE%A4%E5%88%9D%E5%A7%8B%E5%8C%96%EF%BC%8C%E5%BF%85%E9%A1%BB%E6%89%8B%E5%8A%A8%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">7.</span> <span class="nav-text">考点7:final成员变量不会默认初始化，必须手动初始化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-6"><span class="nav-number">7.1.</span> <span class="nav-text">解析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#final%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">7.1.1.</span> <span class="nav-text">final成员变量的初始化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#final%E6%88%90%E5%91%98%E5%85%88%E5%AE%9A%E4%B9%89%E5%90%8E%E8%B5%8B%E5%80%BC%E7%9A%84%E4%BC%98%E7%82%B9-%E4%B8%8D%E5%90%8C%E7%9A%84%E5%AF%B9%E8%B1%A1%E7%9A%84final%E6%88%90%E5%91%98%E5%8F%AF%E4%BB%A5%E4%B8%8D%E4%B8%80%E6%A0%B7"><span class="nav-number">7.1.1.1.</span> <span class="nav-text">final成员先定义后赋值的优点: 不同的对象的final成员可以不一样</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B98-JDK1-7%E4%B9%8B%E5%89%8D%E7%9A%84%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3%E7%89%B9%E6%80%A7"><span class="nav-number">8.</span> <span class="nav-text">考点8:JDK1.7之前的抽象类和接口特性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-7"><span class="nav-number">8.1.</span> <span class="nav-text">解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B99-volatile%E5%85%B3%E9%94%AE%E5%AD%97"><span class="nav-number">9.</span> <span class="nav-text">考点9:volatile关键字</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-8"><span class="nav-number">9.1.</span> <span class="nav-text">解析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-java%E7%9A%84%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B"><span class="nav-number">9.1.1.</span> <span class="nav-text">1.java的内存模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E4%BB%80%E4%B9%88%E6%98%AF%E5%8E%9F%E5%AD%90%E6%80%A7"><span class="nav-number">9.1.2.</span> <span class="nav-text">2.什么是原子性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%AF%E8%A7%81%E6%80%A7"><span class="nav-number">9.1.3.</span> <span class="nav-text">3.什么是可见性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E4%BB%80%E4%B9%88%E6%98%AF%E6%9C%89%E5%BA%8F%E6%80%A7"><span class="nav-number">9.1.4.</span> <span class="nav-text">4.什么是有序性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-volatile%E5%8A%9F%E8%83%BD-volatile%E5%88%B0%E5%BA%95%E5%81%9A%E4%BA%86%E4%BB%80%E4%B9%88"><span class="nav-number">9.1.5.</span> <span class="nav-text">5.volatile功能 volatile到底做了什么</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="蓝蓝"
+      src="/exam/images/avatar.png">
+  <p class="site-author-name" itemprop="name">蓝蓝</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/exam/archives/">
+          <span class="site-state-item-count">148</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/exam/categories/">
+        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://lanlan2017.github.io/todo/" title="todo → https:&#x2F;&#x2F;lanlan2017.github.io&#x2F;todo&#x2F;"><i class="fa fa-check-square fa-fw"></i>todo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://lanlan2017.github.io/links/" title="links → https:&#x2F;&#x2F;lanlan2017.github.io&#x2F;links&#x2F;"><i class="fa fa-link fa-fw"></i>links</a>
+      </span>
+  </div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lanlan2017.github.io/exam/4f99546e/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/exam/images/avatar.png">
+      <meta itemprop="name" content="蓝蓝">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="蓝蓝的站点">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          2021年09月05日 java3
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-09-05 16:09:22" itemprop="dateCreated datePublished" datetime="2021-09-05T16:09:22+08:00">2021-09-05</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-12-31 15:27:42" itemprop="dateModified" datetime="2021-12-31T15:27:42+08:00">2021-12-31</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/exam/categories/%E7%89%9B%E5%AE%A2%E7%BD%91/" itemprop="url" rel="index"><span itemprop="name">牛客网</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/exam/categories/%E7%89%9B%E5%AE%A2%E7%BD%91/%E4%B8%93%E9%A1%B9%E7%BB%83%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">专项练习</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/exam/categories/%E7%89%9B%E5%AE%A2%E7%BD%91/%E4%B8%93%E9%A1%B9%E7%BB%83%E4%B9%A0/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/exam/categories/%E7%89%9B%E5%AE%A2%E7%BD%91/%E4%B8%93%E9%A1%B9%E7%BB%83%E4%B9%A0/Java/2021%E5%B9%B409%E6%9C%88/" itemprop="url" rel="index"><span itemprop="name">2021年09月</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/exam/4f99546e/#waline-comments" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" id="/exam/4f99546e/" data-xid="/exam/4f99546e/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.7k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="考点1-Java内存结构图"><a href="#考点1-Java内存结构图" class="headerlink" title="考点1:Java内存结构图"></a>考点1:Java内存结构图</h1><p>定义:<code>String s1 = &quot;uml&quot;; String s2 = &quot;uml&quot;; String s3= new String(&quot;uml&quot;); String s4= new String(&quot;uml&quot;);那么,s1==s2;s3 == s4;s1.equals(s3);</code>判断正确与否</p>
+<ul>
+<li>A <code>T,F,T</code></li>
+<li>B <code>F,T,F</code></li>
+</ul>
+<h2 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: A</details>
+
+<p>该题考察的是<strong>String类创建的对象在JVM中的内存分配</strong>和<strong>“<strong><strong>e</strong></strong>quals”与“==”的区别</strong>。</p>
+<ul>
+<li><p> “==”比较的是<strong>地址和值</strong>。</p>
+</li>
+<li><p> “equals”比较的是<strong>值</strong>。</p>
+</li>
+<li> <img data-src="https://uploadfiles.nowcoder.com/images/20190701/300975041_1561974792932_428A93CE2102F1DFD863C72B9733057F"></li>
+<li><p> s1==s2，比较的是比较的是地址和值，由上图得知两个引用指向的是同一个地址，<strong>所以返回true.</strong></p>
+</li>
+<li><p> s3 == s4，比较的是两个new出来开辟的空间对象地址，所以地址不同，<strong>返回false.</strong></p>
+</li>
+<li><p> s1.equals(s3)，比较的是内容,<strong>返回true</strong>。</p>
+</li>
+</ul>
+<p>==：比较两个引用的地址和值<br>equals：比较两个引用的值<br>1、s1==s2  true  s1和s2指向字符串常量池中同一个地址<br>2、s3 和 s4 都显示使用了new，是不同的对象，  当然不相等<br>3、s1 和 s3 的值都是 “uml”，当然相等<br><img data-src="https://uploadfiles.nowcoder.com/images/20190701/918861942_1561968854891_59B2900AA03CB2182A51CDB520B535B6"></p>
+<h1 id="考点2-Applet"><a href="#考点2-Applet" class="headerlink" title="考点2:Applet"></a>考点2:Applet</h1><p>在 Applet 中,方法执行的顺序是 ?( )</p>
+<ul>
+<li>A <code>init(), start(), paint(),stop(),destroy().</code></li>
+<li>B <code>init(),paint(),start(),stop(),destroy().</code></li>
+<li>C <code>paint(),start(),stop(),destroy().</code></li>
+<li>D <code>init(), start(),stop(),destroy(),paint().</code></li>
+</ul>
+<h2 id="解析-1"><a href="#解析-1" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: A</details>
+
+
+<h1 id="考点3-abstract和final矛盾"><a href="#考点3-abstract和final矛盾" class="headerlink" title="考点3:abstract和final矛盾"></a>考点3:abstract和final矛盾</h1><p>abstract和final可以同时作为一个类的修饰符。(  )</p>
+<ul>
+<li>A 正确</li>
+<li>B 错误</li>
+</ul>
+<h2 id="解析-2"><a href="#解析-2" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: B</details>
+
+<p>1、abstract期待子类扩展<br>2、final禁止扩展</p>
+<h3 id="abstract和final矛盾"><a href="#abstract和final矛盾" class="headerlink" title="abstract和final矛盾"></a>abstract和final矛盾</h3><p>abstract修饰的类需要被继承，而final修饰的类不可被继承，自相矛盾。<br>拓展：<br>一、抽象类的使用原则如下：<br>（1）抽象方法必须为public或者protected（因为如果为private，则不能被子类继承，子类便无法实现该方法），缺省情况下默认为public；<br>（2）抽象类不能直接实例化，需要依靠子类采用向上转型的方式处理；<br>（3）抽象类必须有子类，使用extends继承，一个子类只能继承一个抽象类；<br>（4）子类（如果不是抽象类）则必须覆写抽象类之中的全部抽象方法（如果子类没有实现父类的抽象方法，则必须将子类也定义为abstract类。<br>二、final关键字：<br>（1）修饰变量 ： 变量不可修改；<br>（1）修饰方法 ： 方法不可重写；<br>（1）修饰类 ：类不可继承。</p>
+<h1 id="考点4-常识"><a href="#考点4-常识" class="headerlink" title="考点4:常识"></a>考点4:常识</h1><p>Web客户端的编程语言JavaScript源自Java,其功能是Java SE的子集。</p>
+<ul>
+<li>A 对</li>
+<li>B 错</li>
+</ul>
+<h2 id="解析-3"><a href="#解析-3" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: B</details>
+
+
+<h1 id="考点5-一切皆对象"><a href="#考点5-一切皆对象" class="headerlink" title="考点5:一切皆对象"></a>考点5:一切皆对象</h1><p>以下说法错误的是()</p>
+<ul>
+<li>A 数组是一个对象</li>
+<li>B 数组不是一种原生类</li>
+<li>C 数组的大小可以任意改变</li>
+<li>D 在<code>Java</code>中,数组存储在堆中连续内存空间里</li>
+</ul>
+<h2 id="解析-4"><a href="#解析-4" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: C</details>
+
+<p><strong>Java中数组是对象，不是基本数据类型（原生类），大小不可变且连续存储，因为是对象所以存在堆中。</strong></p>
+<ol>
+<li><strong>数组的创建使用了new关键字，所以数组是一个对象</strong></li>
+<li>java数据类型分为基本数据类型（又叫原生类、内置类）和引用数据类型，数组是后者</li>
+<li>数组在new的时候内存空间就已经分配好了，不允许改变</li>
+<li>数组是一个对象，对象在内存中如何存放同样适用于数组</li>
+</ol>
+<p>原生类有8种：int 、double、 boolean 、float 、byte、 short 、long、 char 。数组是引用数据类型，不属于原生类。<br>数组长度在定义数组的时候就确定了，长度不可变，数组扩容需要使用函数ArrayCopy复制一个新数组<br>数组是对象，所以存在堆内存中。</p>
+<h1 id="考点6-Hibernate"><a href="#考点6-Hibernate" class="headerlink" title="考点6:Hibernate"></a>考点6:Hibernate</h1><p>下面关于hibernate核心接口说明错误的是？</p>
+<ul>
+<li>A <code>Configuration</code> 接口:配置<code>Hibernate</code>,根据其启动<code>hibernate</code>,创建<code>SessionFactory</code> 对象</li>
+<li>B <code>SessionFactory</code> 接口:负责保存、更新、删除、加载和查询对象,是线程不安全的,避免多个线程共享同一个<code>session</code>,是轻量级、一级缓存</li>
+<li>C <code>Query</code> 和<code>Criteria</code> 接口:执行数据库的查询</li>
+<li>D <code>Transaction</code> 接口:管理事务</li>
+</ul>
+<h2 id="解析-5"><a href="#解析-5" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: B</details>
+
+<p>B选项中应该是Session接口而不是SessionFactory接口<br>1，Configuration接口：配置Hibernate，根据其启动Hibernate，创建SessionFactory对象；<br>2，SessionFactory接口：初始化Hibernate，充当数据存储源的***，创建session对象，SessionFactory是<br>线程安全的，意味着它的同一个实例可以被应用的多个线程共享，是重量级二级缓存；<br>3，session接口：负责保存、更新、删除、加载和查询对象，是一个非线程安全的，避免多个线程共享一个session，是轻量级，一级缓存。<br>4，Transaction接口：管理事务。可以对事务进行提交和回滚；<br>5，Query和Criteria接口：执行数据库的查询。</p>
+<h1 id="考点7-final成员变量不会默认初始化，必须手动初始化"><a href="#考点7-final成员变量不会默认初始化，必须手动初始化" class="headerlink" title="考点7:final成员变量不会默认初始化，必须手动初始化"></a>考点7:final成员变量不会默认初始化，必须手动初始化</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span> </span>&#123;</span><br><span class="line">    <span class="keyword">final</span> <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">int</span> j;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doSomething</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(++j + i);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>的输出是？</p>
+<ul>
+<li>A 0</li>
+<li>B 1</li>
+<li>C 2</li>
+<li>D 不能执行,因为编译有错</li>
+</ul>
+<h2 id="解析-6"><a href="#解析-6" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: D</details>
+
+<h3 id="final成员变量的初始化"><a href="#final成员变量的初始化" class="headerlink" title="final成员变量的初始化"></a>final成员变量的初始化</h3><p>final作为对象成员存在时，必须初始化；<br>1、定义时就初始化<br>2、先定义，后初始化。先定义，然后在构造函数中初始化话，或者在代码块中初始化。</p>
+<figure class="highlight java"><figcaption><span>E:\dev2\workspace\NiKeTest\src\finaltest\FinalTest.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> finaltest;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FinalTest</span> </span>&#123;</span><br><span class="line">    <span class="comment">// final成员变量，定义的时候就赋值</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">int</span> num1 = <span class="number">1</span>;</span><br><span class="line">    <span class="comment">// 先定义，后赋值。</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">int</span> num2;</span><br><span class="line">    <span class="comment">// 先定义，后赋值</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">int</span> num3;</span><br><span class="line"></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 在代码块中初始化</span></span><br><span class="line">        num3 = <span class="number">3</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">FinalTest</span><span class="params">(<span class="keyword">int</span> num)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 在构造函数中初始化</span></span><br><span class="line">        <span class="keyword">this</span>.num2 = num;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        FinalTest f1 = <span class="keyword">new</span> FinalTest(<span class="number">2</span>);</span><br><span class="line">        FinalTest f2 = <span class="keyword">new</span> FinalTest(<span class="number">100</span>);</span><br><span class="line">        System.out.println(f1.num1);</span><br><span class="line">        System.out.println(f1.num2);</span><br><span class="line">        System.out.println(f1.num3);</span><br><span class="line">        System.out.println(<span class="string">&quot;============================&quot;</span>);</span><br><span class="line">        System.out.println(f2.num1);</span><br><span class="line">        System.out.println(f2.num2);</span><br><span class="line">        System.out.println(f2.num3);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行效果：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">============================</span><br><span class="line">1</span><br><span class="line">100</span><br><span class="line">3</span><br></pre></td></tr></table></figure>
+<h4 id="final成员先定义后赋值的优点-不同的对象的final成员可以不一样"><a href="#final成员先定义后赋值的优点-不同的对象的final成员可以不一样" class="headerlink" title="final成员先定义后赋值的优点: 不同的对象的final成员可以不一样"></a>final成员先定义后赋值的优点: 不同的对象的final成员可以不一样</h4><p>从上面的代码中可以看出，定义final成员变量时不初始化，而在构造器中初始化的好处就在于。这个final成员的值是可变的。<br>如果在定义的时候就初始化，或者在代码块中初始化话。<br>所有的对象的这个final成员都是一样的，做不到不同的对象的final变量不一样这样的功能。</p>
+<p>如果定义的时候没有赋值，并且没有构造器，则会在变量处显示错误提示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The blank final field num2 may not have been initialized</span><br></pre></td></tr></table></figure>
+<p>如果定义时，没有赋值，并且有构造器，则会在构造器处显示错误提示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The blank final field num4 may not have been initialized</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="考点8-JDK1-7之前的抽象类和接口特性"><a href="#考点8-JDK1-7之前的抽象类和接口特性" class="headerlink" title="考点8:JDK1.7之前的抽象类和接口特性"></a>考点8:JDK1.7之前的抽象类和接口特性</h1><p>在jdk 1.7中,以下说法正确的是(    )。</p>
+<ul>
+<li>A <code>Java</code>中所有的非抽象方法都必须在类内定义</li>
+<li>B <code>Java</code>中主方法可以不在类内定义,其他方法都必须定义在类内</li>
+<li>C <code>Java</code>中主方法必须定义在类内,其他方法可以不必定义在类内</li>
+<li>D <code>Java</code>中所有方法都不必在类内定义</li>
+</ul>
+<h2 id="解析-7"><a href="#解析-7" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: A</details>
+
+<p>我想这题纯粹是想考察JDK1.8和1.9的接口新特性（因为其提到JDK1.7）<br>JDK1.8接口可以定义default方法和static方法；<br>JDK1.9接口中可以定义私有方法。<br>因此在JDK1.7中，接口只能定义抽象方法，既Java中所有的非抽象方法都必须在类内定义。</p>
+<h1 id="考点9-volatile关键字"><a href="#考点9-volatile关键字" class="headerlink" title="考点9:volatile关键字"></a>考点9:volatile关键字</h1><p>volatile关键字的说法错误的是</p>
+<ul>
+<li>A 能保证线程安全</li>
+<li>B <code>volatile</code>关键字用在多线程同步中,可保证读取的可见性</li>
+<li>C <code>JVM</code>保证从主内存加载到线程工作内存的值是最新的</li>
+<li>D <code>volatile</code>能禁止进行指令重排序</li>
+</ul>
+<h2 id="解析-8"><a href="#解析-8" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: A</details>
+
+<p>出于运行速率的考虑，java编译器会把经常经常访问的变量放到缓存（严格讲应该是工作内存）中，读取变量则从缓存中读。但是在多线程编程中,内存中的值和缓存中的值可能会出现不一致。<br><strong>volatile用于限定变量只能从内存中读取，保证对所有线程而言，值都是一致的</strong>。<br><strong>但是volatile不能保证原子性，也就不能保证线程安全</strong>。</p>
+<h3 id="1-java的内存模型"><a href="#1-java的内存模型" class="headerlink" title="1.java的内存模型"></a>1.java的内存模型</h3><p>java 内存模型规定了所有的变量都存储在主内存中，但是每个线程会有自己的工作内存，线程的工作内存保存了该线程中使用了的变量（从主内存中拷贝的），线程对变量的操作都必须在工作内存中进行，不同线程之间无法直接访问对方工作内存中的变量，线程间变量值从传递都要经过主内存完成</p>
+ <img alt="图片说明" data-src="https://uploadfiles.nowcoder.com/images/20180827/9780880_1535335958506_5721C0ED3C89479FA5F09D1F8E722D00" title="图片标题">
+ 
+<h3 id="2-什么是原子性"><a href="#2-什么是原子性" class="headerlink" title="2.什么是原子性"></a>2.什么是原子性</h3><p>一个操作是不可中断的，要么全部执行成功要么全部执行失败，比如银行转账</p>
+<h3 id="3-什么是可见性"><a href="#3-什么是可见性" class="headerlink" title="3.什么是可见性"></a>3.什么是可见性</h3><p>当多个线程访问同一变量时，一个线程修改了这个变量的值，其他线程就能够立即看到修改的值</p>
+<h3 id="4-什么是有序性"><a href="#4-什么是有序性" class="headerlink" title="4.什么是有序性"></a>4.什么是有序性</h3><p>程序执行的顺序按照代码的先后顺序执行</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">0</span>; <span class="comment">//1</span></span><br><span class="line"><span class="keyword">int</span> b = <span class="number">2</span>; <span class="comment">//2</span></span><br></pre></td></tr></table></figure>
+<p>像这2句代码1会比2先执行，但是jvm在正真执行时不一定是1在2之前，</p>
+<p>这里涉及一个概念叫做指令重排，处理器为了提高程序运行效率，可能会对输入代码进行优化，它不保证程序中各个语句的执行先后顺序同代码中的顺序一致，但是它会保证程序最终执行结果和代码顺序执行的结果是一致的。</p>
+<p>比如上面的代码语句1和语句2谁先执行对最终的程序结果并没有影响，那么就有可能在执行过程中，语句2先执行而语句1后执行。<br>在指令重排时会考虑指令之间的数据依赖性，比如2依赖了1的数值，那么处理器会保证1在2之前执行。</p>
+<p>但是在多线程的情况下，指令重排就会有影响了。</p>
+<h3 id="5-volatile功能-volatile到底做了什么"><a href="#5-volatile功能-volatile到底做了什么" class="headerlink" title="5.volatile功能 volatile到底做了什么"></a>5.volatile功能 volatile到底做了什么</h3><ul>
+<li> 禁止了指令重排</li>
+<li> 保证了不同线程对这个变量进行操作时的可见性，即一个线程修改了某个变量值，这个新值对其他线程是立即可见的</li>
+<li> 不保证原子性（线程不安全）</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>蓝蓝
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://lanlan2017.github.io/exam/4f99546e/" title="2021年09月05日 java3">https://lanlan2017.github.io/exam/4f99546e/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/exam/a1973542/" rel="prev" title="2021年09月05日 java1">
+                  <i class="fa fa-chevron-left"></i> 2021年09月05日 java1
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/exam/8af88738/" rel="next" title="2021年09月05日 数据库1">
+                  2021年09月05日 数据库1 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="waline-comments"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2018 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">蓝蓝</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">507k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">7:41</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/exam/js/comments.js"></script><script src="/exam/js/utils.js"></script><script src="/exam/js/motion.js"></script><script src="/exam/js/next-boot.js"></script><script src="/exam/js/bookmark.js"></script><script src="/exam/js/pjax.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/exam/js/third-party/search/local-search.js"></script>
+
+
+
+  <script src="/exam/js/third-party/fancybox.js"></script>
+
+  <script src="/exam/js/third-party/pace.js"></script>
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="/exam/js/third-party/math/mathjax.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://lanlan2017.github.io/exam/4f99546e/"}</script>
+  <script src="/exam/js/third-party/quicklink.js"></script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":null,"enable":true,"serverURL":"https://waline-test-mzjszagu6-lanlan2017.vercel.app","placeholder":"Just go go","avatar":"mm","pageSize":10,"visitor":false,"comment_count":true,"requiredFields":[],"meta":["nick","mail","link"],"libUrl":"https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js","el":"#waline-comments","path":"/exam/4f99546e/"}</script>
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.waline.el).then(() => 
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => {
+    new Waline(CONFIG.waline);
+  });
+});
+</script>
+</body>
+</html>

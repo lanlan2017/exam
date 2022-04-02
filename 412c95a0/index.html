@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
+<meta name="generator" content="Hexo 5.4.0">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/exam/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/exam/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/exam/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/exam/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="_Sly-yzHYmALHXzjFpPWsodMrjBSphw7bfRbMUH80Qc">
+  <meta name="msvalidate.01" content="B1CFD346B8DEBBFE0C983C2AF8955531">
+  <meta name="baidu-site-verification" content="vkMTwK56xr">
+
+<link rel="stylesheet" href="/exam/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"lanlan2017.github.io","root":"/exam/","images":"/exam/images","scheme":"Gemini","darkmode":true,"version":"8.8.2","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/exam/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/exam/js/config.js"></script>
+<meta name="description" content="考点1:垃圾回收机制123456static String str0&#x3D;&quot;0123456789&quot;;static String str1&#x3D;&quot;0123456789&quot;;String str2&#x3D;str1.substring(5);String str3&#x3D;new String(str2);String str4&#x3D;new String(str3.toCharArray()">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2021年09月24日 java1">
+<meta property="og:url" content="https://lanlan2017.github.io/exam/412c95a0/index.html">
+<meta property="og:site_name" content="蓝蓝的站点">
+<meta property="og:description" content="考点1:垃圾回收机制123456static String str0&#x3D;&quot;0123456789&quot;;static String str1&#x3D;&quot;0123456789&quot;;String str2&#x3D;str1.substring(5);String str3&#x3D;new String(str2);String str4&#x3D;new String(str3.toCharArray()">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gitee.com/XiaoLan223/images/raw/master/Blog/Sum/20210924162953.png">
+<meta property="og:image" content="https://gitee.com/XiaoLan223/images/raw/master/Blog/Sum/20210924163133.png">
+<meta property="og:image" content="https://gitee.com/XiaoLan223/images/raw/master/Blog/Sum/20210916174348.png">
+<meta property="article:published_time" content="2021-12-26T12:11:41.000Z">
+<meta property="article:modified_time" content="2021-12-26T12:11:41.000Z">
+<meta property="article:author" content="蓝蓝">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/XiaoLan223/images/raw/master/Blog/Sum/20210924162953.png">
+
+
+<link rel="canonical" href="https://lanlan2017.github.io/exam/412c95a0/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://lanlan2017.github.io/exam/412c95a0/","path":"/412c95a0/","title":"2021年09月24日 java1"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>2021年09月24日 java1 | 蓝蓝的站点</title>
+  
+
+  <script src="/exam/js/third-party/analytics/baidu-analytics.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?dadeb188eb14ccde0b25a19230c429b5"></script>
+
+
+<link rel="dns-prefetch" href="https://waline-test-mzjszagu6-lanlan2017.vercel.app">
+  <noscript>
+    <link rel="stylesheet" href="/exam/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/exam/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">蓝蓝的站点</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">笔试题汇总</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/exam/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-dir"><a href="/exam/dir/" rel="section"><i class="fa fa-sitemap fa-fw"></i>目录</a></li>
+        <li class="menu-item menu-item-categories"><a href="/exam/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/exam/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-tags"><a href="/exam/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B91-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6"><span class="nav-number">1.</span> <span class="nav-text">考点1:垃圾回收机制</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B92-%E9%80%92%E5%BD%92"><span class="nav-number">2.</span> <span class="nav-text">考点2:递归</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B93-JVM%E5%86%85%E5%AD%98%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0"><span class="nav-number">3.</span> <span class="nav-text">考点3:JVM内存配置参数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B94-Servlet-ServletContext%E5%8F%82%E6%95%B0%E5%80%BC"><span class="nav-number">4.</span> <span class="nav-text">考点4:Servlet ServletContext参数值</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B95-%E7%BA%BF%E7%A8%8B-InterruptedException"><span class="nav-number">5.</span> <span class="nav-text">考点5:线程 InterruptedException</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Thread%E5%8F%AA%E6%9C%89sleep%E2%80%8B%E5%92%8Cjoin%E8%BF%99%E4%B8%A4%E4%B8%AA%E6%96%B9%E6%B3%95%E6%8A%9B%E5%87%BAInterruptedException"><span class="nav-number">5.1.</span> <span class="nav-text">Thread只有sleep​和join这两个方法抛出InterruptedException</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Thread%E7%9A%84suspend%E6%96%B9%E6%B3%95"><span class="nav-number">5.2.</span> <span class="nav-text">Thread的suspend方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Object%E7%B1%BB%E4%B8%AD%E5%8F%AA%E6%9C%89wait%E6%96%B9%E6%B3%95%E6%8A%9B%E5%87%BAInterruptedException"><span class="nav-number">5.3.</span> <span class="nav-text">Object类中只有wait方法抛出InterruptedException</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B96-%E7%BD%91%E8%B7%AF%E7%BC%96%E7%A8%8B-URL%E7%B1%BB"><span class="nav-number">6.</span> <span class="nav-text">考点6:网路编程 URL类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#new-URL%E5%8F%AA%E6%A3%80%E6%9F%A5URL%E7%9A%84%E6%A0%BC%E5%BC%8F%E6%98%AF%E5%90%A6%E6%AD%A3%E7%A1%AE"><span class="nav-number">6.1.</span> <span class="nav-text">new URL只检查URL的格式是否正确</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B"><span class="nav-number">6.2.</span> <span class="nav-text">示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#URL%E6%96%87%E6%A1%A3"><span class="nav-number">6.3.</span> <span class="nav-text">URL文档</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B97-%E5%BC%82%E5%B8%B8%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="nav-number">7.</span> <span class="nav-text">考点7:异常基础知识</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B98-%E5%BC%82%E5%B8%B8%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="nav-number">8.</span> <span class="nav-text">考点8:异常基础知识</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B99-CMS%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E5%99%A8"><span class="nav-number">9.</span> <span class="nav-text">考点9:CMS垃圾收集器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%82%B910-%E7%BA%BF%E7%A8%8B%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="nav-number">10.</span> <span class="nav-text">考点10:线程基础知识</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="蓝蓝"
+      src="/exam/images/avatar.png">
+  <p class="site-author-name" itemprop="name">蓝蓝</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/exam/archives/">
+          <span class="site-state-item-count">148</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/exam/categories/">
+        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://lanlan2017.github.io/todo/" title="todo → https:&#x2F;&#x2F;lanlan2017.github.io&#x2F;todo&#x2F;"><i class="fa fa-check-square fa-fw"></i>todo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://lanlan2017.github.io/links/" title="links → https:&#x2F;&#x2F;lanlan2017.github.io&#x2F;links&#x2F;"><i class="fa fa-link fa-fw"></i>links</a>
+      </span>
+  </div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lanlan2017.github.io/exam/412c95a0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/exam/images/avatar.png">
+      <meta itemprop="name" content="蓝蓝">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="蓝蓝的站点">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          2021年09月24日 java1
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-12-26 20:11:41" itemprop="dateCreated datePublished" datetime="2021-12-26T20:11:41+08:00">2021-12-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/exam/categories/%E7%89%9B%E5%AE%A2%E7%BD%91/" itemprop="url" rel="index"><span itemprop="name">牛客网</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/exam/categories/%E7%89%9B%E5%AE%A2%E7%BD%91/%E4%B8%93%E9%A1%B9%E7%BB%83%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">专项练习</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/exam/categories/%E7%89%9B%E5%AE%A2%E7%BD%91/%E4%B8%93%E9%A1%B9%E7%BB%83%E4%B9%A0/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/exam/categories/%E7%89%9B%E5%AE%A2%E7%BD%91/%E4%B8%93%E9%A1%B9%E7%BB%83%E4%B9%A0/Java/2021%E5%B9%B409%E6%9C%88/" itemprop="url" rel="index"><span itemprop="name">2021年09月</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/exam/412c95a0/#waline-comments" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" id="/exam/412c95a0/" data-xid="/exam/412c95a0/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>9.2k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>8 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="考点1-垃圾回收机制"><a href="#考点1-垃圾回收机制" class="headerlink" title="考点1:垃圾回收机制"></a>考点1:垃圾回收机制</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> String str0=<span class="string">&quot;0123456789&quot;</span>;</span><br><span class="line"><span class="keyword">static</span> String str1=<span class="string">&quot;0123456789&quot;</span>;</span><br><span class="line">String str2=str1.substring(<span class="number">5</span>);</span><br><span class="line">String str3=<span class="keyword">new</span> String(str2);</span><br><span class="line">String str4=<span class="keyword">new</span> String(str3.toCharArray());</span><br><span class="line">str0=<span class="keyword">null</span>;</span><br></pre></td></tr></table></figure>
+<p>假定str0,…,str4后序代码都是只读引用。<br>Java 7中，以上述代码为基础，在发生过一次FullGC后，上述代码在Heap空间（不包括PermGen）保留的字符数为（）</p>
+<ul>
+<li>A 5</li>
+<li>B 10</li>
+<li>C 15</li>
+<li>D 20</li>
+</ul>
+<details><summary>显示答案/隐藏答案</summary>正确答案: C</details>
+
+<p>常量池是PermGen的</p>
+<p>这是一个关于java的垃圾回收机制的题目。垃圾回收主要针对的是堆区的回收，因为栈区的内存是随着线程而释放的。<br>堆区分为三个区：</p>
+<ul>
+<li><p>年轻代（Young Generation）、</p>
+</li>
+<li><p>年老代（Old Generation）、</p>
+</li>
+<li><p>永久代（Permanent Generation，也就是方法区）。</p>
+</li>
+<li><p>年轻代：对象被创建时（new）的对象通常被放在Young（除了一些占据内存比较大的对象）,经过一定的Minor GC（针对年轻代的内存回收）还活着的对象会被移动到年老代（一些具体的移动细节省略）。</p>
+</li>
+<li><p>年老代：就是上述年轻代移动过来的和一些比较大的对象。Minor GC(FullGC)是针对年老代的回收</p>
+</li>
+<li><p>永久代：存储的是final常量，static变量，常量池。</p>
+</li>
+</ul>
+<p>str3,str4都是直接new的对象，而substring的源代码其实也是new一个string对象返回。：</p>
+<figure class="highlight java"><figcaption><span>java/lang/String.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">substring</span><span class="params">(<span class="keyword">int</span> beginIndex)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (beginIndex &lt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> StringIndexOutOfBoundsException(beginIndex);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> subLen = value.length - beginIndex;</span><br><span class="line">    <span class="keyword">if</span> (subLen &lt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> StringIndexOutOfBoundsException(subLen);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> (beginIndex == <span class="number">0</span>) ? <span class="keyword">this</span> : <span class="keyword">new</span> String(value, beginIndex, subLen);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>经过fullgc之后，年老区的内存回收，则年轻区的占了15个，不算PermGen。所以答案选C</p>
+<h1 id="考点2-递归"><a href="#考点2-递归" class="headerlink" title="考点2:递归"></a>考点2:递归</h1><p>下面这段程序的输出结果是（）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        split(<span class="number">12</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">split</span><span class="params">(<span class="keyword">int</span> number)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (number &gt; <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (number % <span class="number">2</span> != <span class="number">0</span>) System.out.print(split((number + <span class="number">1</span>) / <span class="number">2</span>));</span><br><span class="line">                System.out.print(split(number / <span class="number">2</span>));</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">return</span> number;</span><br><span class="line">       &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>A 12136</li>
+<li>B 63121</li>
+<li>C 61213</li>
+<li>D 11236</li>
+</ul>
+<details><summary>显示答案/隐藏答案</summary>正确答案: A</details>
+
+<p>这种题目还考眼力，代码不规范，格式化后的代码如下:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">split</span><span class="params">(<span class="keyword">int</span> number)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (number &gt; <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (number % <span class="number">2</span> != <span class="number">0</span>) </span><br><span class="line">            System.out.print(split((number + <span class="number">1</span>) / <span class="number">2</span>));</span><br><span class="line">        System.out.print(split(number / <span class="number">2</span>));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> number;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>split(12);</p>
+<blockquote>
+<p>12&gt;1,true,进入外层if</p>
+<blockquote>
+<p>12%2!=0,false,不进入内层if.</p>
+<p>执行System.out.print(split(12 / 2));也就是System.out.print(split(6));</p>
+<blockquote>
+<p>先执行split(6)</p>
+<blockquote>
+<p>6&gt;1,进入外层if<br>6 % 2 != 0,false,不进入内层if,</p>
+<p>执行System.out.print(split(6 / 2));也就是执行System.out.print(split(3));</p>
+<blockquote>
+<p>先执行split(3)</p>
+<blockquote>
+<p>3&gt;1,true,进入外层if</p>
+<p>3 % 2 != 0,true,进入内层if</p>
+<blockquote>
+<p>执行System.out.print(split((3 + 1) / 2));也就是执行System.out.print(split(2));</p>
+<blockquote>
+<p>先执行split(2)<br>2&gt;1,true,进入外层if<br>2 % 2 != 0,false,不进入内层if<br>执行System.out.print(split(2 / 2));也就是执行System.out.print(split(1));</p>
+<blockquote>
+<p>先执行split(1)<br>1&gt;1,false,不进入外层if,return 1,也就是split(1)=1</p>
+</blockquote>
+<p>执行System.out.print(split(1))，也就是System.out.print(1)；，输出1，<br>执行sprint(2)的返回语句，返回2<br>执行System.out.print(split(2));也就是执行System.out.print(2);，输出2</p>
+</blockquote>
+<p>退出内层if</p>
+<p>执行System.out.print(split(3 / 2));，也就是执行System.out.print(split(1));</p>
+<blockquote>
+<p>先执行split(1)<br>1&gt;1,false,不进入外层if,返回1，split(1)=1</p>
+</blockquote>
+<p>执行System.out.print(split(1));也就是执行执行System.out.print(1);，输出1</p>
+</blockquote>
+<p>退出外层if,返回3，split(3)=3</p>
+</blockquote>
+</blockquote>
+<p>执行System.out.print(split(3));也就是执行执行System.out.print(3);输出3</p>
+<p>执行split(6)的返回语句，返回6，</p>
+</blockquote>
+<p>执行System.out.print(split(6));也就是执行System.out.print(6);输出6</p>
+</blockquote>
+<p>退出split(12)的外层if</p>
+</blockquote>
+<p>split(12)返回12</p>
+</blockquote>
+<p>考察方法进栈与出栈的顺序。先进后出<br>有个知识点，<strong>方法在出栈的时候，执行的是return语句</strong>。因为出栈就意味着方法结束并销毁，如果没有return语句，那么方法出栈的时候什么都不执行，就直接销毁。</p>
+<p>1.执行split（12）时，执行代码System.out.print(split(number / 2))<br>    split（12/2）进栈，此时number=6；<br>2.执行split（6）时，执行代码System.out.print(split(number / 2))<br>    split（6/2）进栈，此时number=3；<br>3.执行split（3）时，</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">第<span class="number">1</span>行 <span class="keyword">if</span> (number % <span class="number">2</span> != <span class="number">0</span>)</span><br><span class="line">第<span class="number">2</span>行          System.out.print(split((number + <span class="number">1</span>) / <span class="number">2</span>));</span><br><span class="line">第<span class="number">3</span>行    System.out.print(split(number / <span class="number">2</span>));</span><br></pre></td></tr></table></figure>
+<p>按照顺序执行<br>先执行第2行<br>    首先split（(3+1)/2）进栈，此时number=2，<br>    再执行split（2），那么split（2/2）进栈，此时number=1， 最后return 1，<br>    注意此时第2行代码还没有结束<br>    此时<br>    split（2/2）出栈，输出1；<br>    split（(3+1)/2）出栈，输出2；<br>第二行代码结束，再执行第三行，此时number=3，执行System.out.print(split(number / 2))<br>        split（3/2）进栈，number=1，return，那么就需要出栈了<br>split（3/2）出栈，输出1<br>split（6/2）出栈，输出3<br>split（12/2）出栈，输出6；<br>最终结果12136；</p>
+<p>split（number）方法，最终返回的是number这个值，所以split（n）出栈的输出结果就是n</p>
+<p>整理：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">split（12/2）进栈</span><br><span class="line">split（6/2）进栈</span><br><span class="line">split（(3+1)/2）进栈</span><br><span class="line">split（2/2）进栈</span><br><span class="line">       split（2/2）出栈，输出1</span><br><span class="line">        split（(3+1)/2）出栈，输出2</span><br><span class="line"></span><br><span class="line">split（2/2）进栈</span><br><span class="line">        split（2/2）出栈，输出1</span><br><span class="line">split（6/2）出栈，输出3</span><br><span class="line">split（12/2）出栈，输出6</span><br></pre></td></tr></table></figure>
+
+<h1 id="考点3-JVM内存配置参数"><a href="#考点3-JVM内存配置参数" class="headerlink" title="考点3:JVM内存配置参数"></a>考点3:JVM内存配置参数</h1><p>对于JVM内存配置参数：<br>-Xmx10240m -Xms10240m -Xmn5120m -XXSurvivorRatio=3<br>,其最小内存值和Survivor区总大小分别是（）</p>
+<ul>
+<li>A 5120m，1024m</li>
+<li>B 5120m，2048m</li>
+<li>C 10240m，1024m</li>
+<li>D 10240m，2048m</li>
+</ul>
+<details><summary>显示答案/隐藏答案</summary>正确答案: D</details>
+
+
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">-Xmx：</td>
+<td align="left">最大堆大小</td>
+</tr>
+<tr>
+<td align="left">-Xms：</td>
+<td align="left">初始堆大小</td>
+</tr>
+<tr>
+<td align="left">-Xmn:</td>
+<td align="left">年轻代大小</td>
+</tr>
+<tr>
+<td align="left">-XXSurvivorRatio：</td>
+<td align="left">年轻代中Eden区与Survivor的一个区的大小比值，Survivor有两个区</td>
+</tr>
+</tbody></table>
+<p>-Xms10240m，初始堆大小即最小内存值为10240m<br>-Xmn5120m，表示年轻代大小5120m</p>
+<p>-XXSurvivorRatio=3表示Eden:S0:S1=3:1:1<br>Survivor区总大小=<code>(5120/(3+1+1))*(1+1)=(5120/5)*2=1024*2=2048</code></p>
+<h1 id="考点4-Servlet-ServletContext参数值"><a href="#考点4-Servlet-ServletContext参数值" class="headerlink" title="考点4:Servlet ServletContext参数值"></a>考点4:Servlet ServletContext参数值</h1><p>如何获取ServletContext设置的参数值？</p>
+<ul>
+<li>A context.getParameter()</li>
+<li>B context.getInitParameter()</li>
+<li>C context.getAttribute()</li>
+<li>D context.getRequestDispatcher()</li>
+</ul>
+<details><summary>显示答案/隐藏答案</summary>正确答案: B</details>
+
+<p>getParameter()是获取POST/GET传递的参数值；<br>getInitParameter获取Tomcat的server.xml中设置Context的初始化参数<br>getAttribute()是获取对象容器中的数据值；<br>getRequestDispatcher是请求转发。</p>
+<h1 id="考点5-线程-InterruptedException"><a href="#考点5-线程-InterruptedException" class="headerlink" title="考点5:线程 InterruptedException"></a>考点5:线程 InterruptedException</h1><p>下面哪个行为被打断不会导致InterruptedException：（ ）？</p>
+<ul>
+<li>A Thread.join</li>
+<li>B Thread.sleep</li>
+<li>C Object.wait</li>
+<li>D CyclicBarrier.await</li>
+<li>E Thread.suspend</li>
+</ul>
+<details><summary>显示答案/隐藏答案</summary>正确答案: E</details>
+
+<p>抛InterruptedException的代表方法有：<br>java.lang.Object 类的 wait 方法<br>java.lang.Thread 类的 sleep 方法<br>java.lang.Thread 类的 join 方法</p>
+<h2 id="Thread只有sleep​和join这两个方法抛出InterruptedException"><a href="#Thread只有sleep​和join这两个方法抛出InterruptedException" class="headerlink" title="Thread只有sleep​和join这两个方法抛出InterruptedException"></a>Thread只有sleep​和join这两个方法抛出InterruptedException</h2><p><a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Thread.html">https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Thread.html</a></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> sleep​(<span class="keyword">long</span> millis) <span class="keyword">throws</span> InterruptedException</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> sleep​(<span class="keyword">long</span> millis, <span class="keyword">int</span> nanos) <span class="keyword">throws</span> InterruptedException</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">void</span> join​(<span class="keyword">long</span> millis) <span class="keyword">throws</span> InterruptedException</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">void</span> join​(<span class="keyword">long</span> millis, <span class="keyword">int</span> nanos) <span class="function"><span class="keyword">throws</span> InterruptedException</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">void</span> <span class="title">join</span><span class="params">()</span> <span class="keyword">throws</span> InterruptedException</span></span><br></pre></td></tr></table></figure>
+<h2 id="Thread的suspend方法"><a href="#Thread的suspend方法" class="headerlink" title="Thread的suspend方法"></a>Thread的suspend方法</h2><p><a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Thread.html#suspend()">https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Thread.html#suspend()</a></p>
+<p>文档中描述如下</p>
+<blockquote>
+<p><code>@Deprecated(since=&quot;1.2&quot;) public final void suspend()</code><br><strong>Deprecated.</strong><br>This method has been deprecated, as it is inherently deadlock-prone. If the target thread holds a lock on the monitor protecting a critical system resource when it is suspended, no thread can access this resource until the target thread is resumed. If the thread that would resume the target thread attempts to lock this monitor prior to calling resume, deadlock results. Such deadlocks typically manifest themselves as “frozen” processes. For more information, see Why are Thread.stop, Thread.suspend and Thread.resume Deprecated?.<br>Suspends this thread.<br>First, the checkAccess method of this thread is called with no arguments. This may result in throwing a SecurityException (in the current thread).<br>If the thread is alive, it is suspended and makes no further progress unless and until it is resumed.<br><strong>Throws:</strong><br>SecurityException - if the current thread cannot modify this thread.<br><strong>See Also:</strong><br>checkAccess()</p>
+</blockquote>
+<p>没看到有抛出InterruptedException异常</p>
+<h2 id="Object类中只有wait方法抛出InterruptedException"><a href="#Object类中只有wait方法抛出InterruptedException" class="headerlink" title="Object类中只有wait方法抛出InterruptedException"></a>Object类中只有wait方法抛出InterruptedException</h2><p><a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait()">https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait()</a></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">void</span> <span class="title">wait</span><span class="params">()</span> <span class="keyword">throws</span> InterruptedException</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">void</span> wait​<span class="params">(<span class="keyword">long</span> timeoutMillis)</span> <span class="keyword">throws</span> InterruptedException</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">void</span> wait​<span class="params">(<span class="keyword">long</span> timeoutMillis, <span class="keyword">int</span> nanos)</span> <span class="keyword">throws</span> InterruptedException</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="考点6-网路编程-URL类"><a href="#考点6-网路编程-URL类" class="headerlink" title="考点6:网路编程 URL类"></a>考点6:网路编程 URL类</h1><p><code>URL u =new URL(&quot;http://www.123.com&quot;);</code>。如果<code>www.123.com</code>不存在，则返回<code>______</code>。</p>
+<ul>
+<li>A <code>http://www.123.com</code></li>
+<li>B <code>””</code></li>
+<li>C <code>null</code></li>
+<li>D 抛出异常</li>
+</ul>
+<details><summary>显示答案/隐藏答案</summary>正确答案: A</details>
+
+<h2 id="new-URL只检查URL的格式是否正确"><a href="#new-URL只检查URL的格式是否正确" class="headerlink" title="new URL只检查URL的格式是否正确"></a>new URL只检查URL的格式是否正确</h2><p>new URL()时必须捕获检查异常，但这个异常是由于字符串格式和URL不符导致的，与网址是否存在无关。URL的toString方法返回字符串，无论网址是否存在。</p>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">URLtest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">// URL u =new URL(&quot;http://www.123.com&quot;);</span></span><br><span class="line">            URL u =<span class="keyword">new</span> URL(<span class="string">&quot;http://www.agaeww123fjaoufoaufoajquroquroqj223453uuiu.com&quot;</span>);</span><br><span class="line">            System.out.println(u);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (MalformedURLException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://www.agaeww123fjaoufoaufoajquroquroqj223453uuiu.com</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">URLtest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">// URL u =new URL(&quot;http://www.123.com&quot;);</span></span><br><span class="line">            <span class="comment">// URL u =new URL(&quot;http://www.agaeww123fjaoufoaufoajquroquroqj223453uuiu.com&quot;);</span></span><br><span class="line">            URL u =<span class="keyword">new</span> URL(<span class="string">&quot;hello_world://www.nihao.com&quot;</span>);</span><br><span class="line">            System.out.println(u);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (MalformedURLException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">java.net.MalformedURLException: no protocol: hello_world://www.nihao.com</span><br><span class="line">    at java.net.URL.&lt;init&gt;(URL.java:600)</span><br><span class="line">    at java.net.URL.&lt;init&gt;(URL.java:497)</span><br><span class="line">    at java.net.URL.&lt;init&gt;(URL.java:446)</span><br><span class="line">    at base.net.URLtest.main(URLtest.java:11)</span><br></pre></td></tr></table></figure>
+<h2 id="URL文档"><a href="#URL文档" class="headerlink" title="URL文档"></a>URL文档</h2><p><a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URL.html#%3Cinit%3E(java.lang.String)">https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URL.html#%3Cinit%3E(java.lang.String)</a></p>
+<blockquote>
+<p>public URL​(String spec)<br>    throws MalformedURLException<br>Creates a URL object from the String representation.<br>This constructor is equivalent to a call to the two-argument constructor with a null first argument.<br><strong>Parameters:</strong><br>spec - the String to parse as a URL.<br><strong>Throws:</strong><br><code>MalformedURLException</code> - if no protocol is specified, or an unknown protocol is found, or spec is null, or the parsed URL fails to comply with the specific syntax of the associated protocol.<br><strong>See Also:</strong><br>URL(java.net.URL, java.lang.String)</p>
+</blockquote>
+<h1 id="考点7-异常基础知识"><a href="#考点7-异常基础知识" class="headerlink" title="考点7:异常基础知识"></a>考点7:异常基础知识</h1><p>下面哪些情况可以引发异常：</p>
+<ul>
+<li>A 数组越界</li>
+<li>B 指定URL不存在</li>
+<li>C 使用throw语句抛出</li>
+<li>D 使用throws语句</li>
+</ul>
+<details><summary>显示答案/隐藏答案</summary>正确答案: ABC</details>
+
+<p>throws 和 throw：<br>throws出现在方法头，表示可能会出现异常；<br>throw是在方法体，抛出了异常，执行throw则一定抛出了某种异常</p>
+<p>两者都是消极的异常处理方式，只是抛出或者可能抛出异常，是不会由函数处理，真正的处理异常由它的上层调用处理。</p>
+<h1 id="考点8-异常基础知识"><a href="#考点8-异常基础知识" class="headerlink" title="考点8:异常基础知识"></a>考点8:异常基础知识</h1><p>下面有关 JAVA 异常类的描述,说法正确的有()</p>
+<ul>
+<li>A 异常的继承结构:基类为 Throwable,Error 和 Exception 。实现 Throwable, RuntimeException 和 IOException 等继承 Exception</li>
+<li>B 非 RuntimeException 一般是外部错误(不考虑Error的情况下),其可以在当前类被 try{}catch 语句块所捕获</li>
+<li>C Error 类体系描述了 Java 运行系统中的内部错误以及资源耗尽的情形,Error 不需要捕捉</li>
+<li>D RuntimeException 体系包括错误的类型转换、数组越界访问和试图访问空指针等等,必须 被 try{}catch 语句块所捕获</li>
+</ul>
+<details><summary>显示答案/隐藏答案</summary>正确答案: ABC</details>
+
+<p><img data-src="https://gitee.com/XiaoLan223/images/raw/master/Blog/Sum/20210924162953.png" alt="image-20210924162953709"></p>
+<p><img data-src="https://gitee.com/XiaoLan223/images/raw/master/Blog/Sum/20210924163133.png" alt="image-20210924163133318"></p>
+<h1 id="考点9-CMS垃圾收集器"><a href="#考点9-CMS垃圾收集器" class="headerlink" title="考点9:CMS垃圾收集器"></a>考点9:CMS垃圾收集器</h1><p>CMS垃圾回收器在那些阶段是没用用户线程参与的</p>
+<ul>
+<li>A 初始标记</li>
+<li>B 并发标记</li>
+<li>C 重新标记</li>
+<li>D 并发清理</li>
+</ul>
+<details><summary>显示答案/隐藏答案</summary>正确答案: AC</details>
+
+<p>带并发的都是与用户线程一起执行的<br><img data-src="https://gitee.com/XiaoLan223/images/raw/master/Blog/Sum/20210916174348.png" alt="这里有一张图片"><br><a href="/JavaReadingNotes/be2b4fbf/">3.5.6 CMS收集器</a></p>
+<h1 id="考点10-线程基础知识"><a href="#考点10-线程基础知识" class="headerlink" title="考点10:线程基础知识"></a>考点10:线程基础知识</h1><p>以下说法错误的是（）</p>
+<ul>
+<li>A 其他选项均不正确</li>
+<li>B java线程类优先级相同</li>
+<li>C Thread和Runnable接口没有区别</li>
+<li>D 如果一个类继承了某个类，只能使用Runnable实现线程</li>
+</ul>
+<details><summary>显示答案/隐藏答案</summary>正确答案: BCD</details>
+
+<p><strong>Thread和Runable有区别</strong><br>Thread是一个类，Runable是一个接口。<br>Runable只有一个run方法，<br>而Thread除了有run方法，还有从Object继承来的方法，以及Thread中定义的start,sleep等方法。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Thread</span></span></span><br><span class="line"><span class="class"><span class="keyword">extends</span> <span class="title">Object</span></span></span><br><span class="line"><span class="class"><span class="keyword">implements</span> <span class="title">Runnable</span></span></span><br></pre></td></tr></table></figure>
+<p><a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Thread.html#method.summary">https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Thread.html#method.summary</a><br><a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Runnable.html#method.summary">https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Runnable.html#method.summary</a></p>
+<p><strong>实现线程的方式</strong></p>
+<ul>
+<li>继承Thread，然后调用Thread子类的start()方法启动线程</li>
+<li>实现Runable接口，然后new Thread(new Runable实现类).start()</li>
+<li>实现Callable接口，c=new Callable实现类，f=new FutureTask(c),new Thread(f).start()。然后通过f.get()获得线程的返回值。</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>蓝蓝
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://lanlan2017.github.io/exam/412c95a0/" title="2021年09月24日 java1">https://lanlan2017.github.io/exam/412c95a0/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/exam/ec0d698e/" rel="prev" title="2021年11月10日 java1">
+                  <i class="fa fa-chevron-left"></i> 2021年11月10日 java1
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/exam/2d307811/" rel="next" title="2021年09月19日 java1">
+                  2021年09月19日 java1 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="waline-comments"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2018 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">蓝蓝</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">507k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">7:41</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/exam/js/comments.js"></script><script src="/exam/js/utils.js"></script><script src="/exam/js/motion.js"></script><script src="/exam/js/next-boot.js"></script><script src="/exam/js/bookmark.js"></script><script src="/exam/js/pjax.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/exam/js/third-party/search/local-search.js"></script>
+
+
+
+  <script src="/exam/js/third-party/fancybox.js"></script>
+
+  <script src="/exam/js/third-party/pace.js"></script>
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="/exam/js/third-party/math/mathjax.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://lanlan2017.github.io/exam/412c95a0/"}</script>
+  <script src="/exam/js/third-party/quicklink.js"></script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":null,"enable":true,"serverURL":"https://waline-test-mzjszagu6-lanlan2017.vercel.app","placeholder":"Just go go","avatar":"mm","pageSize":10,"visitor":false,"comment_count":true,"requiredFields":[],"meta":["nick","mail","link"],"libUrl":"https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js","el":"#waline-comments","path":"/exam/412c95a0/"}</script>
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.waline.el).then(() => 
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => {
+    new Waline(CONFIG.waline);
+  });
+});
+</script>
+</body>
+</html>
