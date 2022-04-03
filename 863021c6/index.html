@@ -4,8 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
-<meta name="generator" content="Hexo 5.4.0">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 5.4.1">
 
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="apple-touch-icon" sizes="180x180" href="/exam/images/apple-touch-icon-next.png">
@@ -20,14 +19,15 @@
 
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
   <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"lanlan2017.github.io","root":"/exam/","images":"/exam/images","scheme":"Gemini","darkmode":true,"version":"8.8.2","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/exam/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/exam/js/config.js"></script>
-<meta name="description" content="考点1:HashMap源码HashMap的数据结构是怎样的？  A 数组 B 链表 C 数组+链表 D 二叉树  显示答案&#x2F;隐藏答案正确答案: C  HashMap 由数组+链表组成的，数组是 HashMap 的主体，链表则是主要为了解决哈希冲突而存在的JDK8及其以后版本，HashMap的数据结构是数组+链表+红黑树 HashMap内部包含了一个默认大小为 16 Entry 类型的数组 tabl">
+<script class="next-config" data-name="main" type="application/json">{"hostname":"lanlan2017.github.io","root":"/exam/","images":"/exam/images","scheme":"Gemini","darkmode":true,"version":"8.11.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/exam/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/exam/js/config.js"></script>
+
+    <meta name="description" content="考点1:HashMap源码HashMap的数据结构是怎样的？  A 数组 B 链表 C 数组+链表 D 二叉树  显示答案&#x2F;隐藏答案正确答案: C  HashMap 由数组+链表组成的，数组是 HashMap 的主体，链表则是主要为了解决哈希冲突而存在的JDK8及其以后版本，HashMap的数据结构是数组+链表+红黑树 HashMap内部包含了一个默认大小为 16 Entry 类型的数组 tabl">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2021年09月10日 java1">
 <meta property="og:url" content="https://lanlan2017.github.io/exam/863021c6/index.html">
@@ -52,6 +52,7 @@
 
   <script src="/exam/js/third-party/analytics/baidu-analytics.js"></script>
   <script async src="https://hm.baidu.com/hm.js?dadeb188eb14ccde0b25a19230c429b5"></script>
+
 
 
 <link rel="dns-prefetch" href="https://waline-test-mzjszagu6-lanlan2017.vercel.app">
@@ -94,12 +95,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu">
-        <li class="menu-item menu-item-home"><a href="/exam/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
-        <li class="menu-item menu-item-dir"><a href="/exam/dir/" rel="section"><i class="fa fa-sitemap fa-fw"></i>目录</a></li>
-        <li class="menu-item menu-item-categories"><a href="/exam/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
-        <li class="menu-item menu-item-archives"><a href="/exam/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
-        <li class="menu-item menu-item-tags"><a href="/exam/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/exam/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-dir"><a href="/exam/dir/" rel="section"><i class="fa fa-sitemap fa-fw"></i>目录</a></li><li class="menu-item menu-item-categories"><a href="/exam/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/exam/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-tags"><a href="/exam/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -234,11 +230,16 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/exam/images/avatar.png">
       <meta itemprop="name" content="蓝蓝">
-      <meta itemprop="description" content="汇总一些做过的笔试题">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="蓝蓝站点">
+      <meta itemprop="description" content="汇总一些做过的笔试题">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="2021年09月10日 java1 | 蓝蓝站点">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -255,13 +256,13 @@
 
       <time title="创建时间：2021-09-10 15:07:51" itemprop="dateCreated datePublished" datetime="2021-09-10T15:07:51+08:00">2021-09-10</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-12-26 20:11:41" itemprop="dateModified" datetime="2021-12-26T20:11:41+08:00">2021-12-26</time>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
       </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2021-12-26 20:11:41" itemprop="dateModified" datetime="2021-12-26T20:11:41+08:00">2021-12-26</time>
+    </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -334,8 +335,8 @@
 
 <p>HashMap 由数组+链表组成的，数组是 HashMap 的主体，链表则是主要为了解决哈希冲突而存在的<br>JDK8及其以后版本，HashMap的数据结构是数组+链表+红黑树</p>
 <p>HashMap内部包含了一个默认大小为 16 Entry 类型的数组 table,其中每个Entry 是一个链表，当链表长度大于等于 8 时会将链表转换为红黑树。</p>
-<h2 id="JDK1-7中HashMap存储结构"><a href="#JDK1-7中HashMap存储结构" class="headerlink" title="JDK1.7中HashMap存储结构"></a>JDK1.7中HashMap存储结构</h2><p>jdk1.7 中使用个 Entry 数组来存储数据，用key的 hashcode 取模来决定key会被放到数组里的位置，如果 hashcode 相同，或者 hashcode 取模后的结果相同（ hash collision ），那么这些 key 会被定位到 Entry 数组的同一个格子里，这些 key 会形成一个链表。在 hashcode 特别差的情况下，比方说所有key的 hashcode 都相同，这个链表可能会很长，那么 put/get 操作都可能需要遍历这个链表，也就是说时间复杂度在最差情况下会退化到 O(n)</p>
-<h2 id="JDK1-8中HashMap存储结构"><a href="#JDK1-8中HashMap存储结构" class="headerlink" title="JDK1.8中HashMap存储结构"></a>JDK1.8中HashMap存储结构</h2><p>jdk1.8 中使用一个 Node 数组来存储数据，但这个 Node 可能是链表结构，也可能是红黑树结构，如果插入的 key 的 hashcode 相同，那么这些key也会被定位到 Node 数组的同个格子里。如果同一个格子里的key不超过8个，使用链表结构存储。如果超过了8个，那么会调用 treeifyBin 函数，将链表转换为红黑树。那么即使 hashcode 完全相同，由于红黑树的特点，查找某个特定元素，也只需要O(log n)的开销也就是说put/get的操作的时间复杂度最差只有 O(log n)，但是真正想要利用 JDK1.8 的好处，有一个限制：key的对象，必须正确的实现了 Compare 接口</p>
+<h2 id="JDK1-7中HashMap存储结构"><a href="#JDK1-7中HashMap存储结构" class="headerlink" title="JDK1.7中HashMap存储结构"></a>JDK1.7中HashMap存储结构</h2><p>jdk1.7 中使用个 Entry 数组来存储数据，用key的 hashcode 取模来决定key会被放到数组里的位置，如果 hashcode 相同，或者 hashcode 取模后的结果相同（ hash collision ），那么这些 key 会被定位到 Entry 数组的同一个格子里，这些 key 会形成一个链表。在 hashcode 特别差的情况下，比方说所有key的 hashcode 都相同，这个链表可能会很长，那么 put&#x2F;get 操作都可能需要遍历这个链表，也就是说时间复杂度在最差情况下会退化到 O(n)</p>
+<h2 id="JDK1-8中HashMap存储结构"><a href="#JDK1-8中HashMap存储结构" class="headerlink" title="JDK1.8中HashMap存储结构"></a>JDK1.8中HashMap存储结构</h2><p>jdk1.8 中使用一个 Node 数组来存储数据，但这个 Node 可能是链表结构，也可能是红黑树结构，如果插入的 key 的 hashcode 相同，那么这些key也会被定位到 Node 数组的同个格子里。如果同一个格子里的key不超过8个，使用链表结构存储。如果超过了8个，那么会调用 treeifyBin 函数，将链表转换为红黑树。那么即使 hashcode 完全相同，由于红黑树的特点，查找某个特定元素，也只需要O(log n)的开销也就是说put&#x2F;get的操作的时间复杂度最差只有 O(log n)，但是真正想要利用 JDK1.8 的好处，有一个限制：key的对象，必须正确的实现了 Compare 接口</p>
 <p>HashMap在Node数组中进行哈希查找,<br>使用链接法处理冲突,<br>冲突较少时使用链表,<br>目前版本当冲突的键达到8时,<br>会把链表转换为红黑树.</p>
 <p>1、HashMap 底层的数据是数组被成为哈希桶（默认的初始值为 16 ），每个桶存放的是链表，链表中的每个节点，就是 HashMap 中的每个元素。<br>2、在 JDK 8 当链表长度大于等于 8 时，就会转成红黑树的数据结构，以提升查询和插入的效率。</p>
 <h1 id="考点2-不用编码的java文件编译命令-javac-encoding"><a href="#考点2-不用编码的java文件编译命令-javac-encoding" class="headerlink" title="考点2:不用编码的java文件编译命令 javac -encoding"></a>考点2:不用编码的java文件编译命令 javac -encoding</h1><p>语句：<code>char foo=&#39;中&#39;</code>，是否正确？（假设源文件以GB2312编码存储，并且以<code>javac -encoding GB2312</code>命令编译）</p>
@@ -402,7 +403,7 @@
 <p>HashSet内部使用Map保存数据，即将HashSet的数据作为Map的key值保存，<strong>这也是HashSet中元素不能重复的原因</strong>。而Map中保存key值的,会去判断当前Map中是否含有该Key对象，内部是先通过key的hashCode,确定有相同的hashCode之后，再通过equals方法判断是否相同。</p>
 <h1 id="考点5-HashMap源码"><a href="#考点5-HashMap源码" class="headerlink" title="考点5:HashMap源码"></a>考点5:HashMap源码</h1><p>在Java中，关于HashMap类的描述，以下正确的是 ()</p>
 <ul>
-<li>A HashMap使用键/值得形式保存数据</li>
+<li>A HashMap使用键&#x2F;值得形式保存数据</li>
 <li>B HashMap能够保证其中元素的顺序</li>
 <li>C HashMap允许将null用作键</li>
 <li>D HashMap允许将null用作值</li>
@@ -562,14 +563,14 @@ public <mark>abstract</mark> class ClassLoader extends Object
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">507k</span>
+    <span title="站点总字数">515k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">7:41</span>
+    <span title="站点阅读时长">7:48</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
