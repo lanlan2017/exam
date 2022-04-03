@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 5.4.1">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.1.0">
 
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="apple-touch-icon" sizes="180x180" href="/exam/images/apple-touch-icon-next.png">
@@ -336,7 +336,7 @@
 
 
 <h1 id="考点3-C语言指针-内存图"><a href="#考点3-C语言指针-内存图" class="headerlink" title="考点3:C语言指针 内存图"></a>考点3:C语言指针 内存图</h1><p>下列代码段将打印出 ().</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a=<span class="number">2</span>,*p1,**p2;</span><br><span class="line">    p2=&amp;p1;</span><br><span class="line">    p1=&amp;a;</span><br><span class="line">    a++;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d,%d,%d\n&quot;</span>,a,*p1,**p2);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span> <span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> a=<span class="number">2</span>,*p1,**p2;</span><br><span class="line">    p2=&amp;p1;</span><br><span class="line">    p1=&amp;a;</span><br><span class="line">    a++;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d,%d,%d\n&quot;</span>,a,*p1,**p2);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>A 3,2,3</li>
 <li>B 2,2,2</li>
@@ -357,7 +357,7 @@
 
 <h3 id="后-先取值，再加一"><a href="#后-先取值，再加一" class="headerlink" title="后++,先取值，再加一"></a>后++,先取值，再加一</h3><p>因为i++操作是在i&#x2F;3完成之后，再对i进行加1操作的，所以结果是2&#x2F;3，又因为2个int型相除，所以结果是0；</p>
 <p>验证</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">2</span>, b = (i++) / <span class="number">3</span>;</span><br><span class="line">System.out.println(i);</span><br><span class="line">System.out.println(b);</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">2</span>, b = (i++) / <span class="number">3</span>;</span><br><span class="line">System.out.println(i);</span><br><span class="line">System.out.println(b);</span><br></pre></td></tr></table></figure>
 <p>运行结果：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">0</span><br></pre></td></tr></table></figure>
 

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 5.4.1">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.1.0">
 
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="apple-touch-icon" sizes="180x180" href="/exam/images/apple-touch-icon-next.png">
@@ -325,7 +325,7 @@
     
     <div class="post-body" itemprop="articleBody">
         <h1 id="考点1"><a href="#考点1" class="headerlink" title="考点1"></a>考点1</h1><p>下列程序段的输出结果是:( ) </p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">complicatedexpression_r</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> x=<span class="number">20</span>, y=<span class="number">30</span>;</span><br><span class="line">    <span class="keyword">boolean</span> b;</span><br><span class="line">    b = x &gt; <span class="number">50</span> &amp;&amp; y &gt; <span class="number">60</span> || x &gt; <span class="number">50</span> &amp;&amp; y &lt; -<span class="number">60</span> || x &lt; -<span class="number">50</span> &amp;&amp; y &gt; <span class="number">60</span> || x &lt; -<span class="number">50</span> &amp;&amp; y &lt; -<span class="number">60</span>;</span><br><span class="line">    System.out.println(b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">complicatedexpression_r</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> x=<span class="number">20</span>, y=<span class="number">30</span>;</span><br><span class="line">    <span class="type">boolean</span> b;</span><br><span class="line">    b = x &gt; <span class="number">50</span> &amp;&amp; y &gt; <span class="number">60</span> || x &gt; <span class="number">50</span> &amp;&amp; y &lt; -<span class="number">60</span> || x &lt; -<span class="number">50</span> &amp;&amp; y &gt; <span class="number">60</span> || x &lt; -<span class="number">50</span> &amp;&amp; y &lt; -<span class="number">60</span>;</span><br><span class="line">    System.out.println(b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>A <code>true</code></li>
 <li>B <code>false</code></li>
@@ -380,9 +380,9 @@
 <ul>
 <li>A，Thread可以被继承，用于创建新的线程</li>
 <li>B，Number类可以被继承，Integer，Float，Double等都继承自Number类</li>
-<li>C，Double类的声明为<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">Double</span> <span class="keyword">extends</span> <span class="title">Number</span> <span class="keyword">implements</span> <span class="title">Comparable</span></span></span><br></pre></td></tr></table></figure>
+<li>C，Double类的声明为<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">class</span> <span class="title class_">Double</span> <span class="keyword">extends</span> <span class="title class_">Number</span> <span class="keyword">implements</span> <span class="title class_">Comparable</span></span><br></pre></td></tr></table></figure>
 final生明的类不能被继承</li>
-<li>D，Math类的声明为<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">Math</span> <span class="keyword">extends</span> <span class="title">Object</span></span></span><br></pre></td></tr></table></figure>
+<li>D，Math类的声明为<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">class</span> <span class="title class_">Math</span> <span class="keyword">extends</span> <span class="title class_">Object</span></span><br></pre></td></tr></table></figure>
 不能被继承</li>
 <li>E，ClassLoader可以被继承，用户可以自定义类加载器</li>
 </ul>
@@ -397,7 +397,7 @@ final生明的类不能被继承</li>
 <h2 id="解析-5"><a href="#解析-5" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: DE</details>
 
 <p>1、ThreadLocal的类声明：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ThreadLocal</span>&lt;<span class="title">T</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ThreadLocal</span>&lt;T&gt;</span><br></pre></td></tr></table></figure>
 <p>可以看出ThreadLocal并没有继承自Thread，也没有实现Runnable接口。所以AB都不对。<br>2、ThreadLocal类为每一个线程都维护了自己独有的变量拷贝。每个线程都拥有了自己独立的一个变量。<br>所以ThreadLocal重要作用并不在于多线程间的数据共享，而是<strong>数据的独立</strong>，C选项错。<br>由于每个线程在访问该变量时，读取和修改的，都是自己独有的那一份变量拷贝，不会被其他线程访问，<br>变量被彻底封闭在每个访问的线程中。所以E对。<br>3、ThreadLocal中定义了一个哈希表用于为每个线程都提供一个变量的副本：</p>
 <p><code>ThreadLocal</code>继承<code>Object</code>，相当于没继承任何特殊的。<br><code>ThreadLocal</code>没有实现任何接口。<br><code>ThreadLocal</code>并不是一个<code>Thread</code>，而是<code>Thread</code>的局部变量。</p>
 

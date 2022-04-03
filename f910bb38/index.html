@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 5.4.1">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.1.0">
 
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="apple-touch-icon" sizes="180x180" href="/exam/images/apple-touch-icon-next.png">
@@ -336,7 +336,7 @@
 
 <p>如果将父类放在前面的话，异常将被父类完全捕获，子类永远不能捕获异常</p>
 <h1 id="考点2-自动拆箱"><a href="#考点2-自动拆箱" class="headerlink" title="考点2:自动拆箱"></a>考点2:自动拆箱</h1><p>有如下4条语句：()</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Integer i01=<span class="number">59</span>;</span><br><span class="line"><span class="keyword">int</span> i02=<span class="number">59</span>;</span><br><span class="line">Integer i03=Integer.valueOf(<span class="number">59</span>);</span><br><span class="line">Integer i04=<span class="keyword">new</span> Integer(<span class="number">59</span>);</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Integer i01=<span class="number">59</span>;</span><br><span class="line"><span class="type">int</span> i02=<span class="number">59</span>;</span><br><span class="line">Integer i03=Integer.valueOf(<span class="number">59</span>);</span><br><span class="line">Integer i04=<span class="keyword">new</span> <span class="title class_">Integer</span>(<span class="number">59</span>);</span><br></pre></td></tr></table></figure>
 <p>以下输出结果为false的是:</p>
 <ul>
 <li>A System.out.println(i01&#x3D;&#x3D;i02);</li>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 5.4.1">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.1.0">
 
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="apple-touch-icon" sizes="180x180" href="/exam/images/apple-touch-icon-next.png">
@@ -325,7 +325,7 @@
 
 <p>byte能表示的范围[-128,127]<br>boolean的取值只能是true或 false<br>整数默认是int类型，如果要转为long类型，需要在整数后面加上L<br>小数默认类型是double,如果要转为float类型，需要在小数后面加上字母F</p>
 <h1 id="考点2-final类-String"><a href="#考点2-final类-String" class="headerlink" title="考点2:final类 String"></a>考点2:final类 String</h1><p>有以下代码片段:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">String str1=<span class="string">&quot;hello&quot;</span>;</span><br><span class="line">String str2=<span class="string">&quot;he&quot;</span>+ <span class="keyword">new</span> String(<span class="string">&quot;llo&quot;</span>);</span><br><span class="line">System.out.println(str1==str2);</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">String str1=<span class="string">&quot;hello&quot;</span>;</span><br><span class="line">String str2=<span class="string">&quot;he&quot;</span>+ <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&quot;llo&quot;</span>);</span><br><span class="line">System.out.println(str1==str2);</span><br></pre></td></tr></table></figure>
 <p>请问输出的结果是:</p>
 <ul>
 <li>A <code>true</code></li>
@@ -395,7 +395,7 @@
 
 <p>this的作用其中一个就是在一个构造方法中调用另一个构造方<br>法,格式为<code>this(参数)</code>。</p>
 <h1 id="考点7"><a href="#考点7" class="headerlink" title="考点7:"></a>考点7:</h1><p>下面程序运行完之后,t2与t3的关系为()</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Object obj=<span class="keyword">new</span> Object();</span><br><span class="line">List aList=<span class="keyword">new</span> ArrayList();</span><br><span class="line">List bList=<span class="keyword">new</span> LinkedList();</span><br><span class="line"><span class="keyword">long</span> t1=System.currentTimeMillis();</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">50000</span>;i++)&#123;</span><br><span class="line">    aList.add(<span class="number">0</span>,obj);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">long</span> t2=System.currentTimeMillis()-t1;</span><br><span class="line">t1=System.currentTimeMillis();</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">50000</span>;i++)&#123;</span><br><span class="line">    bList.add(<span class="number">0</span>,obj);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">long</span> t3=System.currentTimeMillis()-t1; </span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Object obj=<span class="keyword">new</span> <span class="title class_">Object</span>();</span><br><span class="line">List aList=<span class="keyword">new</span> <span class="title class_">ArrayList</span>();</span><br><span class="line">List bList=<span class="keyword">new</span> <span class="title class_">LinkedList</span>();</span><br><span class="line"><span class="type">long</span> t1=System.currentTimeMillis();</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;<span class="number">50000</span>;i++)&#123;</span><br><span class="line">    aList.add(<span class="number">0</span>,obj);</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">long</span> t2=System.currentTimeMillis()-t1;</span><br><span class="line">t1=System.currentTimeMillis();</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;<span class="number">50000</span>;i++)&#123;</span><br><span class="line">    bList.add(<span class="number">0</span>,obj);</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">long</span> t3=System.currentTimeMillis()-t1; </span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>A <code>t2</code></li>
@@ -435,7 +435,7 @@
 <h3 id="2-什么是原子性"><a href="#2-什么是原子性" class="headerlink" title="2.什么是原子性"></a>2.什么是原子性</h3><p><strong>一个操作是不可中断的,要么全部执行成功要么全部执行失败</strong>,比如银行转账</p>
 <h3 id="3-什么是可见性"><a href="#3-什么是可见性" class="headerlink" title="3.什么是可见性"></a>3.什么是可见性</h3><p>当多个线程访问同一变量时,一个线程修改了这个变量的值,其他线程就能够立即看到修改的值。</p>
 <h3 id="4-什么是有序性"><a href="#4-什么是有序性" class="headerlink" title="4.什么是有序性"></a>4.什么是有序性</h3><p>程序执行的顺序按照代码的先后顺序执行</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a=<span class="number">0</span>;<span class="comment">//1</span></span><br><span class="line"><span class="keyword">int</span> b=<span class="number">2</span>;<span class="comment">//2</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a=<span class="number">0</span>;<span class="comment">//1</span></span><br><span class="line"><span class="type">int</span> b=<span class="number">2</span>;<span class="comment">//2</span></span><br></pre></td></tr></table></figure>
 <p>像这2句代码,1会比2先执行,但是JVM在真正执行时不一定是1在2之前,这里渉及一个概念叫做指令重排,</p>
 <h4 id="指令重排"><a href="#指令重排" class="headerlink" title="指令重排"></a>指令重排</h4><p>处理器为了提高程序运行效率,可能会对输入代码进行优化,它不保证程序中各个语句的执行先后顺序同代码中的顺序一致,但是它会保证程序最终执行结果和代码序执行的结果是一致的。</p>
 <p>比如上面的代码语句1和语句2谁先执行对最终的程序结果并没有影响。那么就有可能在执行过程中,语句2先执行而语句1后执行</p>
@@ -456,7 +456,7 @@
 <h2 id="解析-8"><a href="#解析-8" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: AB</details>
 
 <p>1 Integer与int比较时, Integer会有拆箱的过程,我们可以看看拆箱的代码</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">inValue</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> value;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="type">int</span> <span class="title function_">inValue</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> value;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>直接返回的就是value,因此int a;与Integer b;以及new Integer(a);进行&#x3D;&#x3D;比较时结果都是true。</p>
 <p>解析混乱，我就不记下来了。</p>
 

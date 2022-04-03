@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 5.4.1">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.1.0">
 
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="apple-touch-icon" sizes="180x180" href="/exam/images/apple-touch-icon-next.png">
@@ -419,7 +419,7 @@
 <p>一个1作为符号位，表示负数，剩下两个1,最大值是3，-(128-3)＝-125</p>
 <p>既然求最小整数，那肯定先想到负数，则最高位（符号位）一定为1，原码中肯定是1所在的位数越高，值越小，而补码是由原码取反加1得到的，则在补码中1所在的位数一定要越低，即补码为1000 0011；由补码求得原码：1111 1101&#x3D;-(64+32+16+8+4+1)&#x3D;-125;</p>
 <h1 id="考点8"><a href="#考点8" class="headerlink" title="考点8"></a>考点8</h1><p>下列Java代码中的变量a、b、c分别在内存的____存储区存放。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String a = <span class="string">&quot;aa&quot;</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">methodB</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        String b = <span class="string">&quot;bb&quot;</span>;</span><br><span class="line">        <span class="keyword">final</span> String c = <span class="string">&quot;cc&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">A</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">String</span> <span class="variable">a</span> <span class="operator">=</span> <span class="string">&quot;aa&quot;</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">methodB</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">b</span> <span class="operator">=</span> <span class="string">&quot;bb&quot;</span>;</span><br><span class="line">        <span class="keyword">final</span> <span class="type">String</span> <span class="variable">c</span> <span class="operator">=</span> <span class="string">&quot;cc&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>A 堆区、堆区、堆区</li>
 <li>B 堆区、栈区、堆区</li>

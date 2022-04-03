@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 5.4.1">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.1.0">
 
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="apple-touch-icon" sizes="180x180" href="/exam/images/apple-touch-icon-next.png">
@@ -336,10 +336,10 @@
 </blockquote>
 <p>题目省略<br>定义一维数组的语句</p>
 <h2 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h2><p>Java一维数组有两种初始化方法<br>1、静态初始化<br><code>int array[] = new int[]&#123;1,2,3,4,5&#125;;</code><br>或者简写为：<br> <code>int array[] = &#123;1,2,3,4,5&#125;</code><br>需要注意的是，写成如下形式也是错误的<br> <code>int array[] = new int[5]&#123;1,2,3,4,5&#125;</code><br>2、动态初始化</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> array[] = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">2</span>];</span><br><span class="line">array[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">array[<span class="number">1</span>] = <span class="number">2</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> array[] = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">2</span>];</span><br><span class="line">array[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">array[<span class="number">1</span>] = <span class="number">2</span>;</span><br></pre></td></tr></table></figure>
 <p>静态与动态初始化的区别就在于，前者是声明的时候就初始化，后者是先声明，再动态初始化。</p>
 <p>声明的时候不能初始化容量,只有new的时候才可以。<br>也就是说</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">10</span>];</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a[<span class="number">10</span>];</span><br></pre></td></tr></table></figure>
 <p>这种写法是错误的</p>
 <h1 id="考点4-可以追加文件的IO流"><a href="#考点4-可以追加文件的IO流" class="headerlink" title="考点4 可以追加文件的IO流"></a>考点4 可以追加文件的IO流</h1><p>以下哪个I&#x2F;O类可以附加或更新文件</p>
 <ul>

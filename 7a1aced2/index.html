@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 5.4.1">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.1.0">
 
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="apple-touch-icon" sizes="180x180" href="/exam/images/apple-touch-icon-next.png">
@@ -378,7 +378,7 @@
 
 <h3 id="Linux命令返回值"><a href="#Linux命令返回值" class="headerlink" title="Linux命令返回值"></a>Linux命令返回值</h3><p>参考资料：<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/cy413026/article/details/104172448">https://blog.csdn.net/cy413026/article/details/104172448</a><br>Linux错误代码及其含义：<a target="_blank" rel="noopener" href="https://blog.csdn.net/u013457167/article/details/79196306">https://blog.csdn.net/u013457167/article/details/79196306</a></p>
 <p>在shell终端中，你所输入的一切命令其实都有返回值，而这个返回值默认保存在变量<code>$?</code>中，举例看一下</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">! /bin/bash</span></span><br><span class="line"> </span><br><span class="line">grup_pwd=`cat /etc/grub.conf | grep -v ^# | grep password 2&gt; /dev/null`</span><br><span class="line"> </span><br><span class="line">if [ $? -eq 0 ];then</span><br><span class="line">   echo &quot;  [ √ ] 已设置grub密码,符合要求&quot;</span><br><span class="line">else</span><br><span class="line">   echo &quot;  [ X ] 没有设置grub密码，不符合要求,建议设置grub密码&quot;</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">! /bin/bash</span></span><br><span class="line"> </span><br><span class="line">grup_pwd=`cat /etc/grub.conf | grep -v ^# | grep password 2&gt; /dev/null`</span><br><span class="line"> </span><br><span class="line">if [ $? -eq 0 ];then</span><br><span class="line">   echo &quot;  [ √ ] 已设置grub密码,符合要求&quot;</span><br><span class="line">else</span><br><span class="line">   echo &quot;  [ X ] 没有设置grub密码，不符合要求,建议设置grub密码&quot;</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
 <h3 id="Linux错误码含义"><a href="#Linux错误码含义" class="headerlink" title="Linux错误码含义"></a>Linux错误码含义</h3><p>Linux错误代码及其含义：<a target="_blank" rel="noopener" href="https://blog.csdn.net/u013457167/article/details/79196306">https://blog.csdn.net/u013457167/article/details/79196306</a></p>
 <h1 id="考点5-查看文件命令cat-more-tail"><a href="#考点5-查看文件命令cat-more-tail" class="headerlink" title="考点5:查看文件命令cat more tail"></a>考点5:查看文件命令cat more tail</h1><p>为了查看不断更新的日志文件,可以使用的指令是()</p>
 <ul>

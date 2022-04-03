@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 5.4.1">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.1.0">
 
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="apple-touch-icon" sizes="180x180" href="/exam/images/apple-touch-icon-next.png">
@@ -381,7 +381,7 @@
 <li>finalize是个不太可控的方法因此并不常用，并且在JDK9+版本被标注为过时方法。</li>
 </ol>
 <h1 id="考点6-抽象类-抽象方法-重载的依据-赋值表达式可以出现的位置"><a href="#考点6-抽象类-抽象方法-重载的依据-赋值表达式可以出现的位置" class="headerlink" title="考点6 抽象类 抽象方法 重载的依据 赋值表达式可以出现的位置"></a>考点6 抽象类 抽象方法 重载的依据 赋值表达式可以出现的位置</h1><p>选项中哪一行代码可以替换 &#x2F;&#x2F;add code here 而不产生编译错误</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">MyClass</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> constInt = <span class="number">5</span>;</span><br><span class="line">    <span class="comment">//add code here</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">class</span> <span class="title class_">MyClass</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="variable">constInt</span> <span class="operator">=</span> <span class="number">5</span>;</span><br><span class="line">    <span class="comment">//add code here</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">method</span><span class="params">()</span> &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>A public abstract void method(int a);</li>
@@ -424,15 +424,15 @@
 <details><summary>展开/折叠</summary>
 正确答案: B</details>
 
-<h2 id="解析-8"><a href="#解析-8" class="headerlink" title="解析"></a>解析</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> Socket(<span class="string">&quot;localhost&quot;</span>,<span class="number">9000</span>); <span class="comment">//客户端连接端口 </span></span><br><span class="line"><span class="keyword">new</span> ServerSocket(<span class="number">9000</span>); <span class="comment">//服务器端监听端口</span></span><br></pre></td></tr></table></figure>
+<h2 id="解析-8"><a href="#解析-8" class="headerlink" title="解析"></a>解析</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="title class_">Socket</span>(<span class="string">&quot;localhost&quot;</span>,<span class="number">9000</span>); <span class="comment">//客户端连接端口 </span></span><br><span class="line"><span class="keyword">new</span> <span class="title class_">ServerSocket</span>(<span class="number">9000</span>); <span class="comment">//服务器端监听端口</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>服务端：<code>ServerSocket(port)</code>，因为<strong>服务器知道自己的IP所以不需要输入IP</strong></li>
 <li>客户端：<code>Socket(host,port)</code>，因为客户端不知道连接哪条IP所以需要输入IP</li>
 </ul>
 <p>服务器端创建监听：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ServerSocket ss = <span class="keyword">new</span> ServerSocket(<span class="keyword">int</span> port)</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">ServerSocket</span> <span class="variable">ss</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ServerSocket</span>(<span class="type">int</span> port)</span><br></pre></td></tr></table></figure>
 <p>客户端创建监听：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Socket s = <span class="keyword">new</span> Socket(InetAddress address, <span class="keyword">int</span> port)</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Socket</span> <span class="variable">s</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Socket</span>(InetAddress address, <span class="type">int</span> port)</span><br></pre></td></tr></table></figure>
 
     </div>
 

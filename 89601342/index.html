@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 5.4.1">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.1.0">
 
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="apple-touch-icon" sizes="180x180" href="/exam/images/apple-touch-icon-next.png">
@@ -388,7 +388,7 @@
 
 <p>整型出发结果只取整数部分，小数部分丢弃，或者说向下取整。</p>
 <h1 id="考点6-基本数据类型占用字节数"><a href="#考点6-基本数据类型占用字节数" class="headerlink" title="考点6 基本数据类型占用字节数"></a>考点6 基本数据类型占用字节数</h1><p>以下程序段执行后将有()个字节被写入到文件afile.txt中。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    FileOutputStream fos = <span class="keyword">new</span> FileOutputStream(<span class="string">&quot;afile.txt&quot;</span>);</span><br><span class="line">    DataOutputStream dos = <span class="keyword">new</span> DataOutputStream(fos);</span><br><span class="line">    dos.writeInt(<span class="number">3</span>);</span><br><span class="line">    dos.writeChar(<span class="number">1</span>);</span><br><span class="line">    dos.close();</span><br><span class="line">    fos.close();</span><br><span class="line">&#125; <span class="keyword">catch</span> (IOException e) &#123;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="type">FileOutputStream</span> <span class="variable">fos</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">FileOutputStream</span>(<span class="string">&quot;afile.txt&quot;</span>);</span><br><span class="line">    <span class="type">DataOutputStream</span> <span class="variable">dos</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">DataOutputStream</span>(fos);</span><br><span class="line">    dos.writeInt(<span class="number">3</span>);</span><br><span class="line">    dos.writeChar(<span class="number">1</span>);</span><br><span class="line">    dos.close();</span><br><span class="line">    fos.close();</span><br><span class="line">&#125; <span class="keyword">catch</span> (IOException e) &#123;&#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>A 3</li>
 <li>B 5</li>
