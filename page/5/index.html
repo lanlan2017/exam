@@ -807,7 +807,7 @@
 <h2 id="解析-5"><a href="#解析-5" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: B</details>
 
 <p>定义非内部java接口可以使用public和package修饰，这一点可以在Eclipse创建接口时查看：</p>
-<p><img data-src="https://gitee.com/XiaoLan223/images/raw/master/Blog/Sum/20210903005053.png" alt="image-20210903005053027"></p>
+<p><img data-src="https://raw.githubusercontent.com/lanlan2017/images/master/Blog/Sum/20210903005053.png" alt="image-20210903005053027"></p>
 <h3 id="package权限的接口"><a href="#package权限的接口" class="headerlink" title="package权限的接口"></a>package权限的接口</h3><p>所以的package权限，就是什么都不写：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> interfacetest;</span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">A</span> &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -1075,7 +1075,7 @@
 <h2 id="解析-3"><a href="#解析-3" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: C</details>
 
 <p>java中的异常通常分为编译时异常和运行异常。编译时异常需要我们手动的进行捕捉处理，也就是我们用try….catch块进行捕捉处理。<br>对于运行时异常只有在编译器在编译运行时才会出现，这些不需要我们手动进行处理。对于A、<br>B、 D来说都是运行时异常，因此答案为C</p>
-<h3 id="Java异常族谱"><a href="#Java异常族谱" class="headerlink" title="Java异常族谱"></a>Java异常族谱</h3><p><img data-src="https://gitee.com/XiaoLan223/images/raw/master/Blog/Sum/20210902092027.jpg" alt="214250_1444467985224_6A144C1382BBEF1BE30E9B91BC2973C8"></p>
+<h3 id="Java异常族谱"><a href="#Java异常族谱" class="headerlink" title="Java异常族谱"></a>Java异常族谱</h3><p><img data-src="https://raw.githubusercontent.com/lanlan2017/images/master/Blog/Sum/20210902092027.jpg" alt="214250_1444467985224_6A144C1382BBEF1BE30E9B91BC2973C8"></p>
 <ol>
 <li>粉红色的是受检查的异常(checked exceptions),其必须被try{}catch语句块所捕获,或者在方法签名里通过throws子句声明.受检查的异常必须在编译时被捕捉处理,命名为 Checked Exception 是因为Java编译器要进行检查,Java虚拟机也要进行检查,以确保这个规则得到遵守.</li>
 <li>绿色的异常是运行时异常(runtime exceptions),需要程序员自己分析代码决定是否捕获和处理,比如空指针,被0除…</li>
@@ -1160,7 +1160,7 @@
 </tr>
 </tbody></table>
 <h1 id="考点6-值传递引用传递问题"><a href="#考点6-值传递引用传递问题" class="headerlink" title="考点6:值传递引用传递问题"></a>考点6:值传递引用传递问题</h1><p>指出下来程序运行的结果是</p>
-<p><img data-src="https://gitee.com/XiaoLan223/images/raw/master/Blog/Sum/20210902150108.png" alt="4819419_1512815363858_050A1C016A89DF3247F32E71DC8461D3"></p>
+<p><img data-src="https://raw.githubusercontent.com/lanlan2017/images/master/Blog/Sum/20210902150108.png" alt="4819419_1512815363858_050A1C016A89DF3247F32E71DC8461D3"></p>
 <ul>
 <li>A <code>good and abc</code></li>
 <li>B <code>good and gbc</code></li>
@@ -1232,7 +1232,7 @@
 </ul>
 <h2 id="解析-9"><a href="#解析-9" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: ABCD</details>
 
-<p><img data-src="https://gitee.com/XiaoLan223/images/raw/master/Blog/Sum/20210902164128.png" alt="1562929_1495091266467_AA89EDF1B0D43CAA9A893C73A1615398"></p>
+<p><img data-src="https://raw.githubusercontent.com/lanlan2017/images/master/Blog/Sum/20210902164128.png" alt="1562929_1495091266467_AA89EDF1B0D43CAA9A893C73A1615398"></p>
 <h3 id="GenericServlet抽象类"><a href="#GenericServlet抽象类" class="headerlink" title="GenericServlet抽象类"></a>GenericServlet抽象类</h3><p>GenericServlet是个抽象类，必须给出子类才能实例化。它给出了设计servlet的一些骨架，定义了servlet生命周期，还有一些得到名字、配置、初始化参数的方法，其设计的是和应用层协议无关的，也就是说 你有可能用非http协议实现它。</p>
 <h3 id="HttpServlet"><a href="#HttpServlet" class="headerlink" title="HttpServlet"></a>HttpServlet</h3><p>HttpServlet是GenericServlet的子类，当然就具有GenericServlet的一切特性，还添加了doGet, doPost, doDelete,doPut, doTrace等方法对应处理http协议里的命令的请求响应过程。</p>
 <p>一般没有特殊需要，自己写的Servlet都扩展HttpServlet 。</p>
@@ -3130,7 +3130,7 @@ Double d=new Double(100);//正确
   <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
   <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://lanlan2017.github.io/exam/page/5/"}</script>
   <script src="/exam/js/third-party/quicklink.js"></script>
-<script class="next-config" data-name="waline" type="application/json">{"lang":null,"enable":true,"serverURL":"https://waline-test-mzjszagu6-lanlan2017.vercel.app","placeholder":"Just go go","avatar":"mm","pageSize":10,"visitor":false,"comment_count":true,"requiredFields":[],"meta":["nick","mail","link"],"libUrl":"https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js","el":"#waline-comments","path":"/exam/page/5/"}</script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":null,"enable":true,"serverURL":"https://waline-test-mzjszagu6-lanlan2017.vercel.app","placeholder":"填写您的邮箱以便接收回复提醒 填写您个人网站地址以便为您增加访问量","avatar":"mm","pageSize":10,"visitor":false,"comment_count":true,"requiredFields":[],"meta":["nick","mail","link"],"libUrl":"https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js","el":"#waline-comments","path":"/exam/page/5/"}</script>
 <script>
 document.addEventListener('page:loaded', () => {
   NexT.utils.loadComments(CONFIG.waline.el).then(() => 
