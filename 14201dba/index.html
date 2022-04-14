@@ -34,14 +34,14 @@
 <meta property="og:site_name" content="蓝蓝站点">
 <meta property="og:description" content="考点1:try-catch-finally执行流程分析以下代码,说法正确的是() 1234567891011121314public static void main(String[] args) &amp;#123;    System.out.println(val());&amp;#125;public static int val() &amp;#123;    int num &#x3D; 5;    try &amp;#123">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://raw.githubusercontent.com/lanlan2017/images/master/Blog/Sum/20210902092027.jpg">
-<meta property="og:image" content="https://raw.githubusercontent.com/lanlan2017/images/master/Blog/Sum/20210902150108.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/lanlan2017/images/master/Blog/Sum/20210902164128.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/lanlan2017/images/master/Blog/2021/09/20210902092027.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/lanlan2017/images/master/Blog/2021/09/20210902150108.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/lanlan2017/images/master/Blog/2021/09/20210902164128.png">
 <meta property="article:published_time" content="2021-09-01T12:40:06.000Z">
 <meta property="article:modified_time" content="2021-12-31T07:27:28.000Z">
 <meta property="article:author" content="蓝蓝">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/lanlan2017/images/master/Blog/Sum/20210902092027.jpg">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/lanlan2017/images/master/Blog/2021/09/20210902092027.jpg">
 
 
 <link rel="canonical" href="https://lanlan2017.github.io/exam/14201dba/">
@@ -369,7 +369,7 @@
 <h2 id="解析-3"><a href="#解析-3" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: C</details>
 
 <p>java中的异常通常分为编译时异常和运行异常。编译时异常需要我们手动的进行捕捉处理，也就是我们用try….catch块进行捕捉处理。<br>对于运行时异常只有在编译器在编译运行时才会出现，这些不需要我们手动进行处理。对于A、<br>B、 D来说都是运行时异常，因此答案为C</p>
-<h3 id="Java异常族谱"><a href="#Java异常族谱" class="headerlink" title="Java异常族谱"></a>Java异常族谱</h3><p><img data-src="https://raw.githubusercontent.com/lanlan2017/images/master/Blog/Sum/20210902092027.jpg" alt="214250_1444467985224_6A144C1382BBEF1BE30E9B91BC2973C8"></p>
+<h3 id="Java异常族谱"><a href="#Java异常族谱" class="headerlink" title="Java异常族谱"></a>Java异常族谱</h3><p><img data-src="https://raw.githubusercontent.com/lanlan2017/images/master/Blog/2021/09/20210902092027.jpg" alt="214250_1444467985224_6A144C1382BBEF1BE30E9B91BC2973C8"></p>
 <ol>
 <li>粉红色的是受检查的异常(checked exceptions),其必须被try{}catch语句块所捕获,或者在方法签名里通过throws子句声明.受检查的异常必须在编译时被捕捉处理,命名为 Checked Exception 是因为Java编译器要进行检查,Java虚拟机也要进行检查,以确保这个规则得到遵守.</li>
 <li>绿色的异常是运行时异常(runtime exceptions),需要程序员自己分析代码决定是否捕获和处理,比如空指针,被0除…</li>
@@ -454,7 +454,7 @@
 </tr>
 </tbody></table>
 <h1 id="考点6-值传递引用传递问题"><a href="#考点6-值传递引用传递问题" class="headerlink" title="考点6:值传递引用传递问题"></a>考点6:值传递引用传递问题</h1><p>指出下来程序运行的结果是</p>
-<p><img data-src="https://raw.githubusercontent.com/lanlan2017/images/master/Blog/Sum/20210902150108.png" alt="4819419_1512815363858_050A1C016A89DF3247F32E71DC8461D3"></p>
+<p><img data-src="https://raw.githubusercontent.com/lanlan2017/images/master/Blog/2021/09/20210902150108.png" alt="4819419_1512815363858_050A1C016A89DF3247F32E71DC8461D3"></p>
 <ul>
 <li>A <code>good and abc</code></li>
 <li>B <code>good and gbc</code></li>
@@ -526,7 +526,7 @@
 </ul>
 <h2 id="解析-9"><a href="#解析-9" class="headerlink" title="解析"></a>解析</h2><details><summary>显示答案/隐藏答案</summary>正确答案: ABCD</details>
 
-<p><img data-src="https://raw.githubusercontent.com/lanlan2017/images/master/Blog/Sum/20210902164128.png" alt="1562929_1495091266467_AA89EDF1B0D43CAA9A893C73A1615398"></p>
+<p><img data-src="https://raw.githubusercontent.com/lanlan2017/images/master/Blog/2021/09/20210902164128.png" alt="1562929_1495091266467_AA89EDF1B0D43CAA9A893C73A1615398"></p>
 <h3 id="GenericServlet抽象类"><a href="#GenericServlet抽象类" class="headerlink" title="GenericServlet抽象类"></a>GenericServlet抽象类</h3><p>GenericServlet是个抽象类，必须给出子类才能实例化。它给出了设计servlet的一些骨架，定义了servlet生命周期，还有一些得到名字、配置、初始化参数的方法，其设计的是和应用层协议无关的，也就是说 你有可能用非http协议实现它。</p>
 <h3 id="HttpServlet"><a href="#HttpServlet" class="headerlink" title="HttpServlet"></a>HttpServlet</h3><p>HttpServlet是GenericServlet的子类，当然就具有GenericServlet的一切特性，还添加了doGet, doPost, doDelete,doPut, doTrace等方法对应处理http协议里的命令的请求响应过程。</p>
 <p>一般没有特殊需要，自己写的Servlet都扩展HttpServlet 。</p>
