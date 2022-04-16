@@ -410,7 +410,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lanlan2017.github.io/exam/a58dd038/">
+    <link itemprop="mainEntityOfPage" href="https://lanlan2017.github.io/exam/d28ae0ae/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/exam/images/avatar.png">
@@ -428,7 +428,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/exam/a58dd038/" class="post-title-link" itemprop="url">2019年11月5日_Java_2</a>
+          <a href="/exam/d28ae0ae/" class="post-title-link" itemprop="url">2019年11月5日 java3</a>
         </h2>
 
         <div class="post-meta-container">
@@ -479,8 +479,8 @@
     </span>
     <span class="post-meta-item-text">Waline：</span>
   
-    <a title="waline" href="/exam/a58dd038/#waline-comments" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" id="/exam/a58dd038/" data-xid="/exam/a58dd038/" itemprop="commentCount"></span>
+    <a title="waline" href="/exam/d28ae0ae/#waline-comments" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" id="/exam/d28ae0ae/" data-xid="/exam/d28ae0ae/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -491,14 +491,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>2.6k</span>
+      <span>4.3k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
+      <span>4 分钟</span>
     </span>
 </div>
 
@@ -509,112 +509,85 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="考点1-数据库-关系模型和对象模型的匹配关系"><a href="#考点1-数据库-关系模型和对象模型的匹配关系" class="headerlink" title="考点1 数据库 关系模型和对象模型的匹配关系"></a>考点1 数据库 关系模型和对象模型的匹配关系</h1><p>一般情况下，以下哪个选项不是关系数据模型与对象模型之间匹配关系？</p>
+          <h1 id="考点1"><a href="#考点1" class="headerlink" title="考点1"></a>考点1</h1><p>下面语句正确的是（）</p>
 <ul>
-<li>A 表对应类</li>
-<li>B 记录对应对象</li>
-<li>C 表的字段对应类的属性</li>
-<li>D 表之间的参考关系对应类之间的依赖关系</li>
-</ul>
-<details><summary>展开/折叠</summary>
-正确答案: D</details>
-
-<h2 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h2><p>一般关系数据模型和对象数据模型之间有以下对应关系：</p>
-<ul>
-<li>表对应类，</li>
-<li>记录对应对象，</li>
-<li>表的字段对应类的属性</li>
-</ul>
-<p>目前ORMapping只是规定了数据结构和数据集的映射关系，还没到规定赖关系的阶段</p>
-<h1 id="考点2"><a href="#考点2" class="headerlink" title="考点2"></a>考点2</h1><p>已知有下列Test类的说明，在该类的main方法内，则下列哪个语句是正确的？（）</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Test</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">float</span> <span class="variable">f</span> <span class="operator">=</span> <span class="number">1.0f</span>;</span><br><span class="line">    <span class="type">int</span> <span class="variable">m</span> <span class="operator">=</span> <span class="number">12</span>;</span><br><span class="line">    <span class="keyword">static</span> <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span> <span class="params">(String args[])</span></span><br><span class="line">    &#123;</span><br><span class="line">    <span class="type">Test</span> <span class="variable">t</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Test</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>A t.f;</li>
-<li>B this.n;</li>
-<li>C Test.m</li>
-<li>D Test.f</li>
-</ul>
-<details><summary>展开/折叠</summary>
-正确答案: A</details>
-
-<h2 id="解析-1"><a href="#解析-1" class="headerlink" title="解析"></a>解析</h2><p>A的答案中变量虽然为private，但因为main函数在该类中，所以即使private也仍可使用</p>
-<h1 id="考点3"><a href="#考点3" class="headerlink" title="考点3"></a>考点3</h1><p>下面赋值语句中正确的是（）</p>
-<ul>
-<li>A double d&#x3D;5.3e12;</li>
-<li>B float f&#x3D;11.1;</li>
-<li>C int i&#x3D;0.0;</li>
-<li>D Double oD&#x3D;3;</li>
-</ul>
-<p>正确答案: A</p>
-<h2 id="解析-2"><a href="#解析-2" class="headerlink" title="解析"></a>解析</h2><p>java中整型默认的是int,浮点默认的是double.<br>A: double类型遵循IEEE754标准（具体自己查一下），约为10^-308<del>10^308和-10^-308</del>-10^308，所以本题在范围里<br>B: double类型的11.1 转成 float，是需要强制转换的<br>C: double类型的0.0 转成 int，也是需要强制转换的<br>D: int 转为 封装类型Double，是无法编译的，int虽可以转换成double，但在类型转换时无法进行自动装箱，故错误</p>
-<h1 id="考点4"><a href="#考点4" class="headerlink" title="考点4"></a>考点4</h1><p>下列不属于Java语言性特点的是</p>
-<ul>
-<li>A Java致力于检查程序在编译和运行时的错误</li>
-<li>B Java能运行虚拟机实现跨平台</li>
-<li>C Java自己操纵内存减少了内存出错的可能性</li>
-<li>D Java还实现了真数组，避免了覆盖<code>数据类型</code>的可能</li>
+<li>A x+1&#x3D;5</li>
+<li>B i++&#x3D;1</li>
+<li>C a++b&#x3D;1</li>
+<li>D x+&#x3D;1</li>
 </ul>
 <p>正确答案: D</p>
-<h2 id="解析-3"><a href="#解析-3" class="headerlink" title="解析"></a>解析</h2><h3 id="什么是真数组"><a href="#什么是真数组" class="headerlink" title="什么是真数组"></a>什么是真数组</h3><p>程序设计语言中，数组元素在内存中是一个接着一个线性存放的，通过第一个元素就能访问随后的元素，这样的数组称之为“真数组”。<br>实现了真数组为Java语言健壮性的特点之一。</p>
-<p>真数组：<br>1、在内存中连续分配。<br>2、数组所存在的内存空间为数组专用，避免了<code>数据</code>被覆盖的问题。</p>
-<p>是避免数据覆盖，而不是数据类型覆盖</p>
-<h1 id="考点5"><a href="#考点5" class="headerlink" title="考点5"></a>考点5</h1><p>在java语言中，如果你编写一个多线程序，可以使用的方法是（）</p>
+<h2 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h2><h3 id="赋值运算左值必须是变量"><a href="#赋值运算左值必须是变量" class="headerlink" title="赋值运算左值必须是变量"></a>赋值运算左值必须是变量</h3><p>赋值运算符“&#x3D;”右值可以是任何常数、变量或者表达式（只要能生成一个值就行）。但<strong>左值必须是一个明确的、已命名的变量</strong><br>所以对于i++ &#x3D; 1，a++b &#x3D; 1，x+1&#x3D;5来说，赋值运算符的左边不是一个变量当然是错误的。</p>
+<h1 id="考点2"><a href="#考点2" class="headerlink" title="考点2"></a>考点2</h1><p>类Person里面有个方法sleep()，如果直接用Person.sleep()，则方法sleep前面必须用的关键词是？  (    )</p>
 <ul>
-<li>A 扩展类Thread</li>
-<li>B 实现Runnable接口</li>
-<li>C 扩展类 Runnable</li>
-<li>D 实现接口Thread</li>
+<li>A class</li>
+<li>B static</li>
+<li>C public</li>
+<li>D final</li>
 </ul>
-<p>正确答案: AB</p>
-<h2 id="解析-4"><a href="#解析-4" class="headerlink" title="解析"></a>解析</h2><p>Java多线程实现方式主要有四种：<br>1、继承Thread类<br>2、实现Runnable接口<br>3、实现Callable接口通过FutureTask包装器来创建Thread线程<br>4、使用ExecutorService、Callable、Future实现有返回结果的多线程</p>
-<p>前两种方式线程执行完后都没有返回值，后两种是带返回值的。</p>
-<h1 id="考点6"><a href="#考点6" class="headerlink" title="考点6"></a>考点6</h1><p>下面哪几个语句正确的声明一个整型的二维数组（）</p>
+<p>正确答案: B</p>
+<h2 id="解析-1"><a href="#解析-1" class="headerlink" title="解析"></a>解析</h2><h1 id="考点3"><a href="#考点3" class="headerlink" title="考点3"></a>考点3</h1><p>下列描述中，错误的是</p>
 <ul>
-<li>A int a[][]&#x3D;new int[][]</li>
-<li>B int b[10][10]&#x3D;new int[][]</li>
-<li>C int c[][]&#x3D;new int[10][10]</li>
-<li>D int []d[]&#x3D;new int[10][10]</li>
+<li>A SQL语言又称为结构化查询语言</li>
+<li>B java中”static”关键字表明一个成员变量或者是成员方法可以在没有所属的类的实例变量的情况下被访问</li>
+<li>C 面向对象开发中，引用传递意味着传递的并不是实际的对象，而是对象的引用，因此，外部对引用对象所做的改变不会反映到所引用的对象上</li>
+<li>D java是强类型语言，javascript是弱类型语言</li>
+<li>E 面向对象的三大特性包括：封装，继承，多态</li>
 </ul>
-<p>正确答案: CD</p>
-<h2 id="解析-5"><a href="#解析-5" class="headerlink" title="解析"></a>解析</h2><ol>
-<li>定义一维数组时，必须显式指明数组的长度；</li>
-<li>定义多维数组时，其<strong>一维数组的长度必须首先指明</strong>，其他维数组长度可以稍后指定；</li>
-<li>采用给定值初始化数组时，不必指明长度；</li>
-<li>“[]” 是数组运算符的意思，在声明一个数组时，数组运算符可以放在数据类型与变量之间，也可以放在变量之后。</li>
+<p>正确答案: C</p>
+<h2 id="解析-2"><a href="#解析-2" class="headerlink" title="解析"></a>解析</h2><p>这道题选C，因为引用代表就是所引用的是实际的对象，<strong>对引用的修改就是对对象的修改</strong>，可以理解为两把钥匙可以打开同一扇门，所以C错；其他几个选项都是对的</p>
+<h1 id="考点4"><a href="#考点4" class="headerlink" title="考点4"></a>考点4</h1><p>下列说法正确的是()</p>
+<ul>
+<li>A WebLogic中开发消息Bean的non－persistent 方式可以保证消息的可靠</li>
+<li>B EJB容器发生错误，non－persistent方式下JMS容器仍然会将消息发送</li>
+<li>C EJB容器发生错误，persistent方式下JMS容器仍然会将消息发送</li>
+<li>D EJB容器发生错误，两种方式下JMS容器仍会在MDB可用的时候将消息发送</li>
+</ul>
+<p>正确答案: C</p>
+<h2 id="解析-3"><a href="#解析-3" class="headerlink" title="解析"></a>解析</h2><p>我不懂，解析我也看不懂，有空了解一下</p>
+<h1 id="考点5"><a href="#考点5" class="headerlink" title="考点5"></a>考点5</h1><p>下列语句正确的是：</p>
+<ul>
+<li>A 形式参数可被字段修饰符修饰</li>
+<li>B 形式参数不可以是对象</li>
+<li>C 形式参数为方法被调用时真正被传递的参数</li>
+<li>D 形式参数可被视为local variable</li>
+</ul>
+<p>正确答案: D</p>
+<h2 id="解析-4"><a href="#解析-4" class="headerlink" title="解析"></a>解析</h2><p>A：形式参数只能被final修饰<br>B：形式参数可以是对象<br>C：形式参数被调用时被传递的是实际参数的拷贝<br>D：local variable：局部变量</p>
+<h3 id="修饰符待整理"><a href="#修饰符待整理" class="headerlink" title="修饰符待整理"></a>修饰符待整理</h3><p>Java语言提供了很多修饰符，大概分为两类： </p>
+<ol>
+<li>访问权限修饰符 </li>
+<li>非访问权限修饰符<br>访问权限修饰符<br>public：共有访问。对所有的类都可见。<br>protected：保护型访问。对同一个包可见，对不同的包的子类可见。<br>default：默认访问权限。只对同一个包可见，注意对不同的包的子类不可见。<br>private：私有访问。只对同一个类可见，其余都不见。<br>非访问权限修饰符<br>static 修饰符，用来创建类方法和类变量。<br>final 修饰符，用来修饰类、方法和变量，final 修饰的类不能够被继承，修饰的方法不能被继承类重新定义，修饰的变量为常量，是不可修改的。<br>abstract 修饰符，用来创建抽象类和抽象方法。<br>synchronized 用于多线程的同步。<br>volatile 修饰的成员变量在每次被线程访问时，都强制从共享内存中重新读取该成员变量的值。而且，当成员变量发生变化时，会强制线程将变化值回写到共享内存。这样在任何时刻，两个不同的线程总是看到某个成员变量的同一个值。<br>transient：序列化的对象包含被 transient 修饰的实例变量时，java 虚拟机(JVM)跳过该特定的变量。<br>类<br>外部类修饰符<br>public（访问控制符），将一个类声明为公共类，它可以被任何对象访问，一个程序的主类必须是公共类。<br>default（访问控制符），类只对包内可见，包外不可见。<br>abstract（非访问控制符），将一个类声明为抽象类，抽象类不能用来实例化对象，声明抽象类的唯一目的是为了将来对该类进行扩充，抽象类可以包含抽象方法和非抽象方法。。<br>final（非访问控制符），将一个类生命为最终（即非继承类），表示它不能被其他类继承。<br> 注意：</li>
 </ol>
-<p>一维数组中，[]在变量名arr前还是后，这个写法没有固定的要求，<br>二维数组中，[][]a这三个元素其实可以作<strong>全排列</strong>，不论怎么排都不影响最后的编译结果，写法没有固定的要求。<br>在实际编程中，但最好统一。</p>
-<h1 id="考点7"><a href="#考点7" class="headerlink" title="考点7"></a>考点7</h1><p>有以下程序段， 则下面正确的选项是（）</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MyThead</span> <span class="keyword">extends</span> <span class="title class_">Thread</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        MyThead t=<span class="keyword">new</span> <span class="title class_">MyThead</span>();</span><br><span class="line">        MyThead s=<span class="keyword">new</span> <span class="title class_">MyThead</span>();</span><br><span class="line">        t.start();</span><br><span class="line">        System.out.println(<span class="string">&quot;one.&quot;</span>);</span><br><span class="line">        s.start();</span><br><span class="line">        System.out.println(<span class="string">&quot;two.&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Thread&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>1.protected 和 private 不能修饰外部类，是因为外部类放在包中，只有两种可能，包可见和包不可见。<br>2. final 和 abstract不能同时修饰外部类，因为该类要么能被继承要么不能被继承，二者只能选其一。<br>3.不能用static修饰类，因为类加载后才会加载静态成员变量。所以不能用static修饰类和接口，因为类还没加载，无法使用static关键字。<br>内部类修饰符<br>       内部类与成员变量地位一直，所以可以public,protected、default和private，同时还可以用static修饰，表示嵌套内部类，不用实例化外部类，即可调用。<br>方法修饰符<br>public（公共控制符），包外包内都可以调用该方法。<br>protected（保护访问控制符）指定该方法可以被它的类和子类进行访问。具体细节可参考：<a target="_blank" rel="noopener" href="http://blog.csdn.net/dawn_after_dark/article/details/74453915">http://blog.csdn.net/dawn_after_dark/article/details/74453915</a><br>default(默认权限），指定该方法只对同包可见，对不同包（含不同包的子类）不可见。<br>private（私有控制符）指定此方法只能有自己类等方法访问，其他的类不能访问（包括子类），非常严格的控制。<br>final ,指定方法已完备，不能再进行继承扩充。<br>static，指定不需要实例化就可以激活的一个方法，即在内存中只有一份，通过类名即可调用。<br>synchronize，同步修饰符，在多个线程中，该修饰符用于在运行前，对它所属的方法加锁，以防止其他线程的访问，运行结束后解锁。<br>native，本地修饰符。指定此方法的方法体是用其他语言在程序外部编写的。<br>abstract ,抽象方法是一种没有任何实现的方法，该方法的的具体实现由子类提供。抽象方法不能被声明成 final 和 static。 任何继承抽象类的子类必须实现父类的所有抽象方法，除非该子类也是抽象类。 如果一个类包含若干个抽象方法，那么该类必须声明为抽象类。抽象类可以不包含抽象方法。 抽象方法的声明以分号结尾，例如：public abstract sample();。<br>成员变量修饰符<br>public（公共访问控制符），指定该变量为公共的，它可以被任何对象的方法访问。<br>protected（保护访问控制符）指定该变量可以别被自己的类和子类访问。在子类中可以覆盖此变量。<br>default(默认权限），指定该变量只对同包可见，对不同包（含不同包的子类）不可见。<br>private（私有访问控制符）指定该变量只允许自己的类的方法访问，其他任何类（包括子类）中的方法均不能访问。<br>final，最终修饰符，指定此变量的值不能变。<br>static（静态修饰符）指定变量被所有对象共享，即所有实例都可以使用该变量。变量属于这个类。<br>transient（过度修饰符）指定该变量是系统保留，暂无特别作用的临时性变量。不持久化。<br>volatile（易失修饰符）指定该变量可以同时被几个线程控制和修改，保证两个不同的线程总是看到某个成员变量的同一个值。<br> final 和 static 经常一起使用来创建常量。<br>局部变量修饰符<br>only final is permitted。<br>为什么不能赋予权限修饰符？<br>因为局部变量的生命周期为一个方法的调用期间，所以没必要为其设置权限访问字段，既然你都能访问到这个方法，所以就没必要再为其方法内变量赋予访问权限，因为该变量在方法调用期间已经被加载进了虚拟机栈，换句话说就是肯定能被当前线程访问到，所以设置没意义。<br>为什么不能用static修饰<br>我们都知道静态变量在方法之前先加载的，所以如果在方法内设置静态变量，可想而知，方法都没加载，你能加载成功方法内的静态变量？<br>接口<br>接口修饰符<br>接口修饰符只能用public、default和abstract。<br>不能用final、static修饰。<br>接口默认修饰为abstract。<br>接口中方法修饰符<br>only public &amp; abstract are permitted 。<br>意思只能用 public abstract修饰，当然如果你什么都不写，默认就是public abstract。<br>注意：在Java1.8之后，接口允许定义static 静态方法了！所以也可以用static来修饰！</p>
+<h1 id="考点6"><a href="#考点6" class="headerlink" title="考点6"></a>考点6</h1><p>变量a是一个64位有符号的整数，初始值用16进制表示为：0Xf000000000000000； 变量b是一个64位有符号的整数，初始值用16进制表示为：0x7FFFFFFFFFFFFFFF。 则a-b的结果用10进制表示为多少？（）</p>
 <ul>
-<li>A 编译失败</li>
-<li>B 程序运行可能结果为： one. Thread two. Thread</li>
-<li>C 程序运行可能结果是： one. two. Thread Thread</li>
-<li>D 程序运行结果不稳定</li>
+<li>A 1</li>
+<li>B -(2^62+2^61+2^60+1)</li>
+<li>C 2^62+2^61+2^60+1</li>
+<li>D 2^59+(2^55+2^54+…+2^2+2^1+2^0)</li>
 </ul>
-<p>正确答案: BCD</p>
-<h2 id="解析-6"><a href="#解析-6" class="headerlink" title="解析"></a>解析</h2><p>同一个线程中的输出顺序是确定的，main线程中的输出语句确定，也就是，只要one在two前面输出，thread在其后面那个位置输出无所谓。</p>
-<h1 id="考点8"><a href="#考点8" class="headerlink" title="考点8"></a>考点8</h1><p>java8中，忽略内部接口的情况，不能用来修饰interface里的方法的有（ ）</p>
+<p>正确答案: C</p>
+<h2 id="解析-5"><a href="#解析-5" class="headerlink" title="解析"></a>解析</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">0Xf000000000000000补码为1111000000000000000000000000000000000000000000000000000000000000</span><br><span class="line">0x7FFFFFFFFFFFFFFF补码为0111111111111111111111111111111111111111111111111111111111111111</span><br><span class="line">a-b=a+(-b)=</span><br><span class="line">1111000000000000000000000000000000000000000000000000000000000000+</span><br><span class="line">1000000000000000000000000000000000000000000000000000000000000001=</span><br><span class="line">10111000000000000000000000000000000000000000000000000000000000001(高位溢出舍去)</span><br><span class="line">则结果为</span><br><span class="line">0111000000000000000000000000000000000000000000000000000000000001=</span><br><span class="line">2^62+2^61+2^60+1</span><br><span class="line">答案为C</span><br></pre></td></tr></table></figure>
+
+<h1 id="考点7"><a href="#考点7" class="headerlink" title="考点7"></a>考点7</h1><p>Java对象的初始化方式有（ ）</p>
 <ul>
-<li>A private</li>
-<li>B public</li>
-<li>C protected</li>
-<li>D static</li>
+<li>A 初始化块</li>
+<li>B 构造器</li>
+<li>C 定义变量时指定初始化值</li>
+<li>D 其它各项都不对</li>
 </ul>
-<p>正确答案: AC</p>
-<h2 id="解析-7"><a href="#解析-7" class="headerlink" title="解析"></a>解析</h2><p>java8 接口新特性：可以定义：</p>
+<p>正确答案: ABC</p>
+<h2 id="解析-6"><a href="#解析-6" class="headerlink" title="解析"></a>解析</h2><h3 id="对象的初始化方式"><a href="#对象的初始化方式" class="headerlink" title="对象的初始化方式"></a>对象的初始化方式</h3><p>1.new时初始化<br>2.静态工厂 newInstance；<br>3.反射Class.forName()；<br>4.clone方式；<br>5.反序列化；</p>
+<h1 id="考点8"><a href="#考点8" class="headerlink" title="考点8"></a>考点8</h1><p>下面关于变量及其范围的陈述哪些是不正确的（）</p>
 <ul>
-<li>静态方法（有方法体） 和</li>
-<li>default方法（有方法体</li>
+<li>A 实例变量是类的成员变量</li>
+<li>B 实例变量用关键字static声明</li>
+<li>C 在方法中定义的局部变量在该方法被执行时创建</li>
+<li>D 局部变量在使用前必须被初始化</li>
 </ul>
-<h1 id="考点9"><a href="#考点9" class="headerlink" title="考点9"></a>考点9</h1><p>有关线程的叙述正确的是()</p>
-<ul>
-<li>A 可以获得对任何对象的互斥锁定</li>
-<li>B 通过继承Thread类或实现Runnable接口，可以获得对类中方法的互斥锁定</li>
-<li>C 线程通过使用synchronized关键字可获得对象的互斥锁定</li>
-<li>D 线程调度算法是平台独立的</li>
-</ul>
-<p>正确答案: CD</p>
-<h2 id="解析-8"><a href="#解析-8" class="headerlink" title="解析"></a>解析</h2><p>A，“任何对象”锁定，太绝对了，你能锁住你没有权限访问的对象吗？<br>B，前半句话讲的是创建线程的方式，后半句讲的是锁定，驴头不对马嘴。<br>C，正确。<br>D，线程调度分为协同式调度和抢占式调度，Java使用的是抢占式调度，也就是每个线程将由操作系统来分配执行时间，线程的切换不由线程本身来决定（协同式调度）。这就是平台独立的原因。<br>以上，选CD</p>
+<p>正确答案: BC</p>
+<h2 id="解析-7"><a href="#解析-7" class="headerlink" title="解析"></a>解析</h2><p>实例变量属于对象<br>c选项应该是在线程为该方法<strong>创建栈桢时</strong>被创建，而不是方法<strong>执行</strong>时创建</p>
 
       
     </div>
@@ -881,7 +854,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lanlan2017.github.io/exam/d28ae0ae/">
+    <link itemprop="mainEntityOfPage" href="https://lanlan2017.github.io/exam/a58dd038/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/exam/images/avatar.png">
@@ -899,7 +872,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/exam/d28ae0ae/" class="post-title-link" itemprop="url">2019年11月5日 java3</a>
+          <a href="/exam/a58dd038/" class="post-title-link" itemprop="url">2019年11月5日_Java_2</a>
         </h2>
 
         <div class="post-meta-container">
@@ -950,8 +923,8 @@
     </span>
     <span class="post-meta-item-text">Waline：</span>
   
-    <a title="waline" href="/exam/d28ae0ae/#waline-comments" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" id="/exam/d28ae0ae/" data-xid="/exam/d28ae0ae/" itemprop="commentCount"></span>
+    <a title="waline" href="/exam/a58dd038/#waline-comments" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" id="/exam/a58dd038/" data-xid="/exam/a58dd038/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -962,14 +935,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>4.3k</span>
+      <span>2.6k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>4 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -980,85 +953,112 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="考点1"><a href="#考点1" class="headerlink" title="考点1"></a>考点1</h1><p>下面语句正确的是（）</p>
+          <h1 id="考点1-数据库-关系模型和对象模型的匹配关系"><a href="#考点1-数据库-关系模型和对象模型的匹配关系" class="headerlink" title="考点1 数据库 关系模型和对象模型的匹配关系"></a>考点1 数据库 关系模型和对象模型的匹配关系</h1><p>一般情况下，以下哪个选项不是关系数据模型与对象模型之间匹配关系？</p>
 <ul>
-<li>A x+1&#x3D;5</li>
-<li>B i++&#x3D;1</li>
-<li>C a++b&#x3D;1</li>
-<li>D x+&#x3D;1</li>
+<li>A 表对应类</li>
+<li>B 记录对应对象</li>
+<li>C 表的字段对应类的属性</li>
+<li>D 表之间的参考关系对应类之间的依赖关系</li>
 </ul>
-<p>正确答案: D</p>
-<h2 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h2><h3 id="赋值运算左值必须是变量"><a href="#赋值运算左值必须是变量" class="headerlink" title="赋值运算左值必须是变量"></a>赋值运算左值必须是变量</h3><p>赋值运算符“&#x3D;”右值可以是任何常数、变量或者表达式（只要能生成一个值就行）。但<strong>左值必须是一个明确的、已命名的变量</strong><br>所以对于i++ &#x3D; 1，a++b &#x3D; 1，x+1&#x3D;5来说，赋值运算符的左边不是一个变量当然是错误的。</p>
-<h1 id="考点2"><a href="#考点2" class="headerlink" title="考点2"></a>考点2</h1><p>类Person里面有个方法sleep()，如果直接用Person.sleep()，则方法sleep前面必须用的关键词是？  (    )</p>
-<ul>
-<li>A class</li>
-<li>B static</li>
-<li>C public</li>
-<li>D final</li>
-</ul>
-<p>正确答案: B</p>
-<h2 id="解析-1"><a href="#解析-1" class="headerlink" title="解析"></a>解析</h2><h1 id="考点3"><a href="#考点3" class="headerlink" title="考点3"></a>考点3</h1><p>下列描述中，错误的是</p>
-<ul>
-<li>A SQL语言又称为结构化查询语言</li>
-<li>B java中”static”关键字表明一个成员变量或者是成员方法可以在没有所属的类的实例变量的情况下被访问</li>
-<li>C 面向对象开发中，引用传递意味着传递的并不是实际的对象，而是对象的引用，因此，外部对引用对象所做的改变不会反映到所引用的对象上</li>
-<li>D java是强类型语言，javascript是弱类型语言</li>
-<li>E 面向对象的三大特性包括：封装，继承，多态</li>
-</ul>
-<p>正确答案: C</p>
-<h2 id="解析-2"><a href="#解析-2" class="headerlink" title="解析"></a>解析</h2><p>这道题选C，因为引用代表就是所引用的是实际的对象，<strong>对引用的修改就是对对象的修改</strong>，可以理解为两把钥匙可以打开同一扇门，所以C错；其他几个选项都是对的</p>
-<h1 id="考点4"><a href="#考点4" class="headerlink" title="考点4"></a>考点4</h1><p>下列说法正确的是()</p>
-<ul>
-<li>A WebLogic中开发消息Bean的non－persistent 方式可以保证消息的可靠</li>
-<li>B EJB容器发生错误，non－persistent方式下JMS容器仍然会将消息发送</li>
-<li>C EJB容器发生错误，persistent方式下JMS容器仍然会将消息发送</li>
-<li>D EJB容器发生错误，两种方式下JMS容器仍会在MDB可用的时候将消息发送</li>
-</ul>
-<p>正确答案: C</p>
-<h2 id="解析-3"><a href="#解析-3" class="headerlink" title="解析"></a>解析</h2><p>我不懂，解析我也看不懂，有空了解一下</p>
-<h1 id="考点5"><a href="#考点5" class="headerlink" title="考点5"></a>考点5</h1><p>下列语句正确的是：</p>
-<ul>
-<li>A 形式参数可被字段修饰符修饰</li>
-<li>B 形式参数不可以是对象</li>
-<li>C 形式参数为方法被调用时真正被传递的参数</li>
-<li>D 形式参数可被视为local variable</li>
-</ul>
-<p>正确答案: D</p>
-<h2 id="解析-4"><a href="#解析-4" class="headerlink" title="解析"></a>解析</h2><p>A：形式参数只能被final修饰<br>B：形式参数可以是对象<br>C：形式参数被调用时被传递的是实际参数的拷贝<br>D：local variable：局部变量</p>
-<h3 id="修饰符待整理"><a href="#修饰符待整理" class="headerlink" title="修饰符待整理"></a>修饰符待整理</h3><p>Java语言提供了很多修饰符，大概分为两类： </p>
-<ol>
-<li>访问权限修饰符 </li>
-<li>非访问权限修饰符<br>访问权限修饰符<br>public：共有访问。对所有的类都可见。<br>protected：保护型访问。对同一个包可见，对不同的包的子类可见。<br>default：默认访问权限。只对同一个包可见，注意对不同的包的子类不可见。<br>private：私有访问。只对同一个类可见，其余都不见。<br>非访问权限修饰符<br>static 修饰符，用来创建类方法和类变量。<br>final 修饰符，用来修饰类、方法和变量，final 修饰的类不能够被继承，修饰的方法不能被继承类重新定义，修饰的变量为常量，是不可修改的。<br>abstract 修饰符，用来创建抽象类和抽象方法。<br>synchronized 用于多线程的同步。<br>volatile 修饰的成员变量在每次被线程访问时，都强制从共享内存中重新读取该成员变量的值。而且，当成员变量发生变化时，会强制线程将变化值回写到共享内存。这样在任何时刻，两个不同的线程总是看到某个成员变量的同一个值。<br>transient：序列化的对象包含被 transient 修饰的实例变量时，java 虚拟机(JVM)跳过该特定的变量。<br>类<br>外部类修饰符<br>public（访问控制符），将一个类声明为公共类，它可以被任何对象访问，一个程序的主类必须是公共类。<br>default（访问控制符），类只对包内可见，包外不可见。<br>abstract（非访问控制符），将一个类声明为抽象类，抽象类不能用来实例化对象，声明抽象类的唯一目的是为了将来对该类进行扩充，抽象类可以包含抽象方法和非抽象方法。。<br>final（非访问控制符），将一个类生命为最终（即非继承类），表示它不能被其他类继承。<br> 注意：</li>
-</ol>
-<p>1.protected 和 private 不能修饰外部类，是因为外部类放在包中，只有两种可能，包可见和包不可见。<br>2. final 和 abstract不能同时修饰外部类，因为该类要么能被继承要么不能被继承，二者只能选其一。<br>3.不能用static修饰类，因为类加载后才会加载静态成员变量。所以不能用static修饰类和接口，因为类还没加载，无法使用static关键字。<br>内部类修饰符<br>       内部类与成员变量地位一直，所以可以public,protected、default和private，同时还可以用static修饰，表示嵌套内部类，不用实例化外部类，即可调用。<br>方法修饰符<br>public（公共控制符），包外包内都可以调用该方法。<br>protected（保护访问控制符）指定该方法可以被它的类和子类进行访问。具体细节可参考：<a target="_blank" rel="noopener" href="http://blog.csdn.net/dawn_after_dark/article/details/74453915">http://blog.csdn.net/dawn_after_dark/article/details/74453915</a><br>default(默认权限），指定该方法只对同包可见，对不同包（含不同包的子类）不可见。<br>private（私有控制符）指定此方法只能有自己类等方法访问，其他的类不能访问（包括子类），非常严格的控制。<br>final ,指定方法已完备，不能再进行继承扩充。<br>static，指定不需要实例化就可以激活的一个方法，即在内存中只有一份，通过类名即可调用。<br>synchronize，同步修饰符，在多个线程中，该修饰符用于在运行前，对它所属的方法加锁，以防止其他线程的访问，运行结束后解锁。<br>native，本地修饰符。指定此方法的方法体是用其他语言在程序外部编写的。<br>abstract ,抽象方法是一种没有任何实现的方法，该方法的的具体实现由子类提供。抽象方法不能被声明成 final 和 static。 任何继承抽象类的子类必须实现父类的所有抽象方法，除非该子类也是抽象类。 如果一个类包含若干个抽象方法，那么该类必须声明为抽象类。抽象类可以不包含抽象方法。 抽象方法的声明以分号结尾，例如：public abstract sample();。<br>成员变量修饰符<br>public（公共访问控制符），指定该变量为公共的，它可以被任何对象的方法访问。<br>protected（保护访问控制符）指定该变量可以别被自己的类和子类访问。在子类中可以覆盖此变量。<br>default(默认权限），指定该变量只对同包可见，对不同包（含不同包的子类）不可见。<br>private（私有访问控制符）指定该变量只允许自己的类的方法访问，其他任何类（包括子类）中的方法均不能访问。<br>final，最终修饰符，指定此变量的值不能变。<br>static（静态修饰符）指定变量被所有对象共享，即所有实例都可以使用该变量。变量属于这个类。<br>transient（过度修饰符）指定该变量是系统保留，暂无特别作用的临时性变量。不持久化。<br>volatile（易失修饰符）指定该变量可以同时被几个线程控制和修改，保证两个不同的线程总是看到某个成员变量的同一个值。<br> final 和 static 经常一起使用来创建常量。<br>局部变量修饰符<br>only final is permitted。<br>为什么不能赋予权限修饰符？<br>因为局部变量的生命周期为一个方法的调用期间，所以没必要为其设置权限访问字段，既然你都能访问到这个方法，所以就没必要再为其方法内变量赋予访问权限，因为该变量在方法调用期间已经被加载进了虚拟机栈，换句话说就是肯定能被当前线程访问到，所以设置没意义。<br>为什么不能用static修饰<br>我们都知道静态变量在方法之前先加载的，所以如果在方法内设置静态变量，可想而知，方法都没加载，你能加载成功方法内的静态变量？<br>接口<br>接口修饰符<br>接口修饰符只能用public、default和abstract。<br>不能用final、static修饰。<br>接口默认修饰为abstract。<br>接口中方法修饰符<br>only public &amp; abstract are permitted 。<br>意思只能用 public abstract修饰，当然如果你什么都不写，默认就是public abstract。<br>注意：在Java1.8之后，接口允许定义static 静态方法了！所以也可以用static来修饰！</p>
-<h1 id="考点6"><a href="#考点6" class="headerlink" title="考点6"></a>考点6</h1><p>变量a是一个64位有符号的整数，初始值用16进制表示为：0Xf000000000000000； 变量b是一个64位有符号的整数，初始值用16进制表示为：0x7FFFFFFFFFFFFFFF。 则a-b的结果用10进制表示为多少？（）</p>
-<ul>
-<li>A 1</li>
-<li>B -(2^62+2^61+2^60+1)</li>
-<li>C 2^62+2^61+2^60+1</li>
-<li>D 2^59+(2^55+2^54+…+2^2+2^1+2^0)</li>
-</ul>
-<p>正确答案: C</p>
-<h2 id="解析-5"><a href="#解析-5" class="headerlink" title="解析"></a>解析</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">0Xf000000000000000补码为1111000000000000000000000000000000000000000000000000000000000000</span><br><span class="line">0x7FFFFFFFFFFFFFFF补码为0111111111111111111111111111111111111111111111111111111111111111</span><br><span class="line">a-b=a+(-b)=</span><br><span class="line">1111000000000000000000000000000000000000000000000000000000000000+</span><br><span class="line">1000000000000000000000000000000000000000000000000000000000000001=</span><br><span class="line">10111000000000000000000000000000000000000000000000000000000000001(高位溢出舍去)</span><br><span class="line">则结果为</span><br><span class="line">0111000000000000000000000000000000000000000000000000000000000001=</span><br><span class="line">2^62+2^61+2^60+1</span><br><span class="line">答案为C</span><br></pre></td></tr></table></figure>
+<details><summary>展开/折叠</summary>
+正确答案: D</details>
 
-<h1 id="考点7"><a href="#考点7" class="headerlink" title="考点7"></a>考点7</h1><p>Java对象的初始化方式有（ ）</p>
+<h2 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h2><p>一般关系数据模型和对象数据模型之间有以下对应关系：</p>
 <ul>
-<li>A 初始化块</li>
-<li>B 构造器</li>
-<li>C 定义变量时指定初始化值</li>
-<li>D 其它各项都不对</li>
+<li>表对应类，</li>
+<li>记录对应对象，</li>
+<li>表的字段对应类的属性</li>
 </ul>
-<p>正确答案: ABC</p>
-<h2 id="解析-6"><a href="#解析-6" class="headerlink" title="解析"></a>解析</h2><h3 id="对象的初始化方式"><a href="#对象的初始化方式" class="headerlink" title="对象的初始化方式"></a>对象的初始化方式</h3><p>1.new时初始化<br>2.静态工厂 newInstance；<br>3.反射Class.forName()；<br>4.clone方式；<br>5.反序列化；</p>
-<h1 id="考点8"><a href="#考点8" class="headerlink" title="考点8"></a>考点8</h1><p>下面关于变量及其范围的陈述哪些是不正确的（）</p>
+<p>目前ORMapping只是规定了数据结构和数据集的映射关系，还没到规定赖关系的阶段</p>
+<h1 id="考点2"><a href="#考点2" class="headerlink" title="考点2"></a>考点2</h1><p>已知有下列Test类的说明，在该类的main方法内，则下列哪个语句是正确的？（）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Test</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">float</span> <span class="variable">f</span> <span class="operator">=</span> <span class="number">1.0f</span>;</span><br><span class="line">    <span class="type">int</span> <span class="variable">m</span> <span class="operator">=</span> <span class="number">12</span>;</span><br><span class="line">    <span class="keyword">static</span> <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span> <span class="params">(String args[])</span></span><br><span class="line">    &#123;</span><br><span class="line">    <span class="type">Test</span> <span class="variable">t</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Test</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
-<li>A 实例变量是类的成员变量</li>
-<li>B 实例变量用关键字static声明</li>
-<li>C 在方法中定义的局部变量在该方法被执行时创建</li>
-<li>D 局部变量在使用前必须被初始化</li>
+<li>A t.f;</li>
+<li>B this.n;</li>
+<li>C Test.m</li>
+<li>D Test.f</li>
 </ul>
-<p>正确答案: BC</p>
-<h2 id="解析-7"><a href="#解析-7" class="headerlink" title="解析"></a>解析</h2><p>实例变量属于对象<br>c选项应该是在线程为该方法<strong>创建栈桢时</strong>被创建，而不是方法<strong>执行</strong>时创建</p>
+<details><summary>展开/折叠</summary>
+正确答案: A</details>
+
+<h2 id="解析-1"><a href="#解析-1" class="headerlink" title="解析"></a>解析</h2><p>A的答案中变量虽然为private，但因为main函数在该类中，所以即使private也仍可使用</p>
+<h1 id="考点3"><a href="#考点3" class="headerlink" title="考点3"></a>考点3</h1><p>下面赋值语句中正确的是（）</p>
+<ul>
+<li>A double d&#x3D;5.3e12;</li>
+<li>B float f&#x3D;11.1;</li>
+<li>C int i&#x3D;0.0;</li>
+<li>D Double oD&#x3D;3;</li>
+</ul>
+<p>正确答案: A</p>
+<h2 id="解析-2"><a href="#解析-2" class="headerlink" title="解析"></a>解析</h2><p>java中整型默认的是int,浮点默认的是double.<br>A: double类型遵循IEEE754标准（具体自己查一下），约为10^-308<del>10^308和-10^-308</del>-10^308，所以本题在范围里<br>B: double类型的11.1 转成 float，是需要强制转换的<br>C: double类型的0.0 转成 int，也是需要强制转换的<br>D: int 转为 封装类型Double，是无法编译的，int虽可以转换成double，但在类型转换时无法进行自动装箱，故错误</p>
+<h1 id="考点4"><a href="#考点4" class="headerlink" title="考点4"></a>考点4</h1><p>下列不属于Java语言性特点的是</p>
+<ul>
+<li>A Java致力于检查程序在编译和运行时的错误</li>
+<li>B Java能运行虚拟机实现跨平台</li>
+<li>C Java自己操纵内存减少了内存出错的可能性</li>
+<li>D Java还实现了真数组，避免了覆盖<code>数据类型</code>的可能</li>
+</ul>
+<p>正确答案: D</p>
+<h2 id="解析-3"><a href="#解析-3" class="headerlink" title="解析"></a>解析</h2><h3 id="什么是真数组"><a href="#什么是真数组" class="headerlink" title="什么是真数组"></a>什么是真数组</h3><p>程序设计语言中，数组元素在内存中是一个接着一个线性存放的，通过第一个元素就能访问随后的元素，这样的数组称之为“真数组”。<br>实现了真数组为Java语言健壮性的特点之一。</p>
+<p>真数组：<br>1、在内存中连续分配。<br>2、数组所存在的内存空间为数组专用，避免了<code>数据</code>被覆盖的问题。</p>
+<p>是避免数据覆盖，而不是数据类型覆盖</p>
+<h1 id="考点5"><a href="#考点5" class="headerlink" title="考点5"></a>考点5</h1><p>在java语言中，如果你编写一个多线程序，可以使用的方法是（）</p>
+<ul>
+<li>A 扩展类Thread</li>
+<li>B 实现Runnable接口</li>
+<li>C 扩展类 Runnable</li>
+<li>D 实现接口Thread</li>
+</ul>
+<p>正确答案: AB</p>
+<h2 id="解析-4"><a href="#解析-4" class="headerlink" title="解析"></a>解析</h2><p>Java多线程实现方式主要有四种：<br>1、继承Thread类<br>2、实现Runnable接口<br>3、实现Callable接口通过FutureTask包装器来创建Thread线程<br>4、使用ExecutorService、Callable、Future实现有返回结果的多线程</p>
+<p>前两种方式线程执行完后都没有返回值，后两种是带返回值的。</p>
+<h1 id="考点6"><a href="#考点6" class="headerlink" title="考点6"></a>考点6</h1><p>下面哪几个语句正确的声明一个整型的二维数组（）</p>
+<ul>
+<li>A int a[][]&#x3D;new int[][]</li>
+<li>B int b[10][10]&#x3D;new int[][]</li>
+<li>C int c[][]&#x3D;new int[10][10]</li>
+<li>D int []d[]&#x3D;new int[10][10]</li>
+</ul>
+<p>正确答案: CD</p>
+<h2 id="解析-5"><a href="#解析-5" class="headerlink" title="解析"></a>解析</h2><ol>
+<li>定义一维数组时，必须显式指明数组的长度；</li>
+<li>定义多维数组时，其<strong>一维数组的长度必须首先指明</strong>，其他维数组长度可以稍后指定；</li>
+<li>采用给定值初始化数组时，不必指明长度；</li>
+<li>“[]” 是数组运算符的意思，在声明一个数组时，数组运算符可以放在数据类型与变量之间，也可以放在变量之后。</li>
+</ol>
+<p>一维数组中，[]在变量名arr前还是后，这个写法没有固定的要求，<br>二维数组中，[][]a这三个元素其实可以作<strong>全排列</strong>，不论怎么排都不影响最后的编译结果，写法没有固定的要求。<br>在实际编程中，但最好统一。</p>
+<h1 id="考点7"><a href="#考点7" class="headerlink" title="考点7"></a>考点7</h1><p>有以下程序段， 则下面正确的选项是（）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MyThead</span> <span class="keyword">extends</span> <span class="title class_">Thread</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        MyThead t=<span class="keyword">new</span> <span class="title class_">MyThead</span>();</span><br><span class="line">        MyThead s=<span class="keyword">new</span> <span class="title class_">MyThead</span>();</span><br><span class="line">        t.start();</span><br><span class="line">        System.out.println(<span class="string">&quot;one.&quot;</span>);</span><br><span class="line">        s.start();</span><br><span class="line">        System.out.println(<span class="string">&quot;two.&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Thread&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>A 编译失败</li>
+<li>B 程序运行可能结果为： one. Thread two. Thread</li>
+<li>C 程序运行可能结果是： one. two. Thread Thread</li>
+<li>D 程序运行结果不稳定</li>
+</ul>
+<p>正确答案: BCD</p>
+<h2 id="解析-6"><a href="#解析-6" class="headerlink" title="解析"></a>解析</h2><p>同一个线程中的输出顺序是确定的，main线程中的输出语句确定，也就是，只要one在two前面输出，thread在其后面那个位置输出无所谓。</p>
+<h1 id="考点8"><a href="#考点8" class="headerlink" title="考点8"></a>考点8</h1><p>java8中，忽略内部接口的情况，不能用来修饰interface里的方法的有（ ）</p>
+<ul>
+<li>A private</li>
+<li>B public</li>
+<li>C protected</li>
+<li>D static</li>
+</ul>
+<p>正确答案: AC</p>
+<h2 id="解析-7"><a href="#解析-7" class="headerlink" title="解析"></a>解析</h2><p>java8 接口新特性：可以定义：</p>
+<ul>
+<li>静态方法（有方法体） 和</li>
+<li>default方法（有方法体</li>
+</ul>
+<h1 id="考点9"><a href="#考点9" class="headerlink" title="考点9"></a>考点9</h1><p>有关线程的叙述正确的是()</p>
+<ul>
+<li>A 可以获得对任何对象的互斥锁定</li>
+<li>B 通过继承Thread类或实现Runnable接口，可以获得对类中方法的互斥锁定</li>
+<li>C 线程通过使用synchronized关键字可获得对象的互斥锁定</li>
+<li>D 线程调度算法是平台独立的</li>
+</ul>
+<p>正确答案: CD</p>
+<h2 id="解析-8"><a href="#解析-8" class="headerlink" title="解析"></a>解析</h2><p>A，“任何对象”锁定，太绝对了，你能锁住你没有权限访问的对象吗？<br>B，前半句话讲的是创建线程的方式，后半句讲的是锁定，驴头不对马嘴。<br>C，正确。<br>D，线程调度分为协同式调度和抢占式调度，Java使用的是抢占式调度，也就是每个线程将由操作系统来分配执行时间，线程的切换不由线程本身来决定（协同式调度）。这就是平台独立的原因。<br>以上，选CD</p>
 
       
     </div>
